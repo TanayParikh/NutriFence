@@ -1,0 +1,6 @@
+framework module Pods_NutriFence__iOS_UITests {
+  umbrella header "Pods-NutriFence (iOS)UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

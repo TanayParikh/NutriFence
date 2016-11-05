@@ -53,6 +53,11 @@ app.post('/ClassificationAPI',function(req, res){
     rawIngredients = rawIngredients.replace(/[)]+/g, ',');
     rawIngredients = rawIngredients.replace(/[.]+/g, ',');
     rawIngredients = rawIngredients.split(",");
+    
+    var ind = rawIngredients.indexOf("may contain");
+    for (var i=ind; i<rawIngredients.length-1; i++) {
+        rawIngredients.pop();
+    }
 
     var goodIngredients = [];
     var badIngredients = [];

@@ -10,11 +10,13 @@ var populateDatabase = require("./populateDatabase.js");
 var unsafeList;
 client.smembers('Celiac Unsafe', function(err, list) {
     unsafeList = list;
+    unsafeList.forEach(function(item) { item.toLowerCase() });
 })
 
 var unfriendlyList;
 client.smembers('Celiac Unfriendly', function(err, list) {
     unfriendlyList = list;
+    unfriendlyList.forEach(function(item) { item.toLowerCase() });
 })
 
 //require the express nodejs module

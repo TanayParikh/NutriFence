@@ -1,9 +1,10 @@
 /*
 	TODO: check for may contain -> mayContainGluten = true automatically
 	 					contains -> isGlutenFree = false automatically
+	TODO: fix the way the API handles brackets
 */
 
-
+// start Redis
 var redis = require('redis');
 var client = redis.createClient();
 
@@ -11,9 +12,11 @@ client.on('connect', function() {
     console.log('app connected');
 });
 
+// fetch the unsafe/unfriendly ingredients data from Redis
 var populateDatabase = require("./populateDatabase.js");
 populateDatabase.addCeliacUnsafe();
 populateDatabase.addCeliacUnfriendly();
+// populateDatabase.printMembers();
 
 var unsafeList;
 client.smembers('Celiac Unsafe', function(err, list) {
@@ -25,28 +28,20 @@ client.smembers('Celiac Unfriendly', function(err, list) {
     unfriendlyList = list;
 });
 
-//require the express nodejs module
+// require and initialize the necessary modules
 var express = require('express'),
-
-//set an instance of express
     app = express(),
-
-//require the body-parser nodejs module
     bodyParser = require('body-parser'),
-
-//require the path nodejs module
     path = require("path");
 
-//support parsing of application/json type post data
+// add support for parsing different types of post data
 app.use(bodyParser.json());
-
-//support parsing of application/x-www-form-urlencoded post data
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//tell express that www is the root of our public web folder
+// tell express that www is the root of our public web folder
 app.use(express.static(path.join(__dirname, 'www')));
 
-//tell express what to do when the /ClassificationAPI route is requested
+// tell express what to do when the /ClassificationAPI route is requested
 app.post('/ClassificationAPI',function(req, res){
     var rawIngredients = req.body.responses[0].textAnnotations[0].description;
     rawIngredients = rawIngredients.toLowerCase();
@@ -56,20 +51,21 @@ app.post('/ClassificationAPI',function(req, res){
     rawIngredients = rawIngredients.replace(/(\n)+/g, ' ');
     rawIngredients = rawIngredients.replace(/[(]+/g, ',');
     rawIngredients = rawIngredients.replace(/[)]+/g, ',');
+    rawIngredients = rawIngredients.replace(/[.]+/g, ',');
     rawIngredients = rawIngredients.split(",");
 
     var goodIngredients = [];
     var badIngredients = [];
     var unsureIngredients = [];
 
-    rawIngredients.forEach(function(ingredient) {
+    rawIngredients.forEach( function(ingredient) {
         if (!isUnsafe(ingredient) && !isUnfriendly(ingredient)) {
             if (ingredient) goodIngredients.push(ingredient);
         }
     });
 
     function isUnsafe(ingredient) {
-        unsafeList.forEach(function (unsafeItem) {
+        unsafeList.forEach( function (unsafeItem) {
             if (ingredient.includes(unsafeItem)) {
                 badIngredients.push(ingredient);
                 return true;
@@ -95,21 +91,13 @@ app.post('/ClassificationAPI',function(req, res){
     
     res.setHeader('Content-Type', 'application/rawIngredients');
 
-    //mimic a slow network connection
-    setTimeout(function(){
-
-        res.send(JSON.stringify({
-            Bad_Ingredients: badIngredients,
-        	Unsure_Ingredients: unsureIngredients,
-            Good_Ingredients: goodIngredients,
-            isGlutenFree: pass,
-            mayContainGluten: maybe
-        }));
-
-    }, 1000);
-
-    //debugging output for the terminal
-    console.log('you posted Response: ' + badIngredients);
+    res.send(JSON.stringify({
+        Bad_Ingredients: badIngredients,
+        Unsure_Ingredients: unsureIngredients,
+        Good_Ingredients: goodIngredients,
+        isGlutenFree: pass,
+        mayContainGluten: maybe
+    }));
 });
 
 //wait for a connection

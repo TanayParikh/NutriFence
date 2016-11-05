@@ -1,0 +1,125 @@
+Abyssinian Hard (Wheat triticum durum)
+Alcohol (Spirits - Specific Types)
+Atta Flour
+Barley Grass (can contain seeds)
+Barley Hordeum vulgare
+Barley Malt
+Beer (most contain barley or wheat)
+Bleached Flour 
+Bran
+Bread Flour
+Brewer's Yeast
+Brown Flour
+Bulgur (Bulgar Wheat/Nuts) 
+Bulgur Wheat
+Cereal Binding
+Chilton
+Club Wheat (Triticum aestivum subspecies compactum) 
+Common Wheat (Triticum aestivum)
+Cookie Crumbs
+Cookie Dough
+Cookie Dough Pieces
+Couscous
+Criped Rice
+Dinkle (Spelt)
+Disodium Wheatgermamido Peg-2 Sulfosuccinate 
+Durum wheat (Triticum durum)
+Edible Coatings
+Edible Films
+Edible Starch
+Einkorn (Triticum monococcum)
+Emmer (Triticum dicoccon) 
+Enriched Bleached Flour
+Enriched Bleached Wheat Flour
+Enriched Flour
+Farik
+Farina 
+Farina Graham 
+Farro
+Filler
+Flour (normally this is wheat)
+Freekeh
+Frikeh
+Fu (dried wheat gluten)
+Germ 
+Graham Flour
+Granary Flour
+Groats (barley, wheat) 
+Hard Wheat
+Heeng
+Hing
+Hordeum Vulgare Extract
+Hydroxypropyltrimonium Hydrolyzed Wheat Protein 
+Kamut (Pasta wheat) 
+Kecap Manis (Soy Sauce)
+Ketjap Manis (Soy Sauce)
+Kluski Pasta
+Maida (Indian wheat flour)
+Malt
+Malted Barley Flour
+Malted Milk
+Malt Extract
+Malt Syrup
+Malt Flavoring
+Malt Vinegar 
+Macha Wheat (Triticum aestivum) 
+Matza
+Matzah
+Matzo
+Matzo Semolina 
+Meripro 711
+Mir 
+Nishasta
+Oriental Wheat (Triticum turanicum) 
+Orzo Pasta
+Pasta
+Pearl Barley
+Persian Wheat (Triticum carthlicum) 
+Perungayam
+Poulard Wheat (Triticum turgidum)
+Polish Wheat (Triticum polonicum) 
+Rice Malt (if barley or Koji are used)
+Roux
+Rusk
+Rye
+Seitan
+Semolina
+Semolina Triticum
+Shot Wheat (Triticum aestivum) 
+Small Spelt
+Spirits (Specific Types)
+Spelt (Triticum spelta)
+Sprouted Wheat or Barley
+Stearyldimoniumhydroxypropyl Hydrolyzed Wheat Protein 
+Strong Flour
+Suet in Packets
+Tabbouleh 
+Tabouli
+Teriyaki Sauce
+Timopheevi Wheat (Triticum timopheevii) 
+Triticale X triticosecale
+Triticum Vulgare (Wheat) Flour Lipids
+Triticum Vulgare (Wheat) Germ Extract
+Triticum Vulgare (Wheat) Germ Oil
+Udon (wheat noodles)
+Unbleached Flour 
+Vavilovi Wheat (Triticum aestivum) 
+Vital Wheat Gluten
+Wheat, Abyssinian Hard triticum durum
+Wheat Amino Acids
+Wheat Bran Extract
+Wheat, Bulgur 
+Wheat Durum Triticum 
+Wheat Germ Extract
+Wheat Germ Glycerides
+Wheat Germ Oil
+Wheat Germamidopropyldimonium Hydroxypropyl Hydrolyzed Wheat Protein
+Wheat Grass (can contain seeds) 
+Wheat Nuts
+Wheat Protein
+Wheat Triticum aestivum 
+Wheat Triticum Monococcum
+Wheat (Triticum Vulgare) Bran Extract
+Whole-Meal Flour
+Wild Einkorn (Triticum boeotictim) 
+Wild Emmer (Triticum dicoccoides)

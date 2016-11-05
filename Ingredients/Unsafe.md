@@ -49,11 +49,11 @@ Heeng
 Hing
 Hordeum Vulgare Extract
 Hydroxypropyltrimonium Hydrolyzed Wheat Protein 
-Kamut (Pasta wheat) 
-Kecap Manis (Soy Sauce)
-Ketjap Manis (Soy Sauce)
+Kamut
+Kecap Manis
+Ketjap Manis
 Kluski Pasta
-Maida (Indian wheat flour)
+Maida
 Malt
 Malted Barley Flour
 Malted Milk
@@ -113,7 +113,7 @@ Wheat Germ Extract
 Wheat Germ Glycerides
 Wheat Germ Oil
 Wheat Germamidopropyldimonium Hydroxypropyl Hydrolyzed Wheat Protein
-Wheat Grass (can contain seeds) 
+Wheat Grass
 Wheat Nuts
 Wheat Protein
 Wheat Triticum aestivum 

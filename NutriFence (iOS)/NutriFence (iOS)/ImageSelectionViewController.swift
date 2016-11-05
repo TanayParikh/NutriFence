@@ -9,8 +9,20 @@
 import UIKit
 import SwiftyJSON
 
-class ImageSelectionViewController: UIViewController, TGCameraDelegate {
+@IBDesignable
+class ImageSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var takePictureButton: UIButton!
+    @IBOutlet weak var chooseFromLibraryButton: UIButton!
+    
+    var imagePicker = UIImagePickerController()
+    private var backgroundGradient: CAGradientLayer!
+    @IBInspectable var gradientTopColor: UIColor!
+    @IBInspectable var gradientBottomColor: UIColor!
+    static let rgbGrayFontColor = 234
+    
+    let session = URLSession(configuration: URLSessionConfiguration.default)
+    
     var googleAPIKey = "AIzaSyDbLtbxBhXGUmQpRyeKQPryCSZZjeKoKmc"
     var googleURL: URL {
         return URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(googleAPIKey)")!
@@ -18,25 +30,55 @@ class ImageSelectionViewController: UIViewController, TGCameraDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createGradientLayer(top: gradientTopColor, bottom: gradientBottomColor)
+        customizeButtons()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        print(#function)
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Actions
+    
+    @IBAction func takePictureButtonTapped(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: true, completion: nil)
+        }
     }
-    */
+    
+    @IBAction func chooseFromLibraryButtonTapped(_ sender: UIButton) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    // Custom drawing
+    
+    func createGradientLayer(top: UIColor, bottom: UIColor) {
+        backgroundGradient = CAGradientLayer()
+        backgroundGradient.frame = self.view.bounds
+        backgroundGradient.colors = [top.cgColor, bottom.cgColor]
+        self.view.layer.insertSublayer(backgroundGradient, at: 0)
+    }
+    
+    func customizeButtons() {
+        self.takePictureButton.layer.borderWidth = 1.5
+        self.takePictureButton.layer.borderColor = ImageSelectionViewController.customGray().cgColor
+        self.chooseFromLibraryButton.layer.borderWidth = 1.5
+        self.chooseFromLibraryButton.layer.borderColor = ImageSelectionViewController.customGray().cgColor
+    }
+    
+    // Helpers
+    
+    static func customGray() -> UIColor {
+        return UIColor(red: rgbGrayFontColor, green: rgbGrayFontColor, blue: rgbGrayFontColor)
+    }
 
 }
 
@@ -59,41 +101,13 @@ extension ImageSelectionViewController {
             } else {
                 // Parse the response
                 print(json)
-                /*let responses: JSON = json["responses"][0]
-                 
-                 // Get label annotations
-                 let labelAnnotations: JSON = responses["labelAnnotations"]
-                 let numLabels: Int = labelAnnotations.count
-                 var labels: Array<String> = []
-                 if numLabels > 0 {
-                 var labelResultsText:String = "Labels found: "
-                 for index in 0..<numLabels {
-                 let label = labelAnnotations[index]["description"].stringValue
-                 labels.append(label)
-                 }
-                 for label in labels {
-                 // if it's not the last item add a comma
-                 if labels[labels.count - 1] != label {
-                 labelResultsText += "\(label), "
-                 } else {
-                 labelResultsText += "\(label)"
-                 }
-                 }
-                 self.labelResults.text = labelResultsText
-                 } else {
-                 self.labelResults.text = "No labels found"
-                 }
-                 */
             }
         })
     }
     
+    // UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.contentMode = .scaleAspectFit
-            imageView.isHidden = false
-            selectedImage = pickedImage
-            labelResults.isHidden = true
             
             // Base64 encode the image and create the request
             let binaryImageData = base64EncodeImage(pickedImage)

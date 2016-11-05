@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class OpeningSplashViewController: UIViewController, UITableViewDataSource {
+class OpeningSplashViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     private var backgroundGradient: CAGradientLayer!
     @IBInspectable var gradientTopColor: UIColor!
@@ -26,6 +26,7 @@ class OpeningSplashViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectionTableView.dataSource = self
+        selectionTableView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -53,7 +54,20 @@ class OpeningSplashViewController: UIViewController, UITableViewDataSource {
         cell?.indentationLevel = 0
         cell?.preservesSuperviewLayoutMargins = false
         cell?.layoutMargins = UIEdgeInsets.zero
+        cell?.selectionStyle = .none
         return cell!
+    }
+    
+    // Table view delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+        cell.accessoryType = .checkmark
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+        cell.accessoryType = .none
     }
     
     // Custom drawing

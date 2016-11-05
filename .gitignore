@@ -174,3 +174,9 @@ jspm_packages
 
 # Output of 'npm pack'
 *.tgz
+
+
+### Redis ###
+# Ignore redis binary dump (dump.rdb) files
+
+*.rdb

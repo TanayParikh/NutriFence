@@ -1,0 +1,6 @@
+framework module TGCameraViewController {
+  umbrella header "TGCameraViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,6 +1,6 @@
 # NutriFence
 
-## Core Features:
+### Core Features:
 - Scan
    - Dev: Get images
    - Prod: Take pics

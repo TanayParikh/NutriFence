@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="raQ-eO-C6c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,36 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Page View Controller-->
-        <scene sceneID="JaE-hJ-Fb6">
-            <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hoZ-Nw-s9a" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ros-u0-WTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-66" y="-367"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ezj-vc-m5Q">
-            <objects>
-                <viewController id="c26-nh-bGC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yhv-ff-Dc3"/>
-                        <viewControllerLayoutGuide type="bottom" id="xYl-iK-P1X"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FIA-8k-XzU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qm7-tE-YBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-71" y="295"/>
-        </scene>
         <!--Opening Splash View Controller-->
         <scene sceneID="Ady-JE-lib">
             <objects>
-                <viewController storyboardIdentifier="OpeningSplashViewController" id="raQ-eO-C6c" customClass="OpeningSplashViewController" customModule="NutriFence__iOS_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpeningSplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="raQ-eO-C6c" customClass="OpeningSplashViewController" customModule="NutriFence__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mwj-7M-fjt"/>
                         <viewControllerLayoutGuide type="bottom" id="bMh-zR-b1h"/>
@@ -65,6 +39,9 @@
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJV-6E-3mK">
                                 <rect key="frame" x="279" y="607" width="80" height="40"/>
                                 <state key="normal" image="NextArrow"/>
+                                <connections>
+                                    <action selector="scanArrowButtonTapped:" destination="raQ-eO-C6c" eventType="touchUpInside" id="Hmi-vO-qso"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="4" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tZB-8h-vbf">
                                 <rect key="frame" x="67" y="269" width="240" height="190"/>
@@ -127,7 +104,7 @@
         <!--Image Selection Controller-->
         <scene sceneID="oGv-36-Nbs">
             <objects>
-                <viewController storyboardIdentifier="ImageSelectionViewController" title="Image Selection Controller" id="rJ9-tU-zuL" customClass="ImageSelectionViewController" customModule="NutriFence__iOS_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSelectionViewController" title="Image Selection Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rJ9-tU-zuL" customClass="ImageSelectionViewController" customModule="NutriFence__iOS_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hiu-x3-9y8"/>
                         <viewControllerLayoutGuide type="bottom" id="0UD-vG-o5W"/>
@@ -147,7 +124,7 @@
                                     <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="takePictureButtonTapped:" destination="rJ9-tU-zuL" eventType="touchUpInside" id="Vxy-sq-Ngl"/>
+                                    <action selector="takePictureButtonTapped:" destination="rJ9-tU-zuL" eventType="touchUpInside" id="gO3-8N-auL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-FF-1UW">
@@ -158,7 +135,7 @@
                                     <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseFromLibraryButtonTapped:" destination="rJ9-tU-zuL" eventType="touchUpInside" id="bLJ-7q-RRD"/>
+                                    <action selector="chooseFromLibraryButtonTapped:" destination="rJ9-tU-zuL" eventType="touchUpInside" id="pN5-cP-Qsm"/>
                                 </connections>
                             </button>
                         </subviews>

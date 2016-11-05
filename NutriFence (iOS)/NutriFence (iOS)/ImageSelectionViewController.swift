@@ -53,6 +53,7 @@ class ImageSelectionViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func chooseFromLibraryButtonTapped(_ sender: UIButton) {
+        print(#function)
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }

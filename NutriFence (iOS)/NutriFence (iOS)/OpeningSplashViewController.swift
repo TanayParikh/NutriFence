@@ -35,6 +35,11 @@ class OpeningSplashViewController: UIViewController, UITableViewDataSource, UITa
         createGradientLayer(top: gradientTopColor, bottom: gradientBottomColor)
     }
     
+    @IBAction func scanArrowButtonTapped(_ sender: UIButton) {
+        print(#function)
+    }
+    
+    
     // Data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

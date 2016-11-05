@@ -21,13 +21,13 @@ client.smembers('Celiac Unfriendly', function(err, list) {
 var express = require('express'),
 
 //set an instance of express
-app = express(),
+    app = express(),
 
 //require the body-parser nodejs module
-bodyParser = require('body-parser'),
+    bodyParser = require('body-parser'),
 
 //require the path nodejs module
-path = require("path");
+    path = require("path");
 
 //support parsing of application/json type post data
 app.use(bodyParser.json());
@@ -40,22 +40,49 @@ app.use(express.static(path.join(__dirname, 'www')));
 
 //tell express what to do when the /ClassificationAPI route is requested
 app.post('/ClassificationAPI',function(req, res){
-	var json = req.body.responses[0].textAnnotations[0].description;
-	json = json.toLowerCase();
+    var rawIngredients = req.body.responses[0].textAnnotations[0].description;
+    rawIngredients = rawIngredients.toLowerCase();
 
-	var index = json.indexOf("ingredients") + 13;
-	json = json.substring(index, json.length-1);
-	json = json.replace(/(\n)+/g, ' ');
-	json = json.replace(/[(]+/g, ',');
-	json = json.replace(/[)]+/g, ',');
-	json = json.split(",");
+    var index = rawIngredients.indexOf("ingredients") + 13;
+    rawIngredients = rawIngredients.substring(index, rawIngredients.length-1);
+    rawIngredients = rawIngredients.replace(/(\n)+/g, ' ');
+    rawIngredients = rawIngredients.replace(/[(]+/g, ',');
+    rawIngredients = rawIngredients.replace(/[)]+/g, ',');
+    rawIngredients = rawIngredients.split(",");
 
-  foreach (item in json) {
-    
+    var goodIngredients;
+    var badIngredients;
+    var unsureIngredients;
 
-  }
+    rawIngredients.forEach(function(ingredient) {
+        if (!isUnsafe(ingredient) && !isUnfriendly(ingredient)) {
+            if (ingredient) goodIngredients.push(ingredient);
+        }
+    });
 
-    res.setHeader('Content-Type', 'application/json');
+    function isUnsafe(ingredient) {
+        unsafeList.forEach(function (unsafeItem) {
+            if (ingredient.contains(unsafeItem)) {
+                badIngredients.push(ingredient);
+                return true;
+            }
+        });
+
+        return false;
+    }
+
+    function isUnfriendly(ingredient) {
+        unfriendlyList.forEach(function (unfriendlyItem) {
+            if (ingredient.contains(unfriendlyItem)) {
+                unsureIngredients.push(ingredient);
+                return true;
+            }
+        });
+
+        return false;
+    }
+
+    res.setHeader('Content-Type', 'application/rawIngredients');
 
     //mimic a slow network connection
     setTimeout(function(){

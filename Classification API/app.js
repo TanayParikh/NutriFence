@@ -52,13 +52,14 @@ app.post('/ClassificationAPI',function(req, res){
 
     rawIngredients = rawIngredients.replace(/[.]+/g, ',');
     rawIngredients = rawIngredients.split(",");
-    
+
+
     var ind = rawIngredients.indexOf("may contain");
-    for (var i=ind; i<rawIngredients.length-1; i++) {
-        rawIngredients.pop();
+    if (ind) {
+        for (var i=ind; i<rawIngredients.length-1; i++) {
+            rawIngredients.pop();
+        }
     }
-
-
 
     // Parses ingredients with sub-group
     var subGroupHead = null;
@@ -66,11 +67,10 @@ app.post('/ClassificationAPI',function(req, res){
     for (var i = 0; i < rawIngredients.length -1; ++i) {
         var ingredient = rawIngredients[i];
 
-        if (ingredient.indexOf('(')) {
+        if (ingredient.indexOf('(') != -1) {
             var index = ingredient.indexOf('(');
-
             subGroupHead = ingredient.substr(0, index-1); //ingredient.replace(/[(]+/g, '');
-            rawIngredients[i] = ingredient.substr(index+1); + " (" + subGroupHead + ")";
+            rawIngredients[i] = ingredient.substr(index+1) + " (" + subGroupHead + ")";
         } else if (ingredient.indexOf(')') != -1) {
             console.log(ingredient.replace(/[)]+/g, '') + " (" + subGroupHead + ")");
             rawIngredients[i] = ingredient.replace(/[)]+/g, '') + " (" + subGroupHead + ")";

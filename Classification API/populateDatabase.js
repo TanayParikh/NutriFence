@@ -117,8 +117,9 @@ exports.addCeliacUnsafe = function() {
         'wheat, abyssinian hard triticum durum',
         'wheat amino acids',
         'wheat bran extract',
-        'wheat, bulgur ',
-        'wheat durum triticum ',
+        'wheat', 
+        'bulgur',
+        'wheat durum ctriticum',
         'wheat germ extract',
         'wheat germ glycerides',
         'wheat germ oil',
@@ -126,11 +127,11 @@ exports.addCeliacUnsafe = function() {
         'wheat grass',
         'wheat nuts',
         'wheat protein',
-        'wheat triticum aestivum ',
+        'wheat triticum aestivum',
         'wheat triticum monococcum',
         'wheat (triticum vulgare) bran extract',
         'whole-meal flour',
-        'wild einkorn (triticum boeotictim) ',
+        'wild einkorn (triticum boeotictim)',
         'wild emmer (triticum dicoccoides)'
     ], function (err, reply) {
         console.log(reply);

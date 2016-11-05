@@ -50,9 +50,9 @@ app.post('/ClassificationAPI',function(req, res){
     rawIngredients = rawIngredients.replace(/[)]+/g, ',');
     rawIngredients = rawIngredients.split(",");
 
-    var goodIngredients;
-    var badIngredients;
-    var unsureIngredients;
+    var goodIngredients = [];
+    var badIngredients = [];
+    var unsureIngredients = [];
 
     rawIngredients.forEach(function(ingredient) {
         if (!isUnsafe(ingredient) && !isUnfriendly(ingredient)) {
@@ -62,7 +62,7 @@ app.post('/ClassificationAPI',function(req, res){
 
     function isUnsafe(ingredient) {
         unsafeList.forEach(function (unsafeItem) {
-            if (ingredient.contains(unsafeItem)) {
+            if (ingredient.includes(unsafeItem)) {
                 badIngredients.push(ingredient);
                 return true;
             }
@@ -73,7 +73,7 @@ app.post('/ClassificationAPI',function(req, res){
 
     function isUnfriendly(ingredient) {
         unfriendlyList.forEach(function (unfriendlyItem) {
-            if (ingredient.contains(unfriendlyItem)) {
+            if (ingredient.includes(unfriendlyItem)) {
                 unsureIngredients.push(ingredient);
                 return true;
             }
@@ -88,13 +88,13 @@ app.post('/ClassificationAPI',function(req, res){
     setTimeout(function(){
 
         res.send(JSON.stringify({
-            Response:
+            Bad_Ingredients: badIngredients
         }));
 
     }, 1000);
 
     //debugging output for the terminal
-    console.log('you posted Response: ' + );
+    console.log('you posted Response: ' + badIngredients);
 });
 
 //wait for a connection

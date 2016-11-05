@@ -56,17 +56,13 @@ app.post('/ClassificationAPI',function(req, res){
             var index = ingredient.indexOf('(');
             subGroupHead = ingredient.substr(0, index-1); //ingredient.replace(/[(]+/g, '');
             rawIngredients[i] = ingredient.substr(index+1) + "(" + subGroupHead + ")";
-        } else if (ingredient.indexOf(')') != -1) {
+        } else if ((ingredient.indexOf(')') != -1) && subGroupHead) {
             rawIngredients[i] = ingredient.replace(/[)]+/g, '') + " (" + subGroupHead + ")";
             
             subGroupHead = null;
         } else if (subGroupHead) {
             rawIngredients[i] = ingredient + " (" + subGroupHead + ")";
         }
-    }
-
-    for (var i=0; i< rawIngredients.length; i++) {
-        rawIngredients[i].replace(/[()]+/g, '');
     }
 
     var mayContain = [];
@@ -81,9 +77,8 @@ app.post('/ClassificationAPI',function(req, res){
             for (var j=k+1; j<rawIngredients.length; j++) {
                 mayContain.push(rawIngredients[j]);
             }
-            for (var j=k; j<rawIngredients.length; j++) {
-                rawIngredients.splice(j, 1);
-            }
+
+            rawIngredients.splice(k, rawIngredients.length-k);
         }
     }
 

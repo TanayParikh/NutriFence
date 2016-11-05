@@ -9,29 +9,46 @@ var populateDatabase = require("./populateDatabase.js");
 populateDatabase.addCeliacUnsafe();
 populateDatabase.addCeliacUnfriendly();
 
-var express = require('express');
+//require the express nodejs module
+var express = require('express'),
 
-/*var app = express();
+//set an instance of express
+app = express(),
 
-app.get('/notes', function(req, res) {
-    res.json({notes: "This is your notebook. Edit this to start saving your notes!"})
-});
+//require the body-parser nodejs module
+bodyParser = require('body-parser'),
 
-app.listen(3000);
+//require the path nodejs module
+path = require("path");
 
-var bodyParser = require('body-parser');
-var app = express();
-port = parseInt(process.env.PORT, 10) || 8080;
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// parse application/json
+//support parsing of application/json type post data
 app.use(bodyParser.json());
 
-app.listen(port);
+//support parsing of application/x-www-form-urlencoded post data
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post("/someRoute", function(req, res) {
-    console.log(req.body);
-    res.status(200).json({ status: 'SUCCESS' });
-}*/
+//tell express that www is the root of our public web folder
+app.use(express.static(path.join(__dirname, 'www')));
+
+//tell express what to do when the /about route is requested
+app.post('/ClassificationAPI',function(req, res){
+    res.setHeader('Content-Type', 'application/json');
+
+    //mimic a slow network connection
+    setTimeout(function(){
+
+        res.send(JSON.stringify({
+            firstName: req.body.firstName || null,
+            lastName: req.body.lastName || null
+        }));
+
+    }, 1000)
+
+    //debugging output for the terminal
+    console.log('you posted: First Name: ' + req.body.firstName + ', Last Name: ' + req.body.lastName);
+});
+
+//wait for a connection
+app.listen(3000, function () {
+    console.log('Server is running. Point your browser to: http://localhost:3000');
+});

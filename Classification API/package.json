@@ -1,0 +1,18 @@
+{
+  "name": "ingredient_classification",
+  "version": "1.0.0",
+  "description": "Determines if a particular ingredient is safe for consumption.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TanayParikh/NutriFence.git"
+  },
+  "author": "NutriFence",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^2.6.3"
+  }
+}

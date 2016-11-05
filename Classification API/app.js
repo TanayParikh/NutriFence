@@ -28,22 +28,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //tell express that www is the root of our public web folder
 app.use(express.static(path.join(__dirname, 'www')));
 
-//tell express what to do when the /about route is requested
+//tell express what to do when the /ClassificationAPI route is requested
 app.post('/ClassificationAPI',function(req, res){
+	var description = req.body.responses.textAnnotations[0].description;
+
     res.setHeader('Content-Type', 'application/json');
 
     //mimic a slow network connection
     setTimeout(function(){
 
         res.send(JSON.stringify({
-            firstName: req.body.firstName || null,
-            lastName: req.body.lastName || null
+            First: description,
         }));
 
     }, 1000)
 
     //debugging output for the terminal
-    console.log('you posted: First Name: ' + req.body.firstName + ', Last Name: ' + req.body.lastName);
+    console.log('you posted: First: ' + description);
 });
 
 //wait for a connection

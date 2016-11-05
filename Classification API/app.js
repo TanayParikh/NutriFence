@@ -2,12 +2,10 @@ var redis = require('redis');
 var client = redis.createClient();
 
 client.on('connect', function() {
-    console.log('connected');
+    console.log('app connected');
 });
 
 var populateDatabase = require("./populateDatabase.js");
-populateDatabase.addCeliacUnsafe();
-populateDatabase.addCeliacUnfriendly();
 
 //require the express nodejs module
 var express = require('express'),

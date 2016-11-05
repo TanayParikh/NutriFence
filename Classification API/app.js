@@ -7,6 +7,8 @@ client.on('connect', function() {
 
 var populateDatabase = require("./populateDatabase.js");
 
+
+
 //require the express nodejs module
 var express = require('express'),
 
@@ -30,7 +32,20 @@ app.use(express.static(path.join(__dirname, 'www')));
 
 //tell express what to do when the /ClassificationAPI route is requested
 app.post('/ClassificationAPI',function(req, res){
-	var description = req.body.responses.textAnnotations[0].description;
+	var json = req.body.responses[0].textAnnotations[0].description;
+	json = json.toLowerCase();
+
+	var index = json.indexOf("ingredients") + 13;
+	json = json.substring(index, json.length-1);
+	json = json.replace(/(\n)+/g, ' ');
+	json = json.replace(/[(]+/g, ',');
+	json = json.replace(/[)]+/g, ',');
+	json = json.split(",");
+
+  foreach (item in json) {
+    
+
+  }
 
     res.setHeader('Content-Type', 'application/json');
 
@@ -38,13 +53,13 @@ app.post('/ClassificationAPI',function(req, res){
     setTimeout(function(){
 
         res.send(JSON.stringify({
-            First: description,
+            Response:
         }));
 
-    }, 1000)
+    }, 1000);
 
     //debugging output for the terminal
-    console.log('you posted: First: ' + description);
+    console.log('you posted Response: ' + );
 });
 
 //wait for a connection

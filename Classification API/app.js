@@ -7,7 +7,15 @@ client.on('connect', function() {
 
 var populateDatabase = require("./populateDatabase.js");
 
+var unsafeList;
+client.smembers('Celiac Unsafe', function(err, list) {
+    unsafeList = list;
+})
 
+var unfriendlyList;
+client.smembers('Celiac Unfriendly', function(err, list) {
+    unfriendlyList = list;
+})
 
 //require the express nodejs module
 var express = require('express'),

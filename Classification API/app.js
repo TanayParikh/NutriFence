@@ -5,8 +5,9 @@ client.on('connect', function() {
     console.log('connected');
 });
 
-client.scard("Celiac Unsafe", redis.print);
-client.scard("Celiac Unfriendly", redis.print);
+var populateDatabase = require("./populateDatabase.js");
+populateDatabase.addCeliacUnsafe();
+populateDatabase.addCeliacUnfriendly();
 
 var express = require('express');
 

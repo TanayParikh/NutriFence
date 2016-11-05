@@ -1,3 +1,9 @@
+/*
+	TODO: check for may contain -> mayContainGluten = true automatically
+	 					contains -> isGlutenFree = false automatically
+*/
+
+
 var redis = require('redis');
 var client = redis.createClient();
 
@@ -6,6 +12,8 @@ client.on('connect', function() {
 });
 
 var populateDatabase = require("./populateDatabase.js");
+populateDatabase.addCeliacUnsafe();
+populateDatabase.addCeliacUnfriendly();
 
 var unsafeList;
 client.smembers('Celiac Unsafe', function(err, list) {
@@ -83,14 +91,21 @@ app.post('/ClassificationAPI',function(req, res){
 
         return false;
     }
-
+    
+    var pass = !(badIngredients.length != 0);
+    var maybe = (unsureIngredients.length != 0);
+    
     res.setHeader('Content-Type', 'application/rawIngredients');
 
     //mimic a slow network connection
     setTimeout(function(){
 
         res.send(JSON.stringify({
-            Bad_Ingredients: badIngredients
+            Bad_Ingredients: badIngredients,
+        	Unsure_Ingredients: unsureIngredients,
+            Good_Ingredients: goodIngredients,
+            isGlutenFree: pass,
+            mayContainGluten: maybe
         }));
 
     }, 1000);

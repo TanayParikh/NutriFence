@@ -58,23 +58,25 @@ app.post('/ClassificationAPI',function(req, res){
             subGroupHead = ingredient.substr(0, index-1); //ingredient.replace(/[(]+/g, '');
             rawIngredients[i] = ingredient.substr(index+1) + "(" + subGroupHead + ")";
         } else if (ingredient.indexOf(')') != -1) {
-            rawIngredients[i] = ingredient.replace(/[)]+/g, ',') + " (" + subGroupHead + ")";
+            rawIngredients[i] = ingredient.replace(/[)]+/g, '') + " (" + subGroupHead + ")";
+            
             subGroupHead = null;
         } else if (subGroupHead) {
             rawIngredients[i] = ingredient + " (" + subGroupHead + ")";
         }
     }
-    
-    rawIngredients = rawIngredients.split(",");
 
     var mayContain = [];
     var goodIngredients = [];
     var badIngredients = [];
     var unsureIngredients = [];
 
-    for (var i=0; i<rawIngredients.length-1; i++) {
+    for (var i=0; i<rawIngredients.length; i++) {
+        console.log(rawIngredients[i]);
         if ( rawIngredients[i].includes("may contain") ) {
-            for (var j=i; j<rawIngredients.length-1; j++) {
+            var temp = rawIngredients[i].substring(rawIngredients[i].indexOf("may contain")+12, rawIngredients[i].length);
+            mayContain.push(temp);
+            for (var j=i+1; j<rawIngredients.length; j++) {
                 mayContain.push(rawIngredients[j]);
                 rawIngredients.pop();
             }

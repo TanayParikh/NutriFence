@@ -3,7 +3,7 @@
 
 ### Core Features:
 - NutriFence is an iOS app that allows you to take an image of a list of ingredients and 
-  have it tell you whether or not that item is safe for consumption
+  have it tell you whether or not that item is safe for consumption if you have Celiac's
 - Core requirements: 
    - Capture the image & format it correctly
    - Send this image to Processing API (OCR)

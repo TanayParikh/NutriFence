@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D661DCD6DDD00DEF76E /* AppDelegate.swift */; };
+		76598D691DCD6DDD00DEF76E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D681DCD6DDD00DEF76E /* ViewController.swift */; };
+		76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6A1DCD6DDE00DEF76E /* Main.storyboard */; };
+		76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */; };
+		76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */; };
+		76598D7C1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D7B1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift */; };
+		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76598D781DCD6DDE00DEF76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76598D5B1DCD6DDD00DEF76E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76598D621DCD6DDD00DEF76E;
+			remoteInfo = "NutriFence (iOS)";
+		};
+		76598D831DCD6DDE00DEF76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76598D5B1DCD6DDD00DEF76E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76598D621DCD6DDD00DEF76E;
+			remoteInfo = "NutriFence (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76598D631DCD6DDD00DEF76E /* NutriFence (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NutriFence (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76598D661DCD6DDD00DEF76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76598D681DCD6DDD00DEF76E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76598D6B1DCD6DDE00DEF76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76598D701DCD6DDE00DEF76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76598D721DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76598D771DCD6DDE00DEF76E /* NutriFence (iOS)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NutriFence (iOS)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76598D7B1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFence__iOS_Tests.swift; sourceTree = "<group>"; };
+		76598D7D1DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76598D821DCD6DDE00DEF76E /* NutriFence (iOS)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NutriFence (iOS)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFence__iOS_UITests.swift; sourceTree = "<group>"; };
+		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76598D601DCD6DDD00DEF76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76598D741DCD6DDE00DEF76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76598D7F1DCD6DDE00DEF76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76598D5A1DCD6DDD00DEF76E = {
+			isa = PBXGroup;
+			children = (
+				76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */,
+				76598D7A1DCD6DDE00DEF76E /* NutriFence (iOS)Tests */,
+				76598D851DCD6DDE00DEF76E /* NutriFence (iOS)UITests */,
+				76598D641DCD6DDD00DEF76E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76598D641DCD6DDD00DEF76E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76598D631DCD6DDD00DEF76E /* NutriFence (iOS).app */,
+				76598D771DCD6DDE00DEF76E /* NutriFence (iOS)Tests.xctest */,
+				76598D821DCD6DDE00DEF76E /* NutriFence (iOS)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
+			isa = PBXGroup;
+			children = (
+				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
+				76598D681DCD6DDD00DEF76E /* ViewController.swift */,
+				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
+				76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */,
+				76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */,
+				76598D721DCD6DDE00DEF76E /* Info.plist */,
+			);
+			path = "NutriFence (iOS)";
+			sourceTree = "<group>";
+		};
+		76598D7A1DCD6DDE00DEF76E /* NutriFence (iOS)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				76598D7B1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift */,
+				76598D7D1DCD6DDE00DEF76E /* Info.plist */,
+			);
+			path = "NutriFence (iOS)Tests";
+			sourceTree = "<group>";
+		};
+		76598D851DCD6DDE00DEF76E /* NutriFence (iOS)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */,
+				76598D881DCD6DDE00DEF76E /* Info.plist */,
+			);
+			path = "NutriFence (iOS)UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76598D621DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76598D8B1DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)" */;
+			buildPhases = (
+				76598D5F1DCD6DDD00DEF76E /* Sources */,
+				76598D601DCD6DDD00DEF76E /* Frameworks */,
+				76598D611DCD6DDD00DEF76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NutriFence (iOS)";
+			productName = "NutriFence (iOS)";
+			productReference = 76598D631DCD6DDD00DEF76E /* NutriFence (iOS).app */;
+			productType = "com.apple.product-type.application";
+		};
+		76598D761DCD6DDE00DEF76E /* NutriFence (iOS)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76598D8E1DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)Tests" */;
+			buildPhases = (
+				76598D731DCD6DDE00DEF76E /* Sources */,
+				76598D741DCD6DDE00DEF76E /* Frameworks */,
+				76598D751DCD6DDE00DEF76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76598D791DCD6DDE00DEF76E /* PBXTargetDependency */,
+			);
+			name = "NutriFence (iOS)Tests";
+			productName = "NutriFence (iOS)Tests";
+			productReference = 76598D771DCD6DDE00DEF76E /* NutriFence (iOS)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76598D811DCD6DDE00DEF76E /* NutriFence (iOS)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76598D911DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)UITests" */;
+			buildPhases = (
+				76598D7E1DCD6DDE00DEF76E /* Sources */,
+				76598D7F1DCD6DDE00DEF76E /* Frameworks */,
+				76598D801DCD6DDE00DEF76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76598D841DCD6DDE00DEF76E /* PBXTargetDependency */,
+			);
+			name = "NutriFence (iOS)UITests";
+			productName = "NutriFence (iOS)UITests";
+			productReference = 76598D821DCD6DDE00DEF76E /* NutriFence (iOS)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76598D5B1DCD6DDD00DEF76E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = NutriFence;
+				TargetAttributes = {
+					76598D621DCD6DDD00DEF76E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3L9BJWLUW8;
+						ProvisioningStyle = Automatic;
+					};
+					76598D761DCD6DDE00DEF76E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3L9BJWLUW8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 76598D621DCD6DDD00DEF76E;
+					};
+					76598D811DCD6DDE00DEF76E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3L9BJWLUW8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 76598D621DCD6DDD00DEF76E;
+					};
+				};
+			};
+			buildConfigurationList = 76598D5E1DCD6DDD00DEF76E /* Build configuration list for PBXProject "NutriFence (iOS)" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76598D5A1DCD6DDD00DEF76E;
+			productRefGroup = 76598D641DCD6DDD00DEF76E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76598D621DCD6DDD00DEF76E /* NutriFence (iOS) */,
+				76598D761DCD6DDE00DEF76E /* NutriFence (iOS)Tests */,
+				76598D811DCD6DDE00DEF76E /* NutriFence (iOS)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76598D611DCD6DDD00DEF76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */,
+				76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */,
+				76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76598D751DCD6DDE00DEF76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76598D801DCD6DDE00DEF76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76598D5F1DCD6DDD00DEF76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76598D691DCD6DDD00DEF76E /* ViewController.swift in Sources */,
+				76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76598D731DCD6DDE00DEF76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76598D7C1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76598D7E1DCD6DDE00DEF76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76598D791DCD6DDE00DEF76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76598D621DCD6DDD00DEF76E /* NutriFence (iOS) */;
+			targetProxy = 76598D781DCD6DDE00DEF76E /* PBXContainerItemProxy */;
+		};
+		76598D841DCD6DDE00DEF76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76598D621DCD6DDD00DEF76E /* NutriFence (iOS) */;
+			targetProxy = 76598D831DCD6DDE00DEF76E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76598D6A1DCD6DDE00DEF76E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76598D6B1DCD6DDE00DEF76E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76598D701DCD6DDE00DEF76E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76598D891DCD6DDE00DEF76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76598D8A1DCD6DDE00DEF76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76598D8C1DCD6DDE00DEF76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3L9BJWLUW8;
+				INFOPLIST_FILE = "NutriFence (iOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		76598D8D1DCD6DDE00DEF76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3L9BJWLUW8;
+				INFOPLIST_FILE = "NutriFence (iOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		76598D8F1DCD6DDE00DEF76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3L9BJWLUW8;
+				INFOPLIST_FILE = "NutriFence (iOS)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriFence (iOS).app/NutriFence (iOS)";
+			};
+			name = Debug;
+		};
+		76598D901DCD6DDE00DEF76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3L9BJWLUW8;
+				INFOPLIST_FILE = "NutriFence (iOS)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutriFence (iOS).app/NutriFence (iOS)";
+			};
+			name = Release;
+		};
+		76598D921DCD6DDE00DEF76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3L9BJWLUW8;
+				INFOPLIST_FILE = "NutriFence (iOS)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "NutriFence (iOS)";
+			};
+			name = Debug;
+		};
+		76598D931DCD6DDE00DEF76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3L9BJWLUW8;
+				INFOPLIST_FILE = "NutriFence (iOS)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "NutriFence (iOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76598D5E1DCD6DDD00DEF76E /* Build configuration list for PBXProject "NutriFence (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76598D891DCD6DDE00DEF76E /* Debug */,
+				76598D8A1DCD6DDE00DEF76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76598D8B1DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76598D8C1DCD6DDE00DEF76E /* Debug */,
+				76598D8D1DCD6DDE00DEF76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		76598D8E1DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76598D8F1DCD6DDE00DEF76E /* Debug */,
+				76598D901DCD6DDE00DEF76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		76598D911DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76598D921DCD6DDE00DEF76E /* Debug */,
+				76598D931DCD6DDE00DEF76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76598D5B1DCD6DDD00DEF76E /* Project object */;
+}

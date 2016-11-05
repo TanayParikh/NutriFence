@@ -1,9 +1,3 @@
-/*
-	TODO: check for may contain -> mayContainGluten = true automatically
-	 					contains -> isGlutenFree = false automatically
-	TODO: fix the way the API handles brackets
-*/
-
 // start Redis
 var redis = require('redis');
 var client = redis.createClient();
@@ -49,42 +43,49 @@ app.post('/ClassificationAPI',function(req, res){
     var index = rawIngredients.indexOf("ingredients") + 13;
     rawIngredients = rawIngredients.substring(index, rawIngredients.length-1);
     rawIngredients = rawIngredients.replace(/(\n)+/g, ' ');
-
     rawIngredients = rawIngredients.replace(/[.]+/g, ',');
     rawIngredients = rawIngredients.split(",");
-    
-    var ind = rawIngredients.indexOf("may contain");
-    for (var i=ind; i<rawIngredients.length-1; i++) {
-        rawIngredients.pop();
-    }
-
-
 
     // Parses ingredients with sub-group
     var subGroupHead = null;
 
-    for (var i = 0; i < rawIngredients.length -1; ++i) {
+    for (var i = 0; i < rawIngredients.length-1; ++i) {
         var ingredient = rawIngredients[i];
 
-        if (ingredient.indexOf('(')) {
+        if (ingredient.indexOf('(') != -1) {
             var index = ingredient.indexOf('(');
-
             subGroupHead = ingredient.substr(0, index-1); //ingredient.replace(/[(]+/g, '');
-            rawIngredients[i] = ingredient.substr(index+1); + " (" + subGroupHead + ")";
+            rawIngredients[i] = ingredient.substr(index+1) + "(" + subGroupHead + ")";
         } else if (ingredient.indexOf(')') != -1) {
-            console.log(ingredient.replace(/[)]+/g, '') + " (" + subGroupHead + ")");
             rawIngredients[i] = ingredient.replace(/[)]+/g, '') + " (" + subGroupHead + ")";
+            
             subGroupHead = null;
         } else if (subGroupHead) {
-            console.log("SUBGROUP HEAD: " + subGroupHead);
-
             rawIngredients[i] = ingredient + " (" + subGroupHead + ")";
         }
     }
 
+    for (var i=0; i< rawIngredients.length; i++) {
+        rawIngredients[i].replace(/[()]+/g, '');
+    }
+
+    var mayContain = [];
     var goodIngredients = [];
     var badIngredients = [];
     var unsureIngredients = [];
+
+    for (var k=0; k<rawIngredients.length; k++) {
+        if ( rawIngredients[k].includes("may contain") ) {
+            var temp = rawIngredients[k].substring(rawIngredients[k].indexOf("may contain")+12, rawIngredients[k].length);
+            mayContain.push(temp);
+            for (var j=k+1; j<rawIngredients.length; j++) {
+                mayContain.push(rawIngredients[j]);
+            }
+            for (var j=k; j<rawIngredients.length; j++) {
+                rawIngredients.splice(j, 1);
+            }
+        }
+    }
 
     rawIngredients.forEach( function(ingredient) {
         if (!isUnsafe(ingredient) && !isUnfriendly(ingredient)) {
@@ -116,13 +117,14 @@ app.post('/ClassificationAPI',function(req, res){
     
     var pass = !(badIngredients.length != 0);
     var maybe = (unsureIngredients.length != 0);
-    
+
     res.setHeader('Content-Type', 'application/rawIngredients');
 
     res.send(JSON.stringify({
         Bad_Ingredients: badIngredients,
         Unsure_Ingredients: unsureIngredients,
         Good_Ingredients: goodIngredients,
+        May_Contain: mayContain,
         isGlutenFree: pass,
         mayContainGluten: maybe
     }));

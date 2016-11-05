@@ -1,17 +1,17 @@
 Abyssinian Hard (Wheat triticum durum)
-Alcohol (Spirits - Specific Types)
 Atta Flour
-Barley Grass (can contain seeds)
+Barley Grass
 Barley Hordeum vulgare
 Barley Malt
-Beer (most contain barley or wheat)
+Barley Malt Extract
+Beer
 Bleached Flour 
 Bran
 Bread Flour
 Brewer's Yeast
 Brown Flour
-Bulgur (Bulgar Wheat/Nuts) 
 Bulgur Wheat
+Bulgur Nuts
 Cereal Binding
 Chilton
 Club Wheat (Triticum aestivum subspecies compactum) 
@@ -37,10 +37,9 @@ Farina
 Farina Graham 
 Farro
 Filler
-Flour (normally this is wheat)
 Freekeh
 Frikeh
-Fu (dried wheat gluten)
+Fu
 Germ 
 Graham Flour
 Granary Flour
@@ -78,7 +77,7 @@ Persian Wheat (Triticum carthlicum)
 Perungayam
 Poulard Wheat (Triticum turgidum)
 Polish Wheat (Triticum polonicum) 
-Rice Malt (if barley or Koji are used)
+Rice Malt
 Roux
 Rusk
 Rye

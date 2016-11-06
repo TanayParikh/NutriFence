@@ -4,7 +4,7 @@
   "description": "Determines if a particular ingredient is safe for consumption.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,7 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "redis": "^2.6.3",
+    "request": "^2.78.0",
     "supervisor": "^0.11.0"
-  },
-  "scripts": {
-    "start": "node app.js"
   }
 }

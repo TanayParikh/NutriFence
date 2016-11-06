@@ -61,8 +61,7 @@ function interpretAndSendData(req, response) {
     rawIngredients = rawIngredients.substring(index, rawIngredients.length - 1);
     rawIngredients = rawIngredients.replace(/(\n)+/g, ' ');
     rawIngredients = rawIngredients.replace(/[.]+/g, ',');
-
-    console.log("\nbefore: " + rawIngredients);
+    
     spellCheckIngredients(rawIngredients);
 
     // unused function for adding subheadings
@@ -109,12 +108,13 @@ function spellCheckIngredients(rawIngredients) {
     request(options, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             rawIngredients = correctSpellingErrors(body, rawIngredients);
+        } else {
+            console.log("Issue with trying to connect to spellcheck API");
+            console.log("ERROR:  " + error);
+            console.log("STATUS:  " + response.statusCode);
+            console.log("BODY: " + body);
         }
-
-        console.log("ERROR:  " + error);
-        console.log("STATUS:  " + response.statusCode);
-        //console.log(body);
-
+        
         formatRawIngredients2(rawIngredients);
     });
 
@@ -137,8 +137,6 @@ function spellCheckIngredients(rawIngredients) {
 }
 
 function formatRawIngredients2(rawIngredients) {
-    console.log("\nafter: " + rawIngredients);
-
     rawIngredients = rawIngredients.replace(/[)]+/g, ',');
     rawIngredients = rawIngredients.replace(/[(]+/g, '(,');
     rawIngredients = rawIngredients.split(",");

@@ -39,6 +39,10 @@ class OpeningSplashViewController: UIViewController, UITableViewDataSource, UITa
         print(#function)
     }
     
+    @IBAction func unwindToSplash(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     
     // Data source
     
@@ -56,9 +60,6 @@ class OpeningSplashViewController: UIViewController, UITableViewDataSource, UITa
         cell?.textLabel?.font = UIFont(name: "Century Gothic", size: 17)
         cell?.textLabel?.textColor = OpeningSplashViewController.customGray()
         cell?.textLabel?.text = selection
-        cell?.indentationLevel = 0
-        cell?.preservesSuperviewLayoutMargins = false
-        cell?.layoutMargins = UIEdgeInsets.zero
         cell?.selectionStyle = .none
         return cell!
     }

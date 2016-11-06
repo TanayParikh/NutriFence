@@ -40,5 +40,10 @@
     <string>Enable Photos access to import photos from your library.</string>
     <key>NSCameraUsageDescription</key>
     <string>Enable Camera to take photos.</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

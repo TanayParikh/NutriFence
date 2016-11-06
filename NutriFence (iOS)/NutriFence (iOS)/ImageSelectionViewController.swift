@@ -10,16 +10,23 @@ import UIKit
 import SwiftyJSON
 
 @IBDesignable
-class ImageSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImageSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var takePictureButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var chooseFromLibraryButton: UIButton!
+    @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
     
     var imagePicker = UIImagePickerController()
     private var backgroundGradient: CAGradientLayer!
     @IBInspectable var gradientTopColor: UIColor!
     @IBInspectable var gradientBottomColor: UIColor!
     static let rgbGrayFontColor = 234
+    
+    struct ClassificationResult {
+        var isSafe: Bool!
+        var ingredients: [String]!
+    }
     
     let session = URLSession(configuration: URLSessionConfiguration.default)
     
@@ -28,12 +35,19 @@ class ImageSelectionViewController: UIViewController, UIImagePickerControllerDel
         return URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(googleAPIKey)")!
     }
     
+    var classificationURL: URL {
+        return URL(string: "http://159.203.50.87:3000/ClassificationAPI")!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createGradientLayer(top: gradientTopColor, bottom: gradientBottomColor)
         customizeButtons()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        swipeGestureRecognizer.direction = .right
+        swipeGestureRecognizer.numberOfTouchesRequired = 1
+        swipeGestureRecognizer.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -58,6 +72,27 @@ class ImageSelectionViewController: UIViewController, UIImagePickerControllerDel
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func swipeGesture(_ sender: UISwipeGestureRecognizer) {
+        backButton.sendActions(for: .touchUpInside)
+    }
+    
+    // Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowResultSegue" {
+            if let resultsVC = segue.destination as? ResultsViewController {
+                if let result = sender as? ClassificationResult {
+                    resultsVC.ingredients = result.ingredients
+                    resultsVC.isSafe = result.isSafe
+                }
+            }
+        }
+    }
+    
+    @IBAction func unwindToImageSelect(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     
     // Custom drawing
     
@@ -80,6 +115,14 @@ class ImageSelectionViewController: UIViewController, UIImagePickerControllerDel
     static func customGray() -> UIColor {
         return UIColor(red: rgbGrayFontColor, green: rgbGrayFontColor, blue: rgbGrayFontColor)
     }
+    
+    // Gesture Recognizer Delegate
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if touch.location(in: self.view!).x < (self.view.bounds.width / 3) {
+            return true
+        }
+        return false
+    }
 
 }
 
@@ -88,7 +131,7 @@ extension ImageSelectionViewController {
     func analyzeResults(_ dataToParse: Data) {
         
         // Update UI on the main thread
-        DispatchQueue.main.async(execute: {
+        DispatchQueue.main.async(execute: { [weak self] Void in
             
             
             // Use SwiftyJSON to parse results
@@ -100,10 +143,33 @@ extension ImageSelectionViewController {
             if (errorObj.dictionaryValue != [:]) {
                 // self.labelResults.text = "Error code \(errorObj["code"]): \(errorObj["message"])"
             } else {
-                // Parse the response
+                // Handle the response
                 print(json)
+                self!.createRequest(withJson: json)
             }
         })
+    }
+    
+    func parseResults(_ json: JSON) {
+        print(json)
+        var badIngreds = [String]()
+        var goodIngreds = [String]()
+        var items = json["Bad_Ingredients"].arrayValue
+        for item in items {
+            print(item.stringValue)
+            badIngreds += [item.stringValue]
+        }
+        items = json["Good_Ingredients"].arrayValue
+        for item in items {
+            print(item.stringValue)
+            goodIngreds += [item.stringValue]
+        }
+        let isSafe = json["isGlutenFree"].boolValue
+        let result = ClassificationResult(isSafe: isSafe, ingredients: (isSafe ? goodIngreds :badIngreds))
+        print(#function)
+        DispatchQueue.main.async { [weak self] Void in
+            self!.performSegue(withIdentifier: "ShowResultSegue", sender: result)
+        }
     }
     
     // UIImagePickerControllerDelegate
@@ -145,6 +211,36 @@ extension ImageSelectionViewController {
         return imagedata!.base64EncodedString(options: .endLineWithCarriageReturn)
     }
     
+    func createRequest(withJson json: JSON) {
+        // Create our request URL
+        
+        var request = URLRequest(url: classificationURL)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        
+        // Serialize the JSON
+        guard let data = try? json.rawData() else {
+            return
+        }
+        
+        request.httpBody = data
+        
+        // Run the request on a background thread
+        DispatchQueue.global().async { [weak self] Void in
+            let task: URLSessionDataTask = self!.session.dataTask(with: request) { (data, response, error) in
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription ?? "There was a problem")
+                    return
+                }
+                let dataResult = JSON(data: data)
+                self!.parseResults(dataResult)
+            }
+            
+            task.resume()
+        }
+    }
+    
     func createRequest(with imageBase64: String) {
         // Create our request URL
         
@@ -177,7 +273,12 @@ extension ImageSelectionViewController {
         request.httpBody = data
         
         // Run the request on a background thread
-        DispatchQueue.global().async { self.runRequestOnBackgroundThread(request) }
+        let backgroundQueue = DispatchQueue(label: "com.app.queue",
+                                            qos: .background,
+                                            target: nil)
+        backgroundQueue.async(execute: { [weak self] Void in
+            self!.runRequestOnBackgroundThread(request)
+        })
     }
     
     func runRequestOnBackgroundThread(_ request: URLRequest) {
@@ -185,7 +286,7 @@ extension ImageSelectionViewController {
         
         let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
-                print(error?.localizedDescription ?? "")
+                print(error?.localizedDescription ?? "There was a problem")
                 return
             }
             

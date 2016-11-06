@@ -11,10 +11,16 @@ populateDatabase.addCeliacUnsafe();
 populateDatabase.addCeliacUnfriendly();
 // populateDatabase.printMembers();                         // uncomment for testing
 
+// gets autocorrect api key from file
+var fileName = './azure_autocorrect_api_key.txt';
+var fs = require('fs');
+var autoCorrectAPIKey = fs.readFileSync(fileName, 'utf8');
+
 var unsafeList;
 client.smembers('Celiac Unsafe', function(err, list) {
     unsafeList = list;
 });
+
 var unfriendlyList;
 client.smembers('Celiac Unfriendly', function(err, list) {
     unfriendlyList = list;
@@ -85,6 +91,11 @@ function interpretAndSendData(req, res) {
         rawIngredients = rawIngredients.substring(index, rawIngredients.length - 1);
         rawIngredients = rawIngredients.replace(/(\n)+/g, ' ');
         rawIngredients = rawIngredients.replace(/[.]+/g, ',');
+
+        spellCheckIngredients(rawIngredients);
+
+        console.log(rawIngredients);
+
         rawIngredients = rawIngredients.replace(/[)]+/g, ',');
         rawIngredients = rawIngredients.replace(/[(]+/g, '(,');
         rawIngredients = rawIngredients.split(",");
@@ -93,6 +104,59 @@ function interpretAndSendData(req, res) {
             if (rawIngredients[i].includes("(")) rawIngredients.splice(i, 1);
             rawIngredients[i] = rawIngredients[i].replace(/^\s+|\s+$/g, '');
         }
+
+        return rawIngredients;
+    }
+
+    function spellCheckIngredients(rawIngredients) {
+        var request = require('request');
+
+        // Set the headers
+        var headers = {
+            'Ocp-Apim-Subscription-Key': autoCorrectAPIKey
+            //'Content-Type':     'application/x-www-form-urlencoded'
+        };
+
+        // Configure the request
+        var options = {
+            url: 'https://api.cognitive.microsoft.com/bing/v5.0/spellcheck/',
+            method: 'GET',
+            headers: headers,
+            qs: {'text': rawIngredients, 'mode': 'proof'}
+        };
+
+        // Start the request
+        request(options, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                rawIngredients = correctSpellingErrors(body, rawIngredients);
+                console.log("3:" + rawIngredients);
+
+            }
+
+            console.log("ERROR:  " + error);
+
+            //console.log("STATUS:  " + response.statusCode);
+            //console.log(body);
+        });
+
+        console.log("2:" + rawIngredients);
+
+        return rawIngredients;
+    }
+
+    function correctSpellingErrors(response, rawIngredients) {
+        var spellChecked = JSON.parse(response);
+
+        /*for (var i = 0; i < spellChecked.flaggedTokens.length; ++i) {
+            var word = spellChecked.flaggedTokens[i];
+            rawIngredients = rawIngredients.replace(word.token, word.suggestions[0].suggestion);
+        }*/
+
+        spellChecked.flaggedTokens.forEach(function (word) {
+            rawIngredients = rawIngredients.replace(word.token, word.suggestions[0].suggestion);
+            //console.log(word.token + " to be replaced with ");
+            //console.log(word.suggestions[0].suggestion);
+        });
 
         return rawIngredients;
     }

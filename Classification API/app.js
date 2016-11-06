@@ -46,7 +46,7 @@ app.listen(3000, function () {
 function interpretAndSendData(req, res) {
     var rawIngredients = req.body.responses[0].textAnnotations[0].description;
     rawIngredients = formatRawIngredients(rawIngredients);
-    rawIngredients = splitIntoSubgroups(rawIngredients);
+    // rawIngredients = splitIntoSubgroups(rawIngredients);             // adds supheadings - buggy though
 
     var mayContain = [];
     var goodIngredients = [];
@@ -54,12 +54,9 @@ function interpretAndSendData(req, res) {
     var unsureIngredients = [];
     var pass, mayContainGluten;
 
+
     for (var k=0; k<rawIngredients.length; k++) {
-        if (rawIngredients[k].includes("may contain")) {
-            parseMayContain(rawIngredients[k], k);
-            rawIngredients.splice(k, rawIngredients.length - k);
-            mayContainGluten = true;
-        }
+        parseMayContain(rawIngredients[k], k);
     }
 
     rawIngredients.forEach(function (ingredient) {
@@ -88,10 +85,58 @@ function interpretAndSendData(req, res) {
         rawIngredients = rawIngredients.substring(index, rawIngredients.length - 1);
         rawIngredients = rawIngredients.replace(/(\n)+/g, ' ');
         rawIngredients = rawIngredients.replace(/[.]+/g, ',');
+        rawIngredients = rawIngredients.replace(/[)]+/g, ',');
+        rawIngredients = rawIngredients.replace(/[(]+/g, '(,');
         rawIngredients = rawIngredients.split(",");
+
+        for (var i=0; i<rawIngredients.length; i++) {
+            if (rawIngredients[i].includes("(")) rawIngredients.splice(i, 1);
+            rawIngredients[i] = rawIngredients[i].replace(/^\s+|\s+$/g, '');
+        }
+
         return rawIngredients;
     }
 
+    function parseMayContain(ingredient, index) {
+        if (ingredient.includes("may contain")) {
+            var temp = ingredient.substring(ingredient.indexOf("may contain") + 13, ingredient.length);
+            if (temp.includes("wheat")) mayContainGluten = true;
+            mayContain.push(temp);
+
+            for (var i = index + 1; i < rawIngredients.length; i++) {
+                if (rawIngredients[i].includes("wheat")) mayContainGluten = true;
+                mayContain.push(rawIngredients[i]);
+            }
+
+            rawIngredients.splice(k, rawIngredients.length - k);
+        }
+    }
+
+    function isUnsafe(ingredient) {
+        var unsafe = false;
+        unsafeList.forEach(function (unsafeItem) {
+            if (ingredient.includes(unsafeItem)) {
+                badIngredients.push(ingredient);
+                unsafe = true;
+            }
+        });
+
+        return unsafe;
+    }
+
+    function isUnfriendly(ingredient) {
+        var unfriendly = false;
+        unfriendlyList.forEach(function (unfriendlyItem) {
+            if (ingredient.includes(unfriendlyItem)) {
+                unsureIngredients.push(ingredient);
+                unfriendly = true;
+            }
+        });
+
+        return unfriendly;
+    }
+
+    // unused function for adding subheadings
     function splitIntoSubgroups(rawIngredients) {
         var subGroupHead = null;
 
@@ -111,35 +156,5 @@ function interpretAndSendData(req, res) {
             }
         }
         return rawIngredients;
-    }
-
-    function parseMayContain(ingredient, index) {
-        var temp = ingredient.substring(ingredient.indexOf("may contain") + 12, ingredient.length);
-        mayContain.push(temp);
-        for (var i = index + 1; i < rawIngredients.length; i++) {
-            mayContain.push(rawIngredients[i]);
-        }
-    }
-
-    function isUnsafe(ingredient) {
-        unsafeList.forEach(function (unsafeItem) {
-            if (ingredient.includes(unsafeItem)) {
-                badIngredients.push(ingredient);
-                return true;
-            }
-        });
-
-        return false;
-    }
-
-    function isUnfriendly(ingredient) {
-        unfriendlyList.forEach(function (unfriendlyItem) {
-            if (ingredient.includes(unfriendlyItem)) {
-                unsureIngredients.push(ingredient);
-                return true;
-            }
-        });
-
-        return false;
     }
 }

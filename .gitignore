@@ -180,3 +180,6 @@ jspm_packages
 # Ignore redis binary dump (dump.rdb) files
 
 *.rdb
+
+### Azure key ###
+azure_autocorrect_api_key.txt

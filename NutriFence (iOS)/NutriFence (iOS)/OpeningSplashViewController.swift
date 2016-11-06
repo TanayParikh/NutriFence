@@ -15,6 +15,8 @@ class OpeningSplashViewController: UIViewController, UITableViewDataSource, UITa
     @IBInspectable var gradientTopColor: UIColor!
     @IBInspectable var gradientBottomColor: UIColor!
     @IBOutlet weak var selectionTableView: UITableView!
+    @IBOutlet weak var nextArrowButton: UIButton!
+    
     static let rgbGrayFontColor = 234
     let selections = [
         "Lactose Intolerant",
@@ -63,6 +65,7 @@ class OpeningSplashViewController: UIViewController, UITableViewDataSource, UITa
         cell?.selectionStyle = .none
         return cell!
     }
+    
     
     // Table view delegate
     

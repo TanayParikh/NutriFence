@@ -1,5 +1,8 @@
 # ArchHacks 2016: NutriFence
+### Winner of the Best Nutritional Hack by Panera
 #### Matthew Watt, Tanay Parikh, Isabelle Sauve, Daihan Zhu
+Devpost: https://devpost.com/software/nutrifence
+
 
 
 ### Core Features:

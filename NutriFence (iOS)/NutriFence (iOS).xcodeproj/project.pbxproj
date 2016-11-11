@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E63F2E3521F0162D10503B1 /* Pods_NutriFence__iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9125098AAED1349121DDE646 /* Pods_NutriFence__iOS_Tests.framework */; };
+		2C7869EF477C41A77966D20B /* Pods_NutriFence__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0D898703FCA3A4266C58C /* Pods_NutriFence__iOS_.framework */; };
 		76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D661DCD6DDD00DEF76E /* AppDelegate.swift */; };
-		76598D691DCD6DDD00DEF76E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D681DCD6DDD00DEF76E /* ViewController.swift */; };
 		76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6A1DCD6DDE00DEF76E /* Main.storyboard */; };
 		76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */; };
 		76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */; };
 		76598D7C1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D7B1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift */; };
 		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
+		768551681DCE4E8A008A8526 /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */; };
+		7685516A1DCE4E8A008A8526 /* OpeningSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */; };
+		7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551671DCE4E8A008A8526 /* UIColor+Hex.swift */; };
+		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
+		76C056291DCECC9B0007AAB7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C056281DCECC9B0007AAB7 /* ResultsViewController.swift */; };
+		E1B07B51D332B62A4EB06153 /* Pods_NutriFence__iOS_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A309F0F930E8BDC843B02A /* Pods_NutriFence__iOS_UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		76598D631DCD6DDD00DEF76E /* NutriFence (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NutriFence (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A309F0F930E8BDC843B02A /* Pods_NutriFence__iOS_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriFence__iOS_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0908850765BBEEA358EFA7A1 /* Pods-NutriFence (iOS)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)UITests/Pods-NutriFence (iOS)UITests.release.xcconfig"; sourceTree = "<group>"; };
+		49CD07C2F2343023F35B5B80 /* Pods-NutriFence (iOS)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)Tests/Pods-NutriFence (iOS)Tests.release.xcconfig"; sourceTree = "<group>"; };
+		52B0026EBF0E9A9D9757F91B /* Pods-NutriFence (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS).debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		5FB84F789A576C75C829D539 /* Pods-NutriFence (iOS)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)UITests/Pods-NutriFence (iOS)UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		76598D631DCD6DDD00DEF76E /* NutriFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76598D661DCD6DDD00DEF76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76598D681DCD6DDD00DEF76E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		76598D6B1DCD6DDE00DEF76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76598D701DCD6DDE00DEF76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +58,15 @@
 		76598D821DCD6DDE00DEF76E /* NutriFence (iOS)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NutriFence (iOS)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFence__iOS_UITests.swift; sourceTree = "<group>"; };
 		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
+		768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningSplashViewController.swift; sourceTree = "<group>"; };
+		768551671DCE4E8A008A8526 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
+		76C056281DCECC9B0007AAB7 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		9125098AAED1349121DDE646 /* Pods_NutriFence__iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriFence__iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C0D898703FCA3A4266C58C /* Pods_NutriFence__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriFence__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E69867A18043D93B011A71F7 /* Pods-NutriFence (iOS)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)Tests/Pods-NutriFence (iOS)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB5CEF723CB87E18AECE0109 /* Pods-NutriFence (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS).release.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7869EF477C41A77966D20B /* Pods_NutriFence__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E63F2E3521F0162D10503B1 /* Pods_NutriFence__iOS_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B07B51D332B62A4EB06153 /* Pods_NutriFence__iOS_UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2363D34F9CB60A91BCBE0A57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9C0D898703FCA3A4266C58C /* Pods_NutriFence__iOS_.framework */,
+				9125098AAED1349121DDE646 /* Pods_NutriFence__iOS_Tests.framework */,
+				04A309F0F930E8BDC843B02A /* Pods_NutriFence__iOS_UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5945399775051920FBBF812A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52B0026EBF0E9A9D9757F91B /* Pods-NutriFence (iOS).debug.xcconfig */,
+				EB5CEF723CB87E18AECE0109 /* Pods-NutriFence (iOS).release.xcconfig */,
+				E69867A18043D93B011A71F7 /* Pods-NutriFence (iOS)Tests.debug.xcconfig */,
+				49CD07C2F2343023F35B5B80 /* Pods-NutriFence (iOS)Tests.release.xcconfig */,
+				5FB84F789A576C75C829D539 /* Pods-NutriFence (iOS)UITests.debug.xcconfig */,
+				0908850765BBEEA358EFA7A1 /* Pods-NutriFence (iOS)UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		76598D5A1DCD6DDD00DEF76E = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +127,15 @@
 				76598D7A1DCD6DDE00DEF76E /* NutriFence (iOS)Tests */,
 				76598D851DCD6DDE00DEF76E /* NutriFence (iOS)UITests */,
 				76598D641DCD6DDD00DEF76E /* Products */,
+				5945399775051920FBBF812A /* Pods */,
+				2363D34F9CB60A91BCBE0A57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		76598D641DCD6DDD00DEF76E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76598D631DCD6DDD00DEF76E /* NutriFence (iOS).app */,
+				76598D631DCD6DDD00DEF76E /* NutriFence.app */,
 				76598D771DCD6DDE00DEF76E /* NutriFence (iOS)Tests.xctest */,
 				76598D821DCD6DDE00DEF76E /* NutriFence (iOS)UITests.xctest */,
 			);
@@ -97,12 +145,10 @@
 		76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
 			isa = PBXGroup;
 			children = (
-				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
-				76598D681DCD6DDD00DEF76E /* ViewController.swift */,
+				7685516F1DCE5725008A8526 /* View Controllers */,
+				768551671DCE4E8A008A8526 /* UIColor+Hex.swift */,
 				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
-				76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */,
-				76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */,
-				76598D721DCD6DDE00DEF76E /* Info.plist */,
+				7685516E1DCE56EF008A8526 /* Supporting Files */,
 			);
 			path = "NutriFence (iOS)";
 			sourceTree = "<group>";
@@ -125,6 +171,28 @@
 			path = "NutriFence (iOS)UITests";
 			sourceTree = "<group>";
 		};
+		7685516E1DCE56EF008A8526 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
+				7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */,
+				76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */,
+				76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */,
+				76598D721DCD6DDE00DEF76E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7685516F1DCE5725008A8526 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */,
+				768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */,
+				76C056281DCECC9B0007AAB7 /* ResultsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76598D8B1DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)" */;
 			buildPhases = (
+				9B0765B1961710C535FB9183 /* [CP] Check Pods Manifest.lock */,
 				76598D5F1DCD6DDD00DEF76E /* Sources */,
 				76598D601DCD6DDD00DEF76E /* Frameworks */,
 				76598D611DCD6DDD00DEF76E /* Resources */,
+				A92D21313468805BAFCA9F55 /* [CP] Embed Pods Frameworks */,
+				C9BEE1372F97A13159DA2965 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,16 +213,19 @@
 			);
 			name = "NutriFence (iOS)";
 			productName = "NutriFence (iOS)";
-			productReference = 76598D631DCD6DDD00DEF76E /* NutriFence (iOS).app */;
+			productReference = 76598D631DCD6DDD00DEF76E /* NutriFence.app */;
 			productType = "com.apple.product-type.application";
 		};
 		76598D761DCD6DDE00DEF76E /* NutriFence (iOS)Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76598D8E1DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)Tests" */;
 			buildPhases = (
+				D33729D895C31BD690A63559 /* [CP] Check Pods Manifest.lock */,
 				76598D731DCD6DDE00DEF76E /* Sources */,
 				76598D741DCD6DDE00DEF76E /* Frameworks */,
 				76598D751DCD6DDE00DEF76E /* Resources */,
+				AA1497A3E98C58A572389CC0 /* [CP] Embed Pods Frameworks */,
+				D306BB8423E2650305FB01A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76598D911DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)UITests" */;
 			buildPhases = (
+				66CD52BA30DF1FACA11645A0 /* [CP] Check Pods Manifest.lock */,
 				76598D7E1DCD6DDE00DEF76E /* Sources */,
 				76598D7F1DCD6DDE00DEF76E /* Frameworks */,
 				76598D801DCD6DDE00DEF76E /* Resources */,
+				0870FE172447DA9669A21ABF /* [CP] Embed Pods Frameworks */,
+				C5CB8332E710749E7B97E118 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */,
+				7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */,
 				76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */,
 				76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */,
 			);
@@ -257,13 +335,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0870FE172447DA9669A21ABF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NutriFence (iOS)UITests/Pods-NutriFence (iOS)UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66CD52BA30DF1FACA11645A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B0765B1961710C535FB9183 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A92D21313468805BAFCA9F55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA1497A3E98C58A572389CC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NutriFence (iOS)Tests/Pods-NutriFence (iOS)Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5CB8332E710749E7B97E118 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NutriFence (iOS)UITests/Pods-NutriFence (iOS)UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9BEE1372F97A13159DA2965 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D306BB8423E2650305FB01A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NutriFence (iOS)Tests/Pods-NutriFence (iOS)Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D33729D895C31BD690A63559 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76598D5F1DCD6DDD00DEF76E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76598D691DCD6DDD00DEF76E /* ViewController.swift in Sources */,
+				768551681DCE4E8A008A8526 /* ImageSelectionViewController.swift in Sources */,
 				76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */,
+				7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */,
+				7685516A1DCE4E8A008A8526 /* OpeningSplashViewController.swift in Sources */,
+				76C056291DCECC9B0007AAB7 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,12 +555,13 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -385,6 +605,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -411,32 +632,37 @@
 		};
 		76598D8C1DCD6DDE00DEF76E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52B0026EBF0E9A9D9757F91B /* Pods-NutriFence (iOS).debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L9BJWLUW8;
 				INFOPLIST_FILE = "NutriFence (iOS)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nutrifence.NutriFenceiOS;
+				PRODUCT_NAME = NutriFence;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		76598D8D1DCD6DDE00DEF76E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5CEF723CB87E18AECE0109 /* Pods-NutriFence (iOS).release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L9BJWLUW8;
 				INFOPLIST_FILE = "NutriFence (iOS)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nutrifence.NutriFence--iOS-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nutrifence.NutriFenceiOS;
+				PRODUCT_NAME = NutriFence;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		76598D8F1DCD6DDE00DEF76E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69867A18043D93B011A71F7 /* Pods-NutriFence (iOS)Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +678,7 @@
 		};
 		76598D901DCD6DDE00DEF76E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49CD07C2F2343023F35B5B80 /* Pods-NutriFence (iOS)Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,6 +694,7 @@
 		};
 		76598D921DCD6DDE00DEF76E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB84F789A576C75C829D539 /* Pods-NutriFence (iOS)UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3L9BJWLUW8;
@@ -481,6 +709,7 @@
 		};
 		76598D931DCD6DDE00DEF76E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0908850765BBEEA358EFA7A1 /* Pods-NutriFence (iOS)UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3L9BJWLUW8;
@@ -512,6 +741,7 @@
 				76598D8D1DCD6DDE00DEF76E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76598D8E1DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)Tests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +750,7 @@
 				76598D901DCD6DDE00DEF76E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76598D911DCD6DDE00DEF76E /* Build configuration list for PBXNativeTarget "NutriFence (iOS)UITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +759,7 @@
 				76598D931DCD6DDE00DEF76E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

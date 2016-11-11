@@ -30,13 +30,13 @@ class ImageSelectionViewController: UIViewController, UIImagePickerControllerDel
     
     let session = URLSession(configuration: URLSessionConfiguration.default)
     
-    var googleAPIKey = ""
+    var googleAPIKey = "AIzaSyDbLtbxBhXGUmQpRyeKQPryCSZZjeKoKmc"
     var googleURL: URL {
         return URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(googleAPIKey)")!
     }
     
     var classificationURL: URL {
-        return URL(string: "")!
+        return URL(string: "http://159.203.50.87:3000/ClassificationAPI")!
     }
     
     override func viewDidLoad() {

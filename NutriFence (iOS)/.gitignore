@@ -1,1 +1,4 @@
 */*.xcodeproj
+.DS_Store
+build
+!*.xcodeproj/project.pbxproj

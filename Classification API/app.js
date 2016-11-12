@@ -1,7 +1,10 @@
+require('dotenv').config();
+
 var unsafeList;
 var unfriendlyList;
 var redisClient = setupRedis();
-var autoCorrectAPIKey = getBingSpellcheckAPIKey();
+var autoCorrectAPIKey = process.env.BING_SPELLCHECK_API_KEY;
+
 setupExpressServer();
 
 
@@ -29,14 +32,6 @@ function setupRedis() {
     });
 
     return client;
-}
-
-// gets autocorrect api key from file
-function getBingSpellcheckAPIKey() {
-    var fileName = './azure_autocorrect_api_key.txt';
-    var fs = require('fs');
-    var autoCorrectAPIKey = fs.readFileSync(fileName, 'utf8');
-    return autoCorrectAPIKey;
 }
 
 function setupExpressServer() {

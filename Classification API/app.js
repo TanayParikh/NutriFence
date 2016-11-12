@@ -1,53 +1,68 @@
-// start Redis
-var redis = require('redis');
-var client = redis.createClient();
-client.on('connect', function() {
-    console.log('Redis connection established.');
-});
+var unsafeList;
+var unfriendlyList;
+var redisClient = setupRedis();
+var autoCorrectAPIKey = getBingSpellcheckAPIKey();
+setupExpressServer();
 
-// fetch the unsafe/unfriendly ingredients data from Redis
-var populateDatabase = require("./populateDatabase.js");
-populateDatabase.addCeliacUnsafe();
-populateDatabase.addCeliacUnfriendly();
-// populateDatabase.printMembers();                         // uncomment for testing
+
+// start Redis
+function setupRedis() {
+    var redis = require('redis');
+    var client = redis.createClient();
+    client.on('connect', function () {
+        console.log('Redis connection established.');
+    });
+
+    // fetch the unsafe/unfriendly ingredients data from Redis
+    var populateDatabase = require("./populateDatabase.js");
+    populateDatabase.addCeliacUnsafe();
+    populateDatabase.addCeliacUnfriendly();
+    // populateDatabase.printMembers();                         // uncomment for testing
+
+    client.smembers('Celiac Unsafe', function(err, list) {
+        unsafeList = list;
+    });
+
+
+    client.smembers('Celiac Unfriendly', function(err, list) {
+        unfriendlyList = list;
+    });
+
+    return client;
+}
 
 // gets autocorrect api key from file
-var fileName = './azure_autocorrect_api_key.txt';
-var fs = require('fs');
-var autoCorrectAPIKey = fs.readFileSync(fileName, 'utf8');
+function getBingSpellcheckAPIKey() {
+    var fileName = './azure_autocorrect_api_key.txt';
+    var fs = require('fs');
+    var autoCorrectAPIKey = fs.readFileSync(fileName, 'utf8');
+    return autoCorrectAPIKey;
+}
 
-var unsafeList;
-client.smembers('Celiac Unsafe', function(err, list) {
-    unsafeList = list;
-});
+function setupExpressServer() {
+    var express = require('express'),
+        app = express(),
+        bodyParser = require('body-parser'),
+        path = require("path");
 
-var unfriendlyList;
-client.smembers('Celiac Unfriendly', function(err, list) {
-    unfriendlyList = list;
-});
+    // add support for parsing different types of post data
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: true}));
 
-// require and initialize the necessary modules
-var express = require('express'),
-    app = express(),
-    bodyParser = require('body-parser'),
-    path = require("path");
+    // tell express that www is the root of our public web folder
+    app.use(express.static(path.join(__dirname, 'www')));
 
-// add support for parsing different types of post data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+    // tell express what to do when the /ClassificationAPI route is requested
+    app.post('/ClassificationAPI', function (request, response) {
+        interpretAndSendData(request, response);
+    });
 
-// tell express that www is the root of our public web folder
-app.use(express.static(path.join(__dirname, 'www')));
+    // wait for a connection
+    app.listen(3000, function () {
+        console.log('Server is running using express.js');
+    });
+}
 
-// tell express what to do when the /ClassificationAPI route is requested
-app.post('/ClassificationAPI', function(request, response) {
-    interpretAndSendData(request, response);
-});
-
-// wait for a connection
-app.listen(3000, function () {
-    console.log('Server is running. Point your browser to: http://localhost:3000');
-});
 
 var res;
 function interpretAndSendData(req, response) {
@@ -120,7 +135,7 @@ function spellCheckIngredients(rawIngredients) {
 
     function correctSpellingErrors(response, rawIngredients) {
         var spellChecked = JSON.parse(response);
-        
+
         spellChecked.flaggedTokens.forEach(function (word) {
             rawIngredients = rawIngredients.replace(word.token, word.suggestions[0].suggestion);
         });

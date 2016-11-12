@@ -3,7 +3,6 @@ require('dotenv').config();
 var unsafeList;
 var unfriendlyList;
 var redisClient = setupRedis();
-var autoCorrectAPIKey = process.env.BING_SPELLCHECK_API_KEY;
 
 setupExpressServer();
 
@@ -102,8 +101,7 @@ function spellCheckIngredients(rawIngredients) {
 
     // Set the headers
     var headers = {
-        'Ocp-Apim-Subscription-Key': autoCorrectAPIKey
-        //'Content-Type':     'application/x-www-form-urlencoded'
+        'Ocp-Apim-Subscription-Key': process.env.BING_SPELLCHECK_API_KEY
     };
 
     // Configure the request
@@ -125,7 +123,7 @@ function spellCheckIngredients(rawIngredients) {
             console.log("BODY: " + body);
         }
         
-        formatRawIngredients2(rawIngredients);
+        formatRawIngredients(rawIngredients);
     });
 
     function correctSpellingErrors(response, rawIngredients) {
@@ -139,7 +137,7 @@ function spellCheckIngredients(rawIngredients) {
     }
 }
 
-function formatRawIngredients2(rawIngredients) {
+function formatRawIngredients(rawIngredients) {
     rawIngredients = rawIngredients.replace(/[)]+/g, ',');
     rawIngredients = rawIngredients.replace(/[(]+/g, '(,');
     rawIngredients = rawIngredients.split(",");

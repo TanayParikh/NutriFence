@@ -2,7 +2,7 @@
 var redis = require('redis');
 var client = redis.createClient();
 client.on('connect', function() {
-    console.log('app connected');
+    console.log('Redis connection established.');
 });
 
 // fetch the unsafe/unfriendly ingredients data from Redis
@@ -120,16 +120,9 @@ function spellCheckIngredients(rawIngredients) {
 
     function correctSpellingErrors(response, rawIngredients) {
         var spellChecked = JSON.parse(response);
-
-        /*for (var i = 0; i < spellChecked.flaggedTokens.length; ++i) {
-         var word = spellChecked.flaggedTokens[i];
-         rawIngredients = rawIngredients.replace(word.token, word.suggestions[0].suggestion);
-         }*/
-
+        
         spellChecked.flaggedTokens.forEach(function (word) {
             rawIngredients = rawIngredients.replace(word.token, word.suggestions[0].suggestion);
-            //console.log(word.token + " to be replaced with ");
-            //console.log(word.suggestions[0].suggestion);
         });
 
         return rawIngredients;

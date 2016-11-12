@@ -181,5 +181,6 @@ jspm_packages
 
 *.rdb
 
-### Azure key ###
-azure_autocorrect_api_key.txt
+### dotenv Environment File ###
+*.env
+

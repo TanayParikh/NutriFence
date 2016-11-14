@@ -34,7 +34,8 @@ class NFClassificationFetcher {
                     print(error?.localizedDescription ?? "There was a problem")
                     return
                 }
-                result = parseJSONResults(JSON(data))
+                print(JSON(data))
+                // result = parseJSONResults(JSON(data))
             }
             task.resume()
         }
@@ -53,16 +54,8 @@ class NFClassificationFetcher {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let jsonRequest = [
-            "requests": [
-                "image": [
-                    "content": image
-                ],
-                "features": [
-                    [
-                        "type": "TEXT_DETECTION",
-                        "maxResults": 10
-                    ]
-                ]
+            "request": [
+                "imageContent": image
             ]
         ]
         let jsonObject = JSON(jsonDictionary: jsonRequest)

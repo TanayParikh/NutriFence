@@ -57,11 +57,41 @@ function setupExpressServer() {
     });
 }
 
+function imageOCR(req) {
+    var request = require('sync-request');
+    var requestURL = 'https://vision.googleapis.com/v1/images:annotate?key=' + process.env.GOOGLE_VISION_API_KEY;
+
+    var res = request('POST', requestURL, {
+        json:
+        {
+            "requests": [
+                {
+                    "image":{
+                        "content": req.body.request.imageContent
+                    },
+                    "features": [
+                        {
+                            "type":"TEXT_DETECTION",
+                            "maxResults":1
+                        }
+                    ]
+                }
+            ]
+        }
+    });
+
+    console.log('result');
+    var result = JSON.parse(res.getBody('utf8')).responses[0].textAnnotations[0].description;
+    console.log(result);
+
+    return result;
+}
+
 
 var res;
 function interpretAndSendData(req, response) {
     res = response;
-    var rawIngredients = req.body.responses[0].textAnnotations[0].description;
+    var rawIngredients = imageOCR(req);
     // rawIngredients = splitIntoSubgroups(rawIngredients);             // adds supheadings - buggy though
 
     // format the raw ingredients

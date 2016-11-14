@@ -80,11 +80,7 @@ function imageOCR(req) {
         }
     });
 
-    console.log('result');
-    var result = JSON.parse(res.getBody('utf8')).responses[0].textAnnotations[0].description;
-    console.log(result);
-
-    return result;
+    return JSON.parse(res.getBody('utf8')).responses[0].textAnnotations[0].description;
 }
 
 

@@ -40,8 +40,8 @@ function setupExpressServer() {
         path = require("path");
 
     // add support for parsing different types of post data
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({extended: true}));
+    app.use(bodyParser.json({limit: '2.5mb'}));
+    app.use(bodyParser.urlencoded({limit: '2.5mb', extended: true}));
 
     // tell express that www is the root of our public web folder
     app.use(express.static(path.join(__dirname, 'www')));

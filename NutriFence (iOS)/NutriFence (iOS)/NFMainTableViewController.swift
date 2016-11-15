@@ -17,20 +17,34 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var nextButton: UIButton!
     var imageToAnalyze: UIImage!
     var vcType: NFMainTVCType!
-    private var tableContents: [AnyObject]! {
+    var tableContents: [AnyObject]! {
         didSet {
             tableView.reloadData()
             // stopAnimating()
         }
     }
     
-    
     // MARK: - View controller life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // startAnimating()
+        if vcType! == .result {
+            // startAnimating()
+        }
         initializeController()
+    }
+    
+    // MARK: - Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UnwindToSelectionSegue" {
+            
+        } else if segue.identifier == "TakePhotoSegue" {
+            
+        }
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
     

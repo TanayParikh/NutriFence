@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let diets = [NFDiet(with: "Vegan"), NFDiet(with: "Celiac's"), NFDiet(with: "Lactose Intolerance")]
+        if let navController = window?.rootViewController as? UINavigationController {
+            if let mainVC = navController.topViewController as? NFMainTableViewController {
+                mainVC.tableContents = diets
+                mainVC.vcType = .selection
+            }
+        }
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {

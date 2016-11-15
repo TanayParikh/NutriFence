@@ -8,13 +8,17 @@
 
 import UIKit
 
-class NFGradientColors {
+enum NFGradientColors {
     
-    private static let green = ["top": UIColor(red: 40, green: 64, blue: 40),
+    case red
+    case green
+    case purple
+    
+    private static let greenColors = ["top": UIColor(red: 40, green: 64, blue: 40),
                          "bottom": UIColor(red: 40, green: 48, blue: 40)]
-    private static let red = ["top": UIColor(red: 83, green: 38, blue: 38),
+    private static let redColors = ["top": UIColor(red: 83, green: 38, blue: 38),
                        "bottom": UIColor(red: 83, green: 38, blue: 38)]
-    private static let purple = ["top": UIColor(red: 69, green: 58, blue: 73),
+    private static let purpleColors = ["top": UIColor(red: 69, green: 58, blue: 73),
                           "bottom": UIColor(red: 63, green: 58, blue: 73)]
     
     /**
@@ -28,16 +32,16 @@ class NFGradientColors {
      
     */
     
-    class func gradientInView(_ view: UIView, withColor color: UIColor) -> CAGradientLayer {
+    static func gradientInView(_ view: UIView, withColor color: UIColor) -> CAGradientLayer {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
         switch color {
         case UIColor.green:
-            gradient.colors = [green["top"]!.cgColor, green["bottom"]!.cgColor]
+            gradient.colors = [greenColors["top"]!.cgColor, greenColors["bottom"]!.cgColor]
         case UIColor.red:
-            gradient.colors = [red["top"]!.cgColor, red["bottom"]!.cgColor]
+            gradient.colors = [redColors["top"]!.cgColor, redColors["bottom"]!.cgColor]
         case UIColor.purple:
-            gradient.colors = [purple["top"]!.cgColor, purple["bottom"]!.cgColor]
+            gradient.colors = [purpleColors["top"]!.cgColor, purpleColors["bottom"]!.cgColor]
         default: break
         }
         return gradient

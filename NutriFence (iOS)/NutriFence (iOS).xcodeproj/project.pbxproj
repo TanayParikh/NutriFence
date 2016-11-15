@@ -15,7 +15,7 @@
 		76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */; };
 		76598D7C1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D7B1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift */; };
 		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
-		768551681DCE4E8A008A8526 /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */; };
+		768551681DCE4E8A008A8526 /* NFImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551641DCE4E8A008A8526 /* NFImageSelectionViewController.swift */; };
 		7685516A1DCE4E8A008A8526 /* OpeningSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */; };
 		7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551671DCE4E8A008A8526 /* UIColor+Hex.swift */; };
 		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
@@ -65,7 +65,7 @@
 		76598D821DCD6DDE00DEF76E /* NutriFence (iOS)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NutriFence (iOS)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFence__iOS_UITests.swift; sourceTree = "<group>"; };
 		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
+		768551641DCE4E8A008A8526 /* NFImageSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFImageSelectionViewController.swift; sourceTree = "<group>"; };
 		768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningSplashViewController.swift; sourceTree = "<group>"; };
 		768551671DCE4E8A008A8526 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
@@ -159,6 +159,7 @@
 		76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
 			isa = PBXGroup;
 			children = (
+				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
 				76DFA6341DD8E1D200821BC5 /* To be removed */,
 				76DFA6291DD6D44600821BC5 /* Model */,
 				7685516F1DCE5725008A8526 /* View Controllers */,
@@ -190,7 +191,6 @@
 		7685516E1DCE56EF008A8526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
 				7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */,
 				76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */,
 				76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */,
@@ -202,7 +202,7 @@
 		7685516F1DCE5725008A8526 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */,
+				768551641DCE4E8A008A8526 /* NFImageSelectionViewController.swift */,
 				76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */,
 			);
 			name = "View Controllers";
@@ -527,7 +527,7 @@
 				76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */,
 				76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */,
 				76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */,
-				768551681DCE4E8A008A8526 /* ImageSelectionViewController.swift in Sources */,
+				768551681DCE4E8A008A8526 /* NFImageSelectionViewController.swift in Sources */,
 				76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */,
 				76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */,
 				7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */,

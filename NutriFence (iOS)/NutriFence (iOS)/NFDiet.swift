@@ -10,4 +10,7 @@ import Foundation
 
 class NFDiet {
     var name: String!
+    init(with name: String) {
+        self.name = name
+    }
 }

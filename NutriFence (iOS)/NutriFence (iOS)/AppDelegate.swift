@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let mainVC = navController.topViewController as? NFMainTableViewController {
                 mainVC.tableContents = diets
                 mainVC.vcType = .selection
+                print("mainVC initialized")
             }
         }
         return true

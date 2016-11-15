@@ -15,9 +15,7 @@ class NFClassificationFetcher {
     
     /**
      Sends an image off to the Classification API for analysis and returns an NFResult
-     
-     - Author:
-     Matthew Watt
+
      - returns:
      An optional NFResult containing results of image analysis if the request succeeded, nil if not
      - parameters:
@@ -29,12 +27,15 @@ class NFClassificationFetcher {
         let imageBase64 = base64EncodeImage(image)
         var result: NFResult?
         if let request = urlRequest(withImageBase64: imageBase64) {
+            print(request)
             let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
                 guard let data = data, error == nil else {
                     print(error?.localizedDescription ?? "There was a problem")
                     return
                 }
-                print(JSON(data))
+                let json = JSON(data)
+                print(data)
+                print(response!)
                 // result = parseJSONResults(JSON(data))
             }
             task.resume()

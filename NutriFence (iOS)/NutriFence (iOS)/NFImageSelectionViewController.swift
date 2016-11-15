@@ -20,22 +20,17 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
     @IBInspectable var color: NFGradientColors!
     
     private var imagePicker = UIImagePickerController()
-    private var backgroundGradient: CAGradientLayer!
-    static let rgbGrayFontColor = 234
-    
-    struct ClassificationResult {
-        var isSafe: Bool!
-        var ingredients: [String]!
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
-        swipeGestureRecognizer.direction = .right
-        swipeGestureRecognizer.numberOfTouchesRequired = 1
-        swipeGestureRecognizer.delegate = self
+<<<<<<< Updated upstream
         // Do any additional setup after loading the view.
+=======
+        self.setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
+        customizeButtons()
+>>>>>>> Stashed changes
     }
     
     // MARK: - Actions
@@ -57,14 +52,35 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "LoadResultsSegue" {
+            // Prepare the VC
+            if let imageToAnalyze = sender as? UIImage {
+                if let resultVC = segue.destination as? NFMainTableViewController {
+                    resultVC.imageToAnalyze = imageToAnalyze
+                    resultVC.vcType = .result
+                }
+            }
+        }
     }
     
     // MARK: - UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        
+        let image = info[UIImagePickerControllerEditedImage] as? UIImage
+        performSegue(withIdentifier: "LoadResultsSegue", sender: image!)
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - Helpers
+    
+    private func setGradient(_ gradient: CAGradientLayer) {
+        self.view.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    private func customizeButtons() {
+        let gray = UIColor(red: 175, green: 175, blue: 175)
+        self.takePictureButton.layer.borderWidth = 1.5
+        self.takePictureButton.layer.borderColor = gray.cgColor
+        self.chooseFromLibraryButton.layer.borderWidth = 1.5
+        self.chooseFromLibraryButton.layer.borderColor = gray.cgColor
+    }
 }

@@ -9,5 +9,9 @@
 import Foundation
 
 class NFIngredient {
-    var name: String!
+    var name: String
+    
+    init(with name: String) {
+        self.name = name
+    }
 }

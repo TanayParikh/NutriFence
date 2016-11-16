@@ -27,7 +27,7 @@ class NFClassificationFetcher {
         let imageBase64 = base64EncodeImage(image)
         var result: NFResult?
         if let request = urlRequest(withImageBase64: imageBase64) {
-            print(request)
+            print(request.httpBody!)
             let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
                 guard let data = data, error == nil else {
                     print(error?.localizedDescription ?? "There was a problem")

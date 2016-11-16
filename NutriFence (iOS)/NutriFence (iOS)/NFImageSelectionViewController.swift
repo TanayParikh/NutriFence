@@ -25,17 +25,10 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         // Do any additional setup after loading the view.
-=======
+
         self.setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
         customizeButtons()
->>>>>>> Stashed changes
-=======
-        self.setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
-        customizeButtons()
->>>>>>> Stashed changes
     }
     
     // MARK: - Actions

@@ -130,8 +130,8 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
             // send image for analysis
             queue.async { [weak self] Void in
                 if let result = NFClassificationFetcher.analyzeImage(self!.imageToAnalyze) {
-                    self!.tableContents = result.ingredients
                     DispatchQueue.main.async { [weak self] Void in
+                        self!.tableContents = result.ingredients
                         switch result.safetyStatus {
                         case .safe:
                             self!.setGradient(NFGradientColors.gradientInView(self!.view, withColor: UIColor.green))

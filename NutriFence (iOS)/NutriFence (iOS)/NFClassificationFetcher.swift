@@ -25,18 +25,16 @@ class NFClassificationFetcher {
     */
     class func analyzeImage(_ image: UIImage) -> NFResult? {
         let imageBase64 = base64EncodeImage(image)
-        var result: NFResult?
+        var result: NFResult!
         if let request = urlRequest(withImageBase64: imageBase64) {
-            print(request.httpBody!)
+            print(request.httpBody!.description)
             let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
                 guard let data = data, error == nil else {
                     print(error?.localizedDescription ?? "There was a problem")
                     return
                 }
-                let json = JSON(data)
-                print(data)
-                print(response!)
-                // result = parseJSONResults(JSON(data))
+                let json = JSON(data: data)
+                result = parseJSONResults(json)
             }
             task.resume()
         }
@@ -45,7 +43,7 @@ class NFClassificationFetcher {
     
     // MARK: - Private implementation
     
-    private static let session = URLSession(configuration: .default)
+    private static let session = URLSession.shared
     private static let classificationURL = URL(string: "http://159.203.50.87:3000/ClassificationAPI")!
     
     
@@ -71,9 +69,31 @@ class NFClassificationFetcher {
         return request
     }
     
-    // IMPLEMENT ME PLZ
     private class func parseJSONResults(_ json: JSON) -> NFResult {
-        return NFResult(safetyStatus: .safe, ingredients: [])
+        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
+        var ingredients = [NFIngredient]()
+        if let jsonDict = json.dictionary {
+            let isSafe = jsonDict["isGlutenFree"]?.bool
+            if let _ = isSafe {
+                result.safetyStatus = .safe
+                if let ingreds = jsonDict["Good_Ingredients"]?.array {
+                    for goodIngred in ingreds {
+                        ingredients.append(NFIngredient(with: goodIngred.string!))
+                    }
+                }
+            } else {
+                result.safetyStatus = .unsafe
+                if let ingreds = jsonDict["Bad_Ingredients"]?.array {
+                    for badIngred in ingreds {
+                        ingredients.append(NFIngredient(with: badIngred.string!))
+                    }
+                }
+            }
+            result.ingredients = ingredients
+        }
+        print(#function)
+        print(json)
+        return result
     }
     
     private class func base64EncodeImage(_ image: UIImage) -> String {

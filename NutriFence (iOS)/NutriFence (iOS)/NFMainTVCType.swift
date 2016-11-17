@@ -9,6 +9,6 @@
 import Foundation
 
 enum NFMainTVCType {
-    case result
+    case result(NFProductSafetyStatus?)
     case selection
 }

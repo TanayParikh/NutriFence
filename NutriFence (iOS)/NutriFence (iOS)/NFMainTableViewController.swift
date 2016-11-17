@@ -16,15 +16,26 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var dividerLineView: UIView!
     
     var imageToAnalyze: UIImage!
     var vcType: NFMainTVCType!
     var tableContents: [AnyObject] = [] {
         didSet {
             if let _ = tableView {
+                if case .result(let status) = vcType! {
+                    switch status! {
+                    case .safe:
+                        setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.green))
+                        headerLabel.text = "This product is safe to eat!"
+                    case .unsafe:
+                        headerLabel.text = "This product is NOT safe to eat!"
+                        setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.red))
+                    }
+                }
+                self.tableView.reloadData()
                 unhideAll()
                 activityIndicator.stopAnimating()
-                self.tableView.reloadData()
             }
         }
     }
@@ -33,11 +44,15 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if vcType! == .result {
+        setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
+        switch vcType! {
+        case .selection:
+            headerLabel.text = "Select diet:"
+        case .result(_):
             hideAll()
+            fetchResult(completion: setResult)
             activityIndicator.startAnimating()
         }
-        initializeController()
     }
     
     // MARK: - Segues
@@ -77,27 +92,26 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let type = vcType {
-            if type == .selection {
+            switch type {
+            case .selection:
                 let cell = tableView.cellForRow(at: indexPath)!
                 cell.accessoryType = .checkmark
+            case .result(_):
+                break
             }
         }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let type = vcType {
-            if type == .selection {
+            switch type {
+            case .selection:
                 let cell = tableView.cellForRow(at: indexPath)!
                 cell.accessoryType = .none
+            case .result(_):
+                break
             }
         }
-    }
-    
-    // MARK: - parsing analysis results
-    
-    // IMPLEMENT ME
-    private func parseResult(_ result: NFResult) -> [NFIngredient]? {
-        return nil
     }
     
     // MARK: - Update UI
@@ -120,27 +134,22 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
         self.view.layer.insertSublayer(gradient, at: 0)
     }
     
-    private func initializeController() {
-        switch vcType! {
-        case .selection:
-            headerLabel.text = "Select diet:"
-            setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
-        case .result:
-            let queue = DispatchQueue(label: "com.nutrifence.background")
-            // send image for analysis
-            queue.async { [weak self] Void in
-                if let result = NFClassificationFetcher.analyzeImage(self!.imageToAnalyze) {
-                    DispatchQueue.main.async { [weak self] Void in
-                        self!.tableContents = result.ingredients
-                        switch result.safetyStatus {
-                        case .safe:
-                            self!.setGradient(NFGradientColors.gradientInView(self!.view, withColor: UIColor.green))
-                        case .unsafe:
-                            self!.setGradient(NFGradientColors.gradientInView(self!.view, withColor: UIColor.red))
-                        }
-                    }
+    
+    private func fetchResult(completion: @escaping (NFResult) -> Void) {
+        let queue = DispatchQueue(label: "com.nutrifence.background")
+        // send image for analysis
+        queue.async { [weak self] Void in
+            if let result = NFClassificationFetcher.analyzeImage(self!.imageToAnalyze) {
+                DispatchQueue.main.async {
+                    print("Completion should execute")
+                    completion(result)
                 }
             }
         }
+    }
+    
+    // Fetch callback func
+    private func setResult(_ result: NFResult) {
+        tableContents = result.ingredients
     }
 }

@@ -55,7 +55,7 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
             if let imageToAnalyze = sender as? UIImage {
                 if let resultVC = segue.destination as? NFMainTableViewController {
                     resultVC.imageToAnalyze = imageToAnalyze
-                    resultVC.vcType = .result
+                    resultVC.vcType = NFMainTVCType.result(nil)
                 }
             }
         }

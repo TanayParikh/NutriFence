@@ -269,6 +269,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cAZ-Q3-B2M"/>
                     <connections>
+                        <outlet property="dividerLineView" destination="sRd-3T-R56" id="yAx-Di-ggQ"/>
                         <outlet property="headerLabel" destination="8UP-v7-9dM" id="pwa-Qi-CLV"/>
                         <outlet property="nextButton" destination="P1K-vZ-iL5" id="woL-zk-8VL"/>
                         <outlet property="tableView" destination="JFo-OK-erA" id="9cO-ag-66L"/>
@@ -364,6 +365,7 @@
                     <navigationItem key="navigationItem" id="J9n-9X-dhw"/>
                     <connections>
                         <outlet property="activityIndicator" destination="oSu-0E-KPg" id="GdJ-fn-idi"/>
+                        <outlet property="dividerLineView" destination="Jmp-gq-5gz" id="pZc-as-lh8"/>
                         <outlet property="headerLabel" destination="cn2-c3-YuT" id="vdP-N8-Twd"/>
                         <outlet property="nextButton" destination="WBh-rs-lHJ" id="q2m-DO-P3O"/>
                         <outlet property="tableView" destination="ran-JK-krG" id="iGx-7s-QqB"/>

@@ -15,11 +15,18 @@
 		76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */; };
 		76598D7C1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D7B1DCD6DDE00DEF76E /* NutriFence__iOS_Tests.swift */; };
 		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
-		768551681DCE4E8A008A8526 /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */; };
+		768551681DCE4E8A008A8526 /* NFImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551641DCE4E8A008A8526 /* NFImageSelectionViewController.swift */; };
 		7685516A1DCE4E8A008A8526 /* OpeningSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */; };
 		7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551671DCE4E8A008A8526 /* UIColor+Hex.swift */; };
 		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
 		76C056291DCECC9B0007AAB7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C056281DCECC9B0007AAB7 /* ResultsViewController.swift */; };
+		76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */; };
+		76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */; };
+		76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */; };
+		76DFA62F1DD6D96F00821BC5 /* NFGradientColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62E1DD6D96F00821BC5 /* NFGradientColors.swift */; };
+		76DFA6311DD6E15B00821BC5 /* NFDiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6301DD6E15B00821BC5 /* NFDiet.swift */; };
+		76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6321DD8E0B300821BC5 /* NFResult.swift */; };
+		76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */; };
 		E1B07B51D332B62A4EB06153 /* Pods_NutriFence__iOS_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A309F0F930E8BDC843B02A /* Pods_NutriFence__iOS_UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,11 +65,18 @@
 		76598D821DCD6DDE00DEF76E /* NutriFence (iOS)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NutriFence (iOS)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFence__iOS_UITests.swift; sourceTree = "<group>"; };
 		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
+		768551641DCE4E8A008A8526 /* NFImageSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFImageSelectionViewController.swift; sourceTree = "<group>"; };
 		768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningSplashViewController.swift; sourceTree = "<group>"; };
 		768551671DCE4E8A008A8526 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
 		76C056281DCECC9B0007AAB7 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTableViewController.swift; sourceTree = "<group>"; };
+		76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTVCType.swift; sourceTree = "<group>"; };
+		76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFIngredient.swift; sourceTree = "<group>"; };
+		76DFA62E1DD6D96F00821BC5 /* NFGradientColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFGradientColors.swift; sourceTree = "<group>"; };
+		76DFA6301DD6E15B00821BC5 /* NFDiet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFDiet.swift; sourceTree = "<group>"; };
+		76DFA6321DD8E0B300821BC5 /* NFResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFResult.swift; sourceTree = "<group>"; };
+		76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFClassificationFetcher.swift; sourceTree = "<group>"; };
 		9125098AAED1349121DDE646 /* Pods_NutriFence__iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriFence__iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C0D898703FCA3A4266C58C /* Pods_NutriFence__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriFence__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69867A18043D93B011A71F7 /* Pods-NutriFence (iOS)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)Tests/Pods-NutriFence (iOS)Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +159,9 @@
 		76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
 			isa = PBXGroup;
 			children = (
+				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
+				76DFA6341DD8E1D200821BC5 /* To be removed */,
+				76DFA6291DD6D44600821BC5 /* Model */,
 				7685516F1DCE5725008A8526 /* View Controllers */,
 				76DFA6231DD6B56700821BC5 /* Utilities */,
 				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
@@ -174,7 +191,6 @@
 		7685516E1DCE56EF008A8526 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
 				7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */,
 				76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */,
 				76598D6F1DCD6DDE00DEF76E /* LaunchScreen.storyboard */,
@@ -186,9 +202,8 @@
 		7685516F1DCE5725008A8526 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				768551641DCE4E8A008A8526 /* ImageSelectionViewController.swift */,
-				768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */,
-				76C056281DCECC9B0007AAB7 /* ResultsViewController.swift */,
+				768551641DCE4E8A008A8526 /* NFImageSelectionViewController.swift */,
+				76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -197,8 +212,30 @@
 			isa = PBXGroup;
 			children = (
 				768551671DCE4E8A008A8526 /* UIColor+Hex.swift */,
+				76DFA62E1DD6D96F00821BC5 /* NFGradientColors.swift */,
+				76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		76DFA6291DD6D44600821BC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */,
+				76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */,
+				76DFA6301DD6E15B00821BC5 /* NFDiet.swift */,
+				76DFA6321DD8E0B300821BC5 /* NFResult.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		76DFA6341DD8E1D200821BC5 /* To be removed */ = {
+			isa = PBXGroup;
+			children = (
+				768551661DCE4E8A008A8526 /* OpeningSplashViewController.swift */,
+				76C056281DCECC9B0007AAB7 /* ResultsViewController.swift */,
+			);
+			name = "To be removed";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,11 +523,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				768551681DCE4E8A008A8526 /* ImageSelectionViewController.swift in Sources */,
+				76DFA62F1DD6D96F00821BC5 /* NFGradientColors.swift in Sources */,
+				76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */,
+				76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */,
+				76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */,
+				768551681DCE4E8A008A8526 /* NFImageSelectionViewController.swift in Sources */,
+				76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */,
 				76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */,
 				7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */,
 				7685516A1DCE4E8A008A8526 /* OpeningSplashViewController.swift in Sources */,
+				76DFA6311DD6E15B00821BC5 /* NFDiet.swift in Sources */,
 				76C056291DCECC9B0007AAB7 /* ResultsViewController.swift in Sources */,
+				76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

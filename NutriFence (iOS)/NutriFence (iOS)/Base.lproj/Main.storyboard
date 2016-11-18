@@ -31,7 +31,7 @@
                                 <rect key="frame" x="67" y="52" width="240" height="75"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu9-Jc-YSj">
-                                <rect key="frame" x="67" y="284" width="240" height="33"/>
+                                <rect key="frame" x="67" y="284" width="240" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <state key="normal" title="Take Picture">
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-FF-1UW">
-                                <rect key="frame" x="67" y="350" width="240" height="33"/>
+                                <rect key="frame" x="67" y="349" width="240" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <state key="normal" title="Choose From Library">
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYG-ox-3ml">
-                                <rect key="frame" x="16" y="604" width="134" height="43"/>
+                                <rect key="frame" x="16" y="605" width="126" height="42"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="25"/>
                                 <state key="normal" title="&lt; Selection">
                                     <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,92 +90,12 @@
             </objects>
             <point key="canvasLocation" x="1814" y="77"/>
         </scene>
-        <!--SafeResultsViewController-->
-        <scene sceneID="eN8-kl-tFa">
-            <objects>
-                <viewController title="SafeResultsViewController" id="dgm-re-rBs" customClass="ResultsViewController" customModule="NutriFence" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="slR-M1-v3a"/>
-                        <viewControllerLayoutGuide type="bottom" id="uA0-HJ-u3F"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lhr-Rc-vtI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="VE8-HU-aGJ">
-                                <rect key="frame" x="67" y="52" width="240" height="75"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aql-7Y-W6V">
-                                <rect key="frame" x="67" y="240" width="240" height="21"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="4" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9xX-9U-ZnN">
-                                <rect key="frame" x="67" y="269" width="240" height="190"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="190" id="v8x-rg-d3b"/>
-                                </constraints>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientCell" id="SyP-ht-QyE">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SyP-ht-QyE" id="Wqh-NZ-7Uy">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg1-eH-S2P">
-                                <rect key="frame" x="279" y="607" width="80" height="40"/>
-                                <state key="normal" image="NextArrow"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ip-0k-KiL">
-                                <rect key="frame" x="147" y="606" width="124" height="43"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="25"/>
-                                <state key="normal" title="Scan New">
-                                    <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="VE8-HU-aGJ" firstAttribute="trailing" secondItem="Aql-7Y-W6V" secondAttribute="trailing" id="7ng-cg-VDt"/>
-                            <constraint firstItem="Aql-7Y-W6V" firstAttribute="leading" secondItem="9xX-9U-ZnN" secondAttribute="leading" id="ETe-rv-BMu"/>
-                            <constraint firstItem="9xX-9U-ZnN" firstAttribute="top" secondItem="Aql-7Y-W6V" secondAttribute="bottom" constant="8" symbolic="YES" id="GPG-af-Gds"/>
-                            <constraint firstItem="Aql-7Y-W6V" firstAttribute="top" secondItem="lhr-Rc-vtI" secondAttribute="top" constant="240" id="HbP-0Y-Z6r"/>
-                            <constraint firstItem="2ip-0k-KiL" firstAttribute="centerY" secondItem="mg1-eH-S2P" secondAttribute="centerY" id="QoC-0a-np4"/>
-                            <constraint firstItem="mg1-eH-S2P" firstAttribute="trailing" secondItem="lhr-Rc-vtI" secondAttribute="trailingMargin" id="TOo-4Z-a4b"/>
-                            <constraint firstItem="Aql-7Y-W6V" firstAttribute="trailing" secondItem="9xX-9U-ZnN" secondAttribute="trailing" id="U7Z-F7-cEC"/>
-                            <constraint firstItem="VE8-HU-aGJ" firstAttribute="leading" secondItem="Aql-7Y-W6V" secondAttribute="leading" id="Wjt-t2-mnG"/>
-                            <constraint firstItem="VE8-HU-aGJ" firstAttribute="centerX" secondItem="lhr-Rc-vtI" secondAttribute="centerX" id="g74-an-uga"/>
-                            <constraint firstItem="VE8-HU-aGJ" firstAttribute="top" secondItem="slR-M1-v3a" secondAttribute="bottom" constant="32" id="hBu-uJ-AGG"/>
-                            <constraint firstAttribute="bottom" secondItem="mg1-eH-S2P" secondAttribute="bottom" constant="20" symbolic="YES" id="hHg-Vw-EAx"/>
-                            <constraint firstItem="mg1-eH-S2P" firstAttribute="leading" secondItem="2ip-0k-KiL" secondAttribute="trailing" constant="8" symbolic="YES" id="n8S-oi-82G"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="ingredientsTableView" destination="9xX-9U-ZnN" id="zCs-WH-eBn"/>
-                        <outlet property="safetyResultsLabel" destination="Aql-7Y-W6V" id="q9x-K3-LtE"/>
-                        <outlet property="scanNewButton" destination="mg1-eH-S2P" id="Ewy-Us-OqI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UKT-07-jBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3089" y="-867"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFk-hi-IgH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="TFi-qj-9lG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YLH-Zs-obM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YLH-Zs-obM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -239,13 +159,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UP-v7-9dM">
-                                <rect key="frame" x="67" y="231" width="50.5" height="21"/>
+                                <rect key="frame" x="67" y="231" width="47" height="20"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-3T-R56">
-                                <rect key="frame" x="67" y="260" width="240" height="1"/>
+                                <rect key="frame" x="67" y="259" width="240" height="2"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -338,15 +258,11 @@
                                 <rect key="frame" x="67" y="260" width="240" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oSu-0E-KPg">
-                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Jmp-gq-5gz" firstAttribute="leading" secondItem="ran-JK-krG" secondAttribute="leading" constant="15" id="2u5-9g-037"/>
-                            <constraint firstItem="oSu-0E-KPg" firstAttribute="centerY" secondItem="Ylv-pO-GJZ" secondAttribute="centerY" id="6t7-sF-VA2"/>
                             <constraint firstItem="0uN-QF-ZqG" firstAttribute="leading" secondItem="cn2-c3-YuT" secondAttribute="leading" id="GxT-33-xDf"/>
                             <constraint firstItem="ran-JK-krG" firstAttribute="top" secondItem="Jmp-gq-5gz" secondAttribute="bottom" constant="8" symbolic="YES" id="LkK-gM-mXs"/>
                             <constraint firstItem="Jmp-gq-5gz" firstAttribute="trailing" secondItem="ran-JK-krG" secondAttribute="trailing" constant="15" id="PaN-Cd-bu1"/>
@@ -358,13 +274,11 @@
                             <constraint firstItem="0uN-QF-ZqG" firstAttribute="top" secondItem="3Xe-ss-tQS" secondAttribute="bottom" constant="32" id="f0Y-C6-Z3N"/>
                             <constraint firstAttribute="bottom" secondItem="WBh-rs-lHJ" secondAttribute="bottom" constant="20" symbolic="YES" id="hdt-vU-lW2"/>
                             <constraint firstItem="cn2-c3-YuT" firstAttribute="top" secondItem="Ylv-pO-GJZ" secondAttribute="top" constant="231" id="nng-Tr-rcJ"/>
-                            <constraint firstItem="oSu-0E-KPg" firstAttribute="centerX" secondItem="Ylv-pO-GJZ" secondAttribute="centerX" id="ofm-qI-OfI"/>
                             <constraint firstItem="WBh-rs-lHJ" firstAttribute="trailing" secondItem="Ylv-pO-GJZ" secondAttribute="trailingMargin" id="ulB-xZ-1eE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J9n-9X-dhw"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="oSu-0E-KPg" id="GdJ-fn-idi"/>
                         <outlet property="dividerLineView" destination="Jmp-gq-5gz" id="pZc-as-lh8"/>
                         <outlet property="headerLabel" destination="cn2-c3-YuT" id="vdP-N8-Twd"/>
                         <outlet property="nextButton" destination="WBh-rs-lHJ" id="q2m-DO-P3O"/>

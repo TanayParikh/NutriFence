@@ -11,9 +11,22 @@ import Foundation
 enum NFProductSafetyStatus {
     case safe
     case unsafe
+    
+    var description: String {
+        switch self {
+        case .safe:
+            return "Safe"
+        case .unsafe:
+            return "Unsafe"
+        }
+    }
 }
 
-struct NFResult {
+struct NFResult: CustomDebugStringConvertible {
     var safetyStatus: NFProductSafetyStatus
     var ingredients: [NFIngredient]
+    
+    var debugDescription: String {
+        return "Status: \(self.safetyStatus.description)\nIngredients:\n\t\(ingredients)"
+    }
 }

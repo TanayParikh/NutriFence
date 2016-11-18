@@ -47,3 +47,24 @@ Devpost: https://devpost.com/software/nutrifence
 - sort every item into appropriate category by comparing the ingredients in the request
   with the lists of ingredients from Redis
 - return data & conclusions in JSON format back to the app (POST reply)
+
+#### Configuration
+Create environment values
+
+1. Add a new file named `.env` to /Classification API/.
+2. Add the following values:
+```
+BING_SPELLCHECK_API_KEY=***SPELLCHECK-KEY***
+GOOGLE_VISION_API_KEY=***VISION-KEY***
+```
+
+#### Installation
+
+```sh
+$ npm install
+```
+
+```sh
+$ npm start
+```
+

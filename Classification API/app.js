@@ -51,8 +51,8 @@ function setupExpressServer() {
         interpretAndSendData(request, response);
     });
 
-    // wait for a connection
-    app.listen(3000, function () {
+    // Waits for connection
+    app.listen(process.env.PORT || 3000, function () {
         console.log('Server is running using express.js');
     });
 }

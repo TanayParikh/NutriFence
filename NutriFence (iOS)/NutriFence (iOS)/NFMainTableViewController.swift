@@ -15,44 +15,29 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var dividerLineView: UIView!
     
-    var imageToAnalyze: UIImage!
     var vcType: NFMainTVCType!
-    var tableContents: [AnyObject] = [] {
-        didSet {
-            if let _ = tableView {
-                if case .result(let status) = vcType! {
-                    switch status! {
-                    case .safe:
-                        setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.green))
-                        headerLabel.text = "This product is safe to eat!"
-                    case .unsafe:
-                        headerLabel.text = "This product is NOT safe to eat!"
-                        setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.red))
-                    }
-                }
-                self.tableView.reloadData()
-                unhideAll()
-                activityIndicator.stopAnimating()
-            }
-        }
-    }
+    var tableContents: [AnyObject] = []
     
     // MARK: - View controller life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
         switch vcType! {
         case .selection:
-            headerLabel.text = "Select diet:"
-        case .result(_):
-            hideAll()
-            fetchResult(completion: setResult)
-            activityIndicator.startAnimating()
+            setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
+            self.headerLabel.text = "Select diet:"
+        case .result(let status):
+            if status == .safe {
+                setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.green))
+                self.headerLabel.text = "This product is safe to eat!"
+            } else {
+                setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.red))
+                self.headerLabel.text = "This product is NOT safe to eat!"
+            }
         }
+        debugPrint(#function)
     }
     
     // MARK: - Segues
@@ -114,42 +99,10 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    // MARK: - Update UI
-    
-    private func hideAll() {
-        headerLabel.isHidden = true
-        tableView.isHidden = true
-        nextButton.isHidden = true
-    }
-    
-    private func unhideAll() {
-        headerLabel.isHidden = false
-        tableView.isHidden = false
-        nextButton.isHidden = false
-    }
-    
     // MARK: - Helpers
     
-    private func setGradient(_ gradient: CAGradientLayer) {
+    func setGradient(_ gradient: CAGradientLayer) {
         self.view.layer.insertSublayer(gradient, at: 0)
     }
     
-    
-    private func fetchResult(completion: @escaping (NFResult) -> Void) {
-        let queue = DispatchQueue(label: "com.nutrifence.background")
-        // send image for analysis
-        queue.async { [weak self] Void in
-            if let result = NFClassificationFetcher.analyzeImage(self!.imageToAnalyze) {
-                DispatchQueue.main.async {
-                    print("Completion should execute")
-                    completion(result)
-                }
-            }
-        }
-    }
-    
-    // Fetch callback func
-    private func setResult(_ result: NFResult) {
-        tableContents = result.ingredients
-    }
 }

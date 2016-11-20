@@ -8,18 +8,21 @@
 
 import UIKit
 import SwiftyJSON
+import NVActivityIndicatorView
 
 @IBDesignable
-class NFImageSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NFImageSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NVActivityIndicatorViewable {
 
     @IBOutlet weak var takePictureButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var chooseFromLibraryButton: UIButton!
     
-    private var loadingOverlay = UIView()
+    private var loadingOverlay: NVActivityIndicatorView!
     private var activityIndicator = UIActivityIndicatorView()
+    private var isAnimating = false
     private var result: NFResult? {
         didSet {
+            hideOverlay()
             performSegue(withIdentifier: "LoadResultsSegue", sender: self.result!)
         }
     }
@@ -32,14 +35,12 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         // Do any additional setup after loading the view.
-        debugPrint(#function)
         self.setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
         customizeButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        debugPrint(#function)
     }
     
     // MARK: - Actions
@@ -83,51 +84,37 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
     
     // MARK: - Loading overlay
     
-    private func showOverlay() {
-        print(#function)
-        loadingOverlay.frame = view.frame
-        loadingOverlay.center = view.center
-        loadingOverlay.layer.addSublayer(NFGradientColors.gradientInView(loadingOverlay, withColor: UIColor.purple))
-        loadingOverlay.clipsToBounds = true
-        
-        activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        activityIndicator.activityIndicatorViewStyle = .gray
-        activityIndicator.center = CGPoint(x: loadingOverlay.bounds.width / 2, y: loadingOverlay.bounds.height / 2)
-        activityIndicator.color = UIColor(red: 175, green: 175, blue: 175)
-        
-//        let loadingLabel = UILabel()
-//        loadingLabel.text = "Loading..."
-//        loadingLabel.sizeToFit()
-//        loadingLabel.textColor = UIColor(red: 175, green: 175, blue: 175)
-        
-        loadingOverlay.addSubview(activityIndicator)
-        
-        UIView.transition(with: self.view,
-                          duration: 0.5,
-                          options: .transitionCrossDissolve,
-                          animations: { [weak self] Void in
-                                self!.view.addSubview(self!.loadingOverlay)
-                        },
-                          completion: nil)
-        activityIndicator.startAnimating()
-        
-        /* if #available(iOS 9.0, *) {
-            loadingLabel.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor).isActive = true
-            loadingLabel.centerXAnchor.constraint(equalTo: loadingOverlay.centerXAnchor).isActive = true
-        } else {
-            // Fallback on earlier versions
-        } */
+    private func hideOverlay() {
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
     
-    private func hideOverlay() {
-        UIView.transition(with: loadingOverlay,
-                          duration: 0.5, options: .transitionCrossDissolve,
-                          animations: { [weak self] Void in
-                            self!.loadingOverlay.removeFromSuperview()
-                        },
-                          completion: nil)
-        activityIndicator.stopAnimating()
-        loadingOverlay.removeFromSuperview()
+    private func showOverlay() {
+        let rectSize = CGSize(width: self.view.bounds.width * 0.2, height: self.view.bounds.width * 0.2)
+        let activityData = ActivityData(size: rectSize,
+                                        message: "Analyzing...",
+                                        type: NVActivityIndicatorType.ballBeat,
+                                        color: UIColor(red: 175, green: 175, blue: 175),
+                                        padding: nil,
+                                        displayTimeThreshold: nil,
+                                        minimumDisplayTime: 5)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+        hideSubviews()
+    }
+    
+    private func hideSubviews() {
+        for view in self.view.subviews {
+            if view.restorationIdentifier == "NFLogo" {
+                continue
+            } else {
+                view.isHidden = true
+            }
+        }
+    }
+    
+    private func unhideSubviews() {
+        for view in self.view.subviews {
+            view.isHidden = false
+        }
     }
     
     

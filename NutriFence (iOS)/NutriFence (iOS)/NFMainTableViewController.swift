@@ -25,6 +25,8 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.headerLabel.textColor = UIColor(red: 175, green: 175, blue: 175)
+        self.dividerLineView.backgroundColor = UIColor(red: 175, green: 175, blue: 175)
         switch vcType! {
         case .selection:
             setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))

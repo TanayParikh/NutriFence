@@ -156,10 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
+				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
 				76DFA6291DD6D44600821BC5 /* Model */,
 				7685516F1DCE5725008A8526 /* View Controllers */,
 				76DFA6231DD6B56700821BC5 /* Utilities */,
-				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
 				7685516E1DCE56EF008A8526 /* Supporting Files */,
 			);
 			path = "NutriFence (iOS)";

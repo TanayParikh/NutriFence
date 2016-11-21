@@ -15,7 +15,8 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var dividerLineView: UIView!
+    @IBOutlet weak var requestDietButton: UIButton!
+    
     
     var vcType: NFMainTVCType!
     var tableContents: [AnyObject] = []
@@ -37,8 +38,16 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
                 self.headerLabel.text = "This product is NOT safe to eat!"
             }
         }
-        debugPrint(#function)
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func requestDietButtonTapped(_ sender: UIButton) {
+        let email = "nutrifencecanada@gmail.com"
+        let url = URL(string: "mailto:\(email)")!
+        UIApplication.shared.openURL(url)
+    }
+    
     
     // MARK: - Segues
     

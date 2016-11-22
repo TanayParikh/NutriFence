@@ -10,7 +10,6 @@ import UIKit
 import SwiftyJSON
 import NVActivityIndicatorView
 
-@IBDesignable
 class NFImageSelectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NVActivityIndicatorViewable {
 
     @IBOutlet weak var takePictureButton: UIButton!
@@ -168,9 +167,9 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
                                            preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         errorAlert.addAction(okAction)
+        unhideSubviews()
         present(errorAlert, animated: true, completion: { [weak self] Void in
             self!.hideOverlay()
-            self!.unhideSubviews()
         })
     }
 }

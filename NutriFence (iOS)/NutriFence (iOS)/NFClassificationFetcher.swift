@@ -23,7 +23,7 @@ class NFClassificationFetcher {
      - Important:
      Function should be run on a background queue
     */
-    class func analyzeImage(_ image: UIImage, completion: @escaping (JSON) -> Void) {
+    class func analyzeImage(_ image: UIImage, onSuccess successHandler: @escaping (JSON) -> Void, onFail failHandler: @escaping (Void) -> Void) {
         let imageBase64 = base64EncodeImage(image)
         if let request = urlRequest(withImageBase64: imageBase64) {
             print(request.httpBody!.description)
@@ -31,11 +31,14 @@ class NFClassificationFetcher {
             queue.async {
                 let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
                     guard let data = data, error == nil else {
+                        DispatchQueue.main.async {
+                            failHandler()
+                        }
                         return
                     }
                     DispatchQueue.main.async {
-                        debugPrint(JSON(data: data))
-                        completion(JSON(data: data))
+                        print(JSON(data: data))
+                        successHandler(JSON(data: data))
                     }
                 }
                 task.resume()

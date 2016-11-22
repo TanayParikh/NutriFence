@@ -16,6 +16,7 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var requestDietButton: UIButton!
+    @IBOutlet var dividerLines: [UIView]!
     
     
     var vcType: NFMainTVCType!
@@ -26,7 +27,7 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.headerLabel.textColor = UIColor(red: 175, green: 175, blue: 175)
-        self.dividerLineView.backgroundColor = UIColor(red: 175, green: 175, blue: 175)
+        
         switch vcType! {
         case .selection:
             setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
@@ -114,6 +115,12 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     func setGradient(_ gradient: CAGradientLayer) {
         self.view.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    private func setCustomLinesColor() {
+        for lineView in self.dividerLines {
+            lineView.backgroundColor = UIColor(red: 175, green: 175, blue: 175)
+        }
     }
     
 }

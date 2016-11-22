@@ -22,7 +22,6 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
     private var isAnimating = false
     private var result: NFResult? {
         didSet {
-            hideOverlay()
             performSegue(withIdentifier: "LoadResultsSegue", sender: self.result!)
         }
     }
@@ -69,6 +68,7 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
                     resultVC.vcType = NFMainTVCType.result(result.safetyStatus)
                     resultVC.setGradient(NFGradientColors.gradientInView(resultVC.view, withColor: resultColor))
                     resultVC.tableContents = result.ingredients
+                    self.hideOverlay()
                 }
             }
         }
@@ -79,7 +79,7 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
         let image = info[UIImagePickerControllerEditedImage] as? UIImage
         dismiss(animated: true, completion: nil)
         showOverlay()
-        NFClassificationFetcher.analyzeImage(image!, completion: parseJSONResult)
+        NFClassificationFetcher.analyzeImage(image!, onSuccess: parseJSONResult, onFail: displayErrorAlert)
     }
     
     // MARK: - Loading overlay
@@ -132,6 +132,8 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
         self.chooseFromLibraryButton.layer.borderColor = gray.cgColor
     }
     
+    // MARK: - Network callbacks
+    
     func parseJSONResult(_ json: JSON) {
         var result = NFResult(safetyStatus: .unsafe, ingredients: [])
         var ingredients = [NFIngredient]()
@@ -157,5 +159,18 @@ class NFImageSelectionViewController: UIViewController, UIImagePickerControllerD
             result.ingredients = ingredients
         }
         self.result = result
+    }
+    
+    func displayErrorAlert() {
+        let message = "Looks like our servers are having some trouble right now. Try again in a little while!"
+        let errorAlert = UIAlertController(title: "Connection error",
+                                           message: message,
+                                           preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        errorAlert.addAction(okAction)
+        present(errorAlert, animated: true, completion: { [weak self] Void in
+            self!.hideOverlay()
+            self!.unhideSubviews()
+        })
     }
 }

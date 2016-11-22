@@ -36,9 +36,18 @@ class NFClassificationFetcher {
                         }
                         return
                     }
-                    DispatchQueue.main.async {
-                        print(JSON(data: data))
-                        successHandler(JSON(data: data))
+                    if let resp = response as? HTTPURLResponse {
+                        switch resp.statusCode {
+                        case 200:
+                            DispatchQueue.main.async {
+                                print(JSON(data: data))
+                                successHandler(JSON(data: data))
+                            }
+                        default:
+                            DispatchQueue.main.async {
+                                failHandler()
+                            }
+                        }
                     }
                 }
                 task.resume()
@@ -49,7 +58,7 @@ class NFClassificationFetcher {
     // MARK: - Private implementation
     
     private static let session = URLSession.shared
-    private static let classificationURL = URL(string: "http://159.203.50.87:3000/ClassificationAPI")!
+    private static let classificationURL = URL(string: "http://node.nutrifence.com/ClassificationAPI")!
     
     
     private class func urlRequest(withImageBase64 image: String) -> URLRequest? {

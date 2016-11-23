@@ -40,6 +40,7 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
                 setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.red))
                 self.headerLabel.text = "This product is NOT safe to eat!"
             }
+            self.headerLabel.sizeToFit()
         }
     }
     
@@ -82,6 +83,9 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
             cell.textLabel?.text = cellContent.name
         }
         cell.selectionStyle = .none
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
         return cell
     }
     

@@ -183,6 +183,7 @@ jspm_packages
 
 ### dotenv Environment File ###
 *.env
+*env
 
 ### Compiled TypeScript (JavaScript) Files ###
 Classification API/deploy/

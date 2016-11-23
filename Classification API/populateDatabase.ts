@@ -5,9 +5,8 @@ client.on('connect', function() {
     console.log('populateDatabase connected');
 });
 
-var exports = module.exports = {};
 
-exports.addCeliacUnsafe = function() {
+module.exports.addCeliacUnsafe = function() {
     client.exists('Celiac Unsafe', function(err, reply) {
         if (reply) return;
         client.sadd(['Celiac Unsafe',
@@ -142,7 +141,7 @@ exports.addCeliacUnsafe = function() {
     });
 };
 
-exports.addCeliacUnfriendly = function() {
+module.exports.addCeliacUnfriendly = function() {
     client.exists('Celiac Unfriendly', function(err, reply) {
         if (reply) return;
         client.sadd(['Celiac Unfriendly',
@@ -190,7 +189,7 @@ exports.addCeliacUnfriendly = function() {
     });
 };
 
-exports.printMembers = function() {
+module.exports.printMembers = function() {
     console.log("Celiac Unsafe: ");
     client.smembers('Celiac Unsafe', function(err, reply) {
         console.log(reply);

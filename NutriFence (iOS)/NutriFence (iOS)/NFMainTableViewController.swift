@@ -17,6 +17,8 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var requestDietButton: UIButton!
     @IBOutlet var dividerLines: [UIView]!
+    @IBOutlet weak var ingredientsFoundHeaderLabel: UILabel!
+    
     
     
     var vcType: NFMainTVCType!
@@ -41,7 +43,10 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
                 self.headerLabel.text = "This product is NOT safe to eat!"
             }
             self.headerLabel.sizeToFit()
+            self.ingredientsFoundHeaderLabel.text = "List of ingredients found:"
+            self.ingredientsFoundHeaderLabel.sizeToFit()
         }
+        
     }
     
     // MARK: - Actions

@@ -18,7 +18,10 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var requestDietButton: UIButton!
     @IBOutlet var dividerLines: [UIView]!
     @IBOutlet weak var ingredientsFoundHeaderLabel: UILabel!
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
+    // Useful constants
+    private let iphone4sScreenHeight: CGFloat = 480.0
     
     
     var vcType: NFMainTVCType!
@@ -46,7 +49,11 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
             self.ingredientsFoundHeaderLabel.text = "List of ingredients found:"
             self.ingredientsFoundHeaderLabel.sizeToFit()
         }
-        
+        if let _ = headerHeightConstraint {
+            if UIScreen.main.bounds.height <= iphone4sScreenHeight {
+                headerHeightConstraint.constant = 30
+            }
+        }
     }
     
     // MARK: - Actions

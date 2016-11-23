@@ -318,6 +318,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="J9n-9X-dhw"/>
                     <connections>
+                        <outlet property="headerHeightConstraint" destination="WL9-d2-ori" id="awU-6F-ejO"/>
                         <outlet property="headerLabel" destination="cn2-c3-YuT" id="vdP-N8-Twd"/>
                         <outlet property="ingredientsFoundHeaderLabel" destination="8Sb-Yu-7x3" id="hHs-qm-VRd"/>
                         <outlet property="nextButton" destination="WBh-rs-lHJ" id="q2m-DO-P3O"/>

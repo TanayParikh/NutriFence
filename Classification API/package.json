@@ -4,11 +4,11 @@
   "description": "Determines if a particular ingredient is safe for consumption.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TanayParikh/NutriFence.git"
+    "url": "https://github.com/TanayParikh/NutriFence"
   },
   "author": "NutriFence",
   "license": "ISC",
@@ -17,8 +17,13 @@
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.3",
     "redis": "^2.6.3",
     "request": "^2.78.0",
-    "sync-request": "^3.0.1"
+    "sync-request": "^3.0.1",
+    "typescript": "^2.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.50"
   }
 }

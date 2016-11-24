@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+import SwiftyJSON
+import ALCameraViewController
+import Photos
 
 class NFMainTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -56,6 +60,11 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        unhideSubviews()
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+    }
+    
     // MARK: - Actions
     
     @IBAction func requestDietButtonTapped(_ sender: UIButton) {
@@ -65,11 +74,43 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    @IBAction func nextButtonTapped() {
+        let cameraController = CameraViewController(croppingEnabled: true,
+                                                    allowsLibraryAccess: true,
+                                                    completion: { [weak self] (image, _) -> Void in
+                                                        if let imageData = image {
+                                                            NFClassificationFetcher.analyzeImage(imageData,
+                                                                                                 onSuccess: self!.parseJSONResult,
+                                                                                                 onFail: self!.displayErrorAlert)
+                                                        }
+                                                        self!.dismiss(animated: true, completion: { [weak self] Void in
+                                                            self!.hideSubviews()
+                                                            self!.showOverlay()
+                                                        })
+        })
+        present(cameraController, animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Segues
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoadResultsSegue" {
+            // Prepare the VC
+            if let resultVC = segue.destination as? NFMainTableViewController {
+                if let result = sender as? NFResult {
+                    let resultColor = (result.safetyStatus == .safe ? UIColor.green : UIColor.red)
+                    resultVC.vcType = NFMainTVCType.result(result.safetyStatus)
+                    resultVC.setGradient(NFGradientColors.gradientInView(resultVC.view, withColor: resultColor))
+                    resultVC.tableContents = result.ingredients
+                    self.hideOverlay()
+                }
+            }
+        }
+    }
     
     // MARK: - Table view data source
     
@@ -139,4 +180,92 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+}
+
+// MARK: - Camera view and loading animation
+extension NFMainTableViewController {
+    // MARK: - Loading overlay
+    
+    fileprivate func hideOverlay() {
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+    }
+    
+    fileprivate func showOverlay() {
+        let rectSize = CGSize(width: self.view.bounds.width * 0.2, height: self.view.bounds.width * 0.2)
+        let activityData = ActivityData(size: rectSize,
+                                        message: "Working...",
+                                        type: NVActivityIndicatorType.ballBeat,
+                                        color: UIColor(red: 175, green: 175, blue: 175),
+                                        padding: nil,
+                                        displayTimeThreshold: nil,
+                                        minimumDisplayTime: 5)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+        hideSubviews()
+    }
+    
+    fileprivate func unhideSubviews() {
+        for view in self.view.subviews {
+            UIView.animate(withDuration: 0.2,
+                           animations: {
+                            view.isHidden = false
+            })
+        }
+    }
+    
+    fileprivate func hideSubviews() {
+        for view in self.view.subviews {
+            if view.restorationIdentifier == "NFLogo" {
+                continue
+            } else {
+                UIView.animate(withDuration: 0.2,
+                               animations: {
+                                view.isHidden = true
+                })
+            }
+        }
+    }
+}
+
+// MARK: - Networking and parsing results
+extension NFMainTableViewController {
+    func parseJSONResult(_ json: JSON) {
+        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
+        var ingredients = [NFIngredient]()
+        if let jsonDict = json.dictionary {
+            debugPrint(jsonDict)
+            let isSafe = jsonDict["isGlutenFree"]?.bool!
+            if isSafe == true {
+                result.safetyStatus = .safe
+                if let ingreds = jsonDict["Good_Ingredients"]?.array {
+                    for goodIngred in ingreds {
+                        ingredients.append(NFIngredient(with: goodIngred.string!))
+                    }
+                }
+            } else {
+                print("Setting as .unsafe")
+                result.safetyStatus = .unsafe
+                if let ingreds = jsonDict["Bad_Ingredients"]?.array {
+                    for badIngred in ingreds {
+                        ingredients.append(NFIngredient(with: badIngred.string!))
+                    }
+                }
+            }
+            result.ingredients = ingredients
+        }
+        // After parsing, trigger segue to see results
+        performSegue(withIdentifier: "LoadResultsSegue", sender: result)
+    }
+    
+    func displayErrorAlert() {
+        let message = "Looks like our servers are having some trouble right now. Try again in a little while!"
+        let errorAlert = UIAlertController(title: "Connection error",
+                                           message: message,
+                                           preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        errorAlert.addAction(okAction)
+        unhideSubviews()
+        present(errorAlert, animated: true, completion: { [weak self] Void in
+            self!.hideOverlay()
+        })
+    }
 }

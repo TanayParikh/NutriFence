@@ -16,81 +16,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Image Selection Controller-->
-        <scene sceneID="oGv-36-Nbs">
-            <objects>
-                <viewController storyboardIdentifier="ImageSelectionViewController" title="Image Selection Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rJ9-tU-zuL" customClass="NFImageSelectionViewController" customModule="NutriFence" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hiu-x3-9y8"/>
-                        <viewControllerLayoutGuide type="bottom" id="0UD-vG-o5W"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="InY-xN-Uaw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="NFLogo" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-FJ-yDC">
-                                <rect key="frame" x="67.5" y="52" width="240" height="75"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu9-Jc-YSj">
-                                <rect key="frame" x="67.5" y="284" width="240" height="33"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <state key="normal" title="Take Picture">
-                                    <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePictureButtonTapped:" destination="rJ9-tU-zuL" eventType="touchUpInside" id="jV4-DR-QU1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-FF-1UW">
-                                <rect key="frame" x="67.5" y="350" width="240" height="33"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <state key="normal" title="Choose From Library">
-                                    <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseFromLibraryButtonTapped:" destination="rJ9-tU-zuL" eventType="touchUpInside" id="2eo-YV-BxZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYG-ox-3ml">
-                                <rect key="frame" x="16" y="610" width="107" height="37"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
-                                <state key="normal" title="&lt; Selection">
-                                    <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="CCm-eB-4DT" kind="unwind" unwindAction="unwind:" id="CJz-Ca-mRg"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="mYG-ox-3ml" firstAttribute="leading" secondItem="InY-xN-Uaw" secondAttribute="leadingMargin" id="3O0-EW-reH"/>
-                            <constraint firstItem="Mu9-Jc-YSj" firstAttribute="top" secondItem="InY-xN-Uaw" secondAttribute="top" constant="284" id="8Y4-kc-j4p"/>
-                            <constraint firstItem="zpn-FF-1UW" firstAttribute="top" secondItem="Mu9-Jc-YSj" secondAttribute="bottom" constant="33" id="DcZ-CZ-8KK"/>
-                            <constraint firstItem="bEH-FJ-yDC" firstAttribute="leading" secondItem="Mu9-Jc-YSj" secondAttribute="leading" id="JyH-Zh-4zD"/>
-                            <constraint firstItem="bEH-FJ-yDC" firstAttribute="trailing" secondItem="Mu9-Jc-YSj" secondAttribute="trailing" id="QOk-pq-ouR"/>
-                            <constraint firstItem="Mu9-Jc-YSj" firstAttribute="leading" secondItem="zpn-FF-1UW" secondAttribute="leading" id="S1p-Yn-N4H"/>
-                            <constraint firstItem="Mu9-Jc-YSj" firstAttribute="trailing" secondItem="zpn-FF-1UW" secondAttribute="trailing" id="SYP-Ga-fv6"/>
-                            <constraint firstAttribute="bottom" secondItem="mYG-ox-3ml" secondAttribute="bottom" constant="20" symbolic="YES" id="YMp-U8-xrC"/>
-                            <constraint firstItem="bEH-FJ-yDC" firstAttribute="centerX" secondItem="InY-xN-Uaw" secondAttribute="centerX" id="l8p-KV-aaX"/>
-                            <constraint firstItem="bEH-FJ-yDC" firstAttribute="top" secondItem="hiu-x3-9y8" secondAttribute="bottom" constant="32" id="qMl-1g-YlT"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="backButton" destination="mYG-ox-3ml" id="9HW-7V-tPa"/>
-                        <outlet property="chooseFromLibraryButton" destination="zpn-FF-1UW" id="Yw6-tn-dEG"/>
-                        <outlet property="takePictureButton" destination="Mu9-Jc-YSj" id="3J4-Ps-QwC"/>
-                        <segue destination="qd7-SA-lj3" kind="show" identifier="LoadResultsSegue" id="u5b-zG-rHj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i0s-92-tan" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="CCm-eB-4DT" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1814" y="77"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFk-hi-IgH">
             <objects>
@@ -131,7 +56,7 @@
                                     <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rJ9-tU-zuL" kind="show" identifier="TakePhotoSegue" id="eHr-19-SY8"/>
+                                    <action selector="nextButtonTapped" destination="91U-P1-yba" eventType="touchUpInside" id="IIi-6C-9bp"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="4" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JFo-OK-erA">
@@ -221,6 +146,7 @@
                         <outlet property="tableView" destination="JFo-OK-erA" id="9cO-ag-66L"/>
                         <outletCollection property="dividerLines" destination="sRd-3T-R56" collectionClass="NSMutableArray" id="9t2-ri-yfZ"/>
                         <outletCollection property="dividerLines" destination="ksP-Wt-IpW" collectionClass="NSMutableArray" id="ghY-dr-fsl"/>
+                        <segue destination="qd7-SA-lj3" kind="show" identifier="LoadResultsSegue" id="ZDP-ip-OdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNJ-nj-R5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,7 +255,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKL-4k-Udf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Leb-Dm-taR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2581.5999999999999" y="76.911544227886068"/>
+            <point key="canvasLocation" x="1825" y="77"/>
         </scene>
     </scenes>
     <resources>

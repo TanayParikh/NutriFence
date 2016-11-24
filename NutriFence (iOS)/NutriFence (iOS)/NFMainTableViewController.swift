@@ -61,32 +61,28 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        unhideSubviews()
-        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+        
     }
     
     // MARK: - Actions
     
     @IBAction func requestDietButtonTapped(_ sender: UIButton) {
         let email = "nutrifencecanada@gmail.com"
-        let url = URL(string: "mailto:\(email)")!
+        let url = URL(string: "mailto:\(email)?subject=Diet%20Addition%20Request")!
         UIApplication.shared.openURL(url)
     }
     
     
     @IBAction func nextButtonTapped() {
         let cameraController = CameraViewController(croppingEnabled: true,
-                                                    allowsLibraryAccess: true,
+                                                    allowsLibraryAccess: false,
                                                     completion: { [weak self] (image, _) -> Void in
                                                         if let imageData = image {
                                                             NFClassificationFetcher.analyzeImage(imageData,
                                                                                                  onSuccess: self!.parseJSONResult,
                                                                                                  onFail: self!.displayErrorAlert)
                                                         }
-                                                        self!.dismiss(animated: true, completion: { [weak self] Void in
-                                                            self!.hideSubviews()
-                                                            self!.showOverlay()
-                                                        })
+                                                        self!.dismiss(animated: true, completion: { [weak self] Void in self!.showOverlay() })
         })
         present(cameraController, animated: true, completion: nil)
     }
@@ -253,6 +249,8 @@ extension NFMainTableViewController {
             result.ingredients = ingredients
         }
         // After parsing, trigger segue to see results
+        self.hideOverlay()
+        self.unhideSubviews()
         performSegue(withIdentifier: "LoadResultsSegue", sender: result)
     }
     

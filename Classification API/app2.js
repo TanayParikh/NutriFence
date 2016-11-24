@@ -1,11 +1,47 @@
 require('dotenv').config();
+var redis = require('./database.js');
+var methods = require('./otherMethods.js');
+
+var express = require('express'),
+    app = express(),
+    bodyParser = require('body-parser'),
+    path = require("path");
+
+// add support for parsing different types of post data
+app.use(bodyParser.json({limit: '2.5mb'}));
+app.use(bodyParser.urlencoded({limit: '2.5mb', extended: true}));
+
+// tell express that www is the root of our public web folder
+app.use(express.static(path.join(__dirname, 'www')));
+
+// tell express what to do when the /ClassificationAPI route is requested
+app.post('/ClassificationAPI', function (request, response) {
+    interpretAndSendData(request, response);
+});
+
+// Waits for connection
+app.listen(process.env.PORT || 3000, function () {
+    console.log('Server is running using express.js');
+});
+
+// methods.setupExpressServer();
+
+
+/*
+ var celiacUnfriendly;
+ redis.getFromDB('Celiac Unfriendly').then(function(response){
+ celiacUnfriendly = response;
+ });
+
+ var celiacUnsafe;
+ redis.getFromDB('Celiac Unfriendly').then(function(response){
+ celiacUnsafe = response;
+ });
+ */
 
 var unsafeList;
 var unfriendlyList;
 var redisClient = setupRedis();
-
-setupExpressServer();
-
 
 // start Redis
 function setupRedis() {
@@ -14,12 +50,6 @@ function setupRedis() {
     client.on('connect', function () {
         console.log('Redis connection established.');
     });
-
-    // fetch the unsafe/unfriendly ingredients data from Redis
-    var populateDatabase = require("./populateDatabase.js");
-    populateDatabase.addCeliacUnsafe();
-    populateDatabase.addCeliacUnfriendly();
-    // populateDatabase.printMembers();                         // uncomment for testing
 
     client.smembers('Celiac Unsafe', function(err, list) {
         unsafeList = list;
@@ -33,62 +63,12 @@ function setupRedis() {
     return client;
 }
 
-function setupExpressServer() {
-    var express = require('express'),
-        app = express(),
-        bodyParser = require('body-parser'),
-        path = require("path");
-
-    // add support for parsing different types of post data
-    app.use(bodyParser.json({limit: '2.5mb'}));
-    app.use(bodyParser.urlencoded({limit: '2.5mb', extended: true}));
-
-    // tell express that www is the root of our public web folder
-    app.use(express.static(path.join(__dirname, 'www')));
-
-    // tell express what to do when the /ClassificationAPI route is requested
-    app.post('/ClassificationAPI', function (request, response) {
-        interpretAndSendData(request, response);
-    });
-
-    // Waits for connection
-    app.listen(process.env.PORT || 3000, function () {
-        console.log('Server is running using express.js');
-    });
-}
-
-function imageOCR(req) {
-    var request = require('sync-request');
-    var requestURL = 'https://vision.googleapis.com/v1/images:annotate?key=' + process.env.GOOGLE_VISION_API_KEY;
-
-    var res = request('POST', requestURL, {
-        json:
-        {
-            "requests": [
-                {
-                    "image":{
-                        "content": req.body.request.imageContent
-                    },
-                    "features": [
-                        {
-                            "type":"TEXT_DETECTION",
-                            "maxResults":1
-                        }
-                    ]
-                }
-            ]
-        }
-    });
-
-    return JSON.parse(res.getBody('utf8')).responses[0].textAnnotations[0].description;
-}
-
 
 var res;
 function interpretAndSendData(req, response) {
     res = response;
-    var rawIngredients = imageOCR(req);
-    // rawIngredients = splitIntoSubgroups(rawIngredients);             // adds supheadings - buggy though
+    var rawIngredients = methods.imageOCR(req);
+    // rawIngredients = splitIntoSubgroups(rawIngredients);   // adds supheadings - buggy though
 
     // format the raw ingredients
     rawIngredients = rawIngredients.toLowerCase();
@@ -96,7 +76,7 @@ function interpretAndSendData(req, response) {
     rawIngredients = rawIngredients.substring(index, rawIngredients.length - 1);
     rawIngredients = rawIngredients.replace(/(\n)+/g, ' ');
     rawIngredients = rawIngredients.replace(/[.]+/g, ',');
-    
+
     spellCheckIngredients(rawIngredients);
 
     // unused function for adding subheadings
@@ -148,7 +128,7 @@ function spellCheckIngredients(rawIngredients) {
             console.log("STATUS:  " + response.statusCode);
             console.log("BODY: " + body);
         }
-        
+
         formatRawIngredients(rawIngredients);
     });
 

@@ -52,7 +52,7 @@
                             <button opaque="NO" contentMode="scaleAspectFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1K-vZ-iL5">
                                 <rect key="frame" x="279" y="607" width="80" height="40"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <state key="normal" title="Scan" image="NextArrow">
+                                <state key="normal" image="NextArrow">
                                     <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -171,7 +171,7 @@
                             <button opaque="NO" contentMode="scaleAspectFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-rs-lHJ">
                                 <rect key="frame" x="279" y="607" width="80" height="40"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                <state key="normal" title="Scan New" image="NextArrow">
+                                <state key="normal" title="Scan New">
                                     <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -255,7 +255,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKL-4k-Udf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Leb-Dm-taR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="77"/>
+            <point key="canvasLocation" x="1824.8" y="76.911544227886068"/>
         </scene>
     </scenes>
     <resources>

@@ -58,7 +58,7 @@ class NFClassificationFetcher {
     // MARK: - Private implementation
     
     private static let session = URLSession.shared
-    private static let classificationURL = URL(string: "http://node.nutrifence.com/ClassificationAPI")!
+    private static let classificationURL = URL(string: "http://node.nutrifence.com:3000/ClassificationAPI")!
     
     
     private class func urlRequest(withImageBase64 image: String) -> URLRequest? {

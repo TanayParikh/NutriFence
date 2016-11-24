@@ -17,6 +17,11 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var requestDietButton: UIButton!
     @IBOutlet var dividerLines: [UIView]!
+    @IBOutlet weak var ingredientsFoundHeaderLabel: UILabel!
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    
+    // Useful constants
+    private let iphone4sScreenHeight: CGFloat = 480.0
     
     
     var vcType: NFMainTVCType!
@@ -39,6 +44,14 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
             } else {
                 setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.red))
                 self.headerLabel.text = "This product is NOT safe to eat!"
+            }
+            self.headerLabel.sizeToFit()
+            self.ingredientsFoundHeaderLabel.text = "List of ingredients found:"
+            self.ingredientsFoundHeaderLabel.sizeToFit()
+        }
+        if let _ = headerHeightConstraint {
+            if UIScreen.main.bounds.height <= iphone4sScreenHeight {
+                headerHeightConstraint.constant = 30
             }
         }
     }
@@ -82,6 +95,9 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
             cell.textLabel?.text = cellContent.name
         }
         cell.selectionStyle = .none
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
         return cell
     }
     

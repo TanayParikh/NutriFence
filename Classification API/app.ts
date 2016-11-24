@@ -15,16 +15,9 @@ function setupRedis() {
         console.log('Redis connection established.');
     });
 
-    // fetch the unsafe/unfriendly ingredients data from Redis
-    var populateDatabase = require("./populateDatabase.js");
-    populateDatabase.addCeliacUnsafe();
-    populateDatabase.addCeliacUnfriendly();
-    // populateDatabase.printMembers();                         // uncomment for testing
-
     client.smembers('Celiac Unsafe', function(err, list) {
         unsafeList = list;
     });
-
 
     client.smembers('Celiac Unfriendly', function(err, list) {
         unfriendlyList = list;

@@ -2,33 +2,35 @@ var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var nodemon = require('gulp-nodemon');
 
-gulp.task('typescript', function() {
-    console.log('Compiling typescript');
-    return gulp.src(['./*.ts'])
-        .pipe(ts({module: 'commonjs'})).js.pipe(gulp.dest('./deploy'))
+gulp.task("compile", function() {
+    // Creates new typescript project
+    var project = ts.createProject({
+        "target": "ES5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": true,
+        "noImplicitAny": false
+    });
+
+    // Calls for compilation of .ts files
+    return gulp.src("./*.ts")
+        .pipe(project())
+        .pipe(gulp.dest("./deploy/"))
 });
 
-gulp.task('watch', function() {
-    gulp.watch('./*.ts', ['typescript']);
-});
+gulp.task("default", ["compile"], function() {
+    // Adds package.json to deploy directory
+    gulp.src(['package.json'])
+        .pipe(gulp.dest('./deploy'));
 
-gulp.task('serve', ['typescript'], function () {
-    nodemon({
-        script: './deploy/app.js',
-        ext: 'js',
-        env: {
-            PORT:3000
-        },
-        ignore: ['./node_modules/**']
-    })
-    .on('restart', function() {
-        console.log('Restarting');
+    // Starts nodemon
+    return nodemon({
+        script: "./deploy/app.js",
+        ext: 'ts',
+        tasks: ["compile"],
+        env: { PORT:3000  }
     });
 });
-
-gulp.task('deploy', ['serve'], function() {
-    return gulp.src(['package.json'])
-        .pipe(gulp.dest('./deploy'));
-});
-
-gulp.task('default', ['deploy']);

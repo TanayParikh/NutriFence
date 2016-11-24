@@ -1,15 +1,18 @@
 PODS:
+  - ALCameraViewController (1.2.7)
   - NVActivityIndicatorView (3.0)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
+  - ALCameraViewController
   - NVActivityIndicatorView
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  ALCameraViewController: 4a513b8d5ecfdb3f34c50b1d469c373aae1ec7b4
   NVActivityIndicatorView: 81953b5e65093ba79edf4fe7268e002039ca5268
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: a90a91d304a73674840bae04a9e92600d69bbb23
+PODFILE CHECKSUM: 5df2bf595e672fb4fa40e8261bb4e9b1adb346c3
 
 COCOAPODS: 1.1.1

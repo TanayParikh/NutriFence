@@ -80,6 +80,13 @@ function imageOCR(req) {
         }
     });
 
+    /*
+    // Writes response to file
+    var fs = require('fs');
+    fs.writeFile('google_vision_response.json', res.getBody('utf8'), function() {
+
+    });*/
+
     return JSON.parse(res.getBody('utf8')).responses[0].textAnnotations[0].description;
 }
 
@@ -138,9 +145,24 @@ function spellCheckIngredients(rawIngredients) {
         qs: {'text': rawIngredients, 'mode': 'proof'}
     };
 
+
+    /*
+    // Writes post data to file
+    var fs = require('fs');
+    fs.writeFile('spell_check_post_data.json', JSON.stringify(options), function() {
+        console.log('options written to file');
+    });*/
+
     // Start the request
     request(options, function (error, response, body) {
         if (!error && response.statusCode == 200) {
+
+            /*
+             // Writes response to file
+            fs.writeFile('spell_check_response.json', body, function() {
+                console.log('response written to file');
+            });*/
+
             rawIngredients = correctSpellingErrors(body, rawIngredients);
         } else {
             console.log("Issue with trying to connect to spellcheck API");

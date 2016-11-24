@@ -50,7 +50,6 @@ function databaseOperation() {
                 rl.close();
                 break;
         }
-
     });
 }
 
@@ -145,21 +144,3 @@ function updateExisting(fileName, databaseName) {
         });
     });
 }
-
-// used in app.js to pull list of members of a database from Redis
-module.exports.getFromDB = function(key) {
-
-    return new Promise(function(resolve, reject) {
-        var redis = require('redis');
-        var client = redis.createClient();
-
-        client.on('connect', function() {
-            console.log('Redis connection established.');
-        });
-
-        client.smembers(key, function(err, list) {
-            resolve(list);
-        });
-    });
-
-};

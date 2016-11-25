@@ -68,3 +68,8 @@ $ npm install
 $ npm start
 ```
 
+#### Use
+##### TypeScript autocompilation & reload:
+```sh
+$ gulp
+```

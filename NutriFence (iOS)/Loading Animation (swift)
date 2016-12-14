@@ -1,0 +1,72 @@
+// wheat animation 
+
+let loadinganimation = CALayer()
+loadinganimation.frame = CGRectMake(0, 0, 120, 120)
+
+let r6/animationcorn.ai = CALayer()
+r6/animationcorn.ai.frame = CGRectMake(0, 0, 30, 29)
+
+let r5/animationcorn.ai = CALayer()
+r5/animationcorn.ai.frame = CGRectMake(0, 0, 30, 29)
+
+let r4/animationcorn.ai = CALayer()
+r4/animationcorn.ai.frame = CGRectMake(0, 0, 30, 29)
+
+let r3/animationcorn.ai = CALayer()
+r3/animationcorn.ai.frame = CGRectMake(0, 0, 30, 29)
+
+let r2/animationcorn.ai = CALayer()
+r2/animationcorn.ai.frame = CGRectMake(0, 0, 30, 29)
+
+let r1/animationcorn.ai = CALayer()
+r1/animationcorn.ai.frame = CGRectMake(0, 0, 30, 29)
+
+let loading/animationcorn.ai = CALayer()
+loading/animationcorn.ai.frame = CGRectMake(0, 0, 86, 26)
+
+// right top r1
+let ani = CAKeyframeAnimation(keyPath: "opacity")
+ani.keyTimes = [0,0.333,1]
+ani.timingFunctions = [CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833), CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833)]
+ani.values = [0,1,0]
+ani.duration = 1.001
+
+// right middle r2
+let ani = CAKeyframeAnimation(keyPath: "opacity")
+ani.keyTimes = [0,0.333,1]
+ani.timingFunctions = [CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833), CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833)]
+ani.values = [0,1,0]
+ani.duration = 1.001
+ani.beginTime = CACurrentMediaTime() + 0.334
+
+// rightt bottom r3
+let ani = CAKeyframeAnimation(keyPath: "opacity")
+ani.keyTimes = [0,0.333,1]
+ani.timingFunctions = [CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833), CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833)]
+ani.values = [0,1,0]
+ani.duration = 1.001
+ani.beginTime = CACurrentMediaTime() + 0.667
+
+// left bottom r4
+let ani = CAKeyframeAnimation(keyPath: "opacity")
+ani.keyTimes = [0,0.333,1]
+ani.timingFunctions = [CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833), CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833)]
+ani.values = [0,1,0]
+ani.duration = 1.001
+ani.beginTime = CACurrentMediaTime() + 1.001
+
+// left middle r5
+let ani = CAKeyframeAnimation(keyPath: "opacity")
+ani.keyTimes = [0,0.333,1]
+ani.timingFunctions = [CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833), CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833)]
+ani.values = [0,1,0]
+ani.duration = 1.001
+ani.beginTime = CACurrentMediaTime() + 1.335
+
+// left top r6
+let ani = CAKeyframeAnimation(keyPath: "opacity")
+ani.keyTimes = [0,0.333,1]
+ani.timingFunctions = [CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833), CAMediaTimingFunction(controlPoints: 0.167,0.167,0.833,0.833)]
+ani.values = [0,1,0]
+ani.duration = 1.001
+ani.beginTime = CACurrentMediaTime() + 1.668

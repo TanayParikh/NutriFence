@@ -61,7 +61,7 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
     }
     
     // MARK: - Actions
@@ -82,7 +82,9 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
                                                                                                  onSuccess: self!.parseJSONResult,
                                                                                                  onFail: self!.displayErrorAlert)
                                                         }
-                                                        self!.dismiss(animated: true, completion: { [weak self] Void in self!.showOverlay() })
+                                                        self!.dismiss(animated: true, completion: { [weak self] Void in
+                                                            self!.showOverlay()
+                                                        })
         })
         present(cameraController, animated: true, completion: nil)
     }
@@ -255,11 +257,13 @@ extension NFMainTableViewController {
     }
     
     func displayErrorAlert() {
-        let message = "Looks like our servers are having some trouble right now. Try again in a little while!"
+        let message = "Looks like we're having some trouble connecting. Check your connection and try again."
         let errorAlert = UIAlertController(title: "Connection error",
                                            message: message,
                                            preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { [weak self] (_) -> Void in
+            self!.dismiss(animated: true, completion: nil)
+        })
         errorAlert.addAction(okAction)
         unhideSubviews()
         present(errorAlert, animated: true, completion: { [weak self] Void in

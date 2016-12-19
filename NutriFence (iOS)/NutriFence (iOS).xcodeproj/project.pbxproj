@@ -19,6 +19,7 @@
 		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
 		7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551671DCE4E8A008A8526 /* UIColor+Hex.swift */; };
 		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
+		768CADAB1E087D8A00D89E09 /* TOCropViewController in Resources */ = {isa = PBXBuildFile; fileRef = 768CADAA1E087D8A00D89E09 /* TOCropViewController */; };
 		76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */; };
 		76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */; };
 		76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */; };
@@ -68,6 +69,7 @@
 		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		768551671DCE4E8A008A8526 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
+		768CADAA1E087D8A00D89E09 /* TOCropViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TOCropViewController; sourceTree = "<group>"; };
 		76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTableViewController.swift; sourceTree = "<group>"; };
 		76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTVCType.swift; sourceTree = "<group>"; };
 		76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFIngredient.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				7685516F1DCE5725008A8526 /* View Controllers */,
 				761585D01E07A3860094BEDB /* Controls */,
 				76DFA6231DD6B56700821BC5 /* Utilities */,
+				768CADA91E087D4700D89E09 /* Frameworks */,
 				7685516E1DCE56EF008A8526 /* Supporting Files */,
 			);
 			path = "NutriFence (iOS)";
@@ -212,6 +215,14 @@
 				7634A6761E0792A50049F909 /* NFLabelCaptureViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		768CADA91E087D4700D89E09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				768CADAA1E087D8A00D89E09 /* TOCropViewController */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		76DFA6231DD6B56700821BC5 /* Utilities */ = {
@@ -355,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */,
+				768CADAB1E087D8A00D89E09 /* TOCropViewController in Resources */,
 				7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */,
 				76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */,
 				76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */,
@@ -631,6 +643,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "TOCropViewController-Bridging-Header";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -673,6 +686,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TOCropViewController-Bridging-Header";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -690,6 +704,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nutrifence.NutriFenceiOS;
 				PRODUCT_NAME = NutriFence;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/NutriFence (iOS)/TOCropViewController/TOCropViewController-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -706,6 +721,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nutrifence.NutriFenceiOS;
 				PRODUCT_NAME = NutriFence;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/NutriFence (iOS)/TOCropViewController/TOCropViewController-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

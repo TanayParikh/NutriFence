@@ -8,6 +8,7 @@
 
 import UIKit
 import CameraManager
+import TOCropViewController
 
 class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelegate {
     

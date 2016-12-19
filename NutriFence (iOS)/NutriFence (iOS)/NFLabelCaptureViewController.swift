@@ -9,12 +9,19 @@
 import UIKit
 import CameraManager
 
-class NFLabelCaptureViewController: UIViewController {
+class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelegate {
     
     
     @IBOutlet weak var cameraView: UIView!
     private let cameraManager = CameraManager()
     @IBOutlet weak var shutterButton: NFShutterButton!
+    
+    private var croppedImage: UIImage! {
+        didSet {
+            // go back to previous controller
+            print("Image set")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +41,31 @@ class NFLabelCaptureViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cameraManager.resumeCaptureSession()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
+        cameraManager.stopCaptureSession()
     }
     
     @IBAction func shutterButtonTapped() {
-        
+        cameraManager.capturePictureWithCompletion({ [unowned self] (image, error) -> Void in
+            if let errorOccured = error {
+                self.cameraManager.showErrorBlock("Error occurred", errorOccured.localizedDescription)
+            }
+            else if let image = image {
+                self.displayCropViewController(with: image)
+            }
+        })
+    }
+    
+    fileprivate func displayCropViewController(with image: UIImage) {
+        let cropController = TOCropViewController(croppingStyle: TOCropViewCroppingStyle.default, image: image)
+        cropController.delegate = self
+        present(cropController, animated: true, completion: nil)
     }
     
     fileprivate func addCameraToView() {
@@ -50,5 +77,11 @@ class NFLabelCaptureViewController: UIViewController {
             
             self?.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    // MARK: - TOCropViewControllerDelegate
+    
+    func cropViewController(_ cropViewController: TOCropViewController, didCropTo image: UIImage, with cropRect: CGRect, angle: Int) {
+        self.croppedImage = image
     }
 }

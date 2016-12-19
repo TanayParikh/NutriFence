@@ -270,6 +270,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-6E-cu9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-bO-Vh2" customClass="NFShutterButton" customModule="NutriFence" customModuleProvider="target">
                                 <rect key="frame" x="150" y="572" width="75" height="75"/>
                                 <color key="backgroundColor" red="0.27058823529411763" green="0.22745098039215686" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
@@ -281,6 +286,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shutterButtonTapped" destination="aY6-rM-vcv" eventType="touchUpInside" id="IE7-uZ-Lqr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,7 +299,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="captureButton" destination="YFG-bO-Vh2" id="0zN-Eq-CYu"/>
+                        <outlet property="cameraView" destination="OeT-6E-cu9" id="gfg-Hi-Fqu"/>
+                        <outlet property="shutterButton" destination="YFG-bO-Vh2" id="lrJ-zP-pgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wH-wc-Dcr" userLabel="First Responder" sceneMemberID="firstResponder"/>

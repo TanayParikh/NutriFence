@@ -8,6 +8,7 @@ target 'NutriFence (iOS)' do
   pod 'NVActivityIndicatorView'
   pod 'ALCameraViewController'
   pod 'CameraManager', '~> 3.0'
+  pod 'TOCropViewController'
 
   # Pods for NutriFence (iOS)
 

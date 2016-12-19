@@ -19,7 +19,6 @@
 		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
 		7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551671DCE4E8A008A8526 /* UIColor+Hex.swift */; };
 		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
-		768CADAB1E087D8A00D89E09 /* TOCropViewController in Resources */ = {isa = PBXBuildFile; fileRef = 768CADAA1E087D8A00D89E09 /* TOCropViewController */; };
 		76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */; };
 		76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */; };
 		76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */; };
@@ -366,7 +365,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */,
-				768CADAB1E087D8A00D89E09 /* TOCropViewController in Resources */,
 				7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */,
 				76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */,
 				76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */,

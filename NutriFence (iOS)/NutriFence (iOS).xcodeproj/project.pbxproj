@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0E63F2E3521F0162D10503B1 /* Pods_NutriFence__iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9125098AAED1349121DDE646 /* Pods_NutriFence__iOS_Tests.framework */; };
 		2C7869EF477C41A77966D20B /* Pods_NutriFence__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0D898703FCA3A4266C58C /* Pods_NutriFence__iOS_.framework */; };
+		761585D21E07A3990094BEDB /* NFShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761585D11E07A3990094BEDB /* NFShutterButton.swift */; };
+		7634A6771E0792A50049F909 /* NFLabelCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7634A6761E0792A50049F909 /* NFLabelCaptureViewController.swift */; };
 		76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D661DCD6DDD00DEF76E /* AppDelegate.swift */; };
 		76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6A1DCD6DDE00DEF76E /* Main.storyboard */; };
 		76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6D1DCD6DDE00DEF76E /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		49CD07C2F2343023F35B5B80 /* Pods-NutriFence (iOS)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)Tests/Pods-NutriFence (iOS)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		52B0026EBF0E9A9D9757F91B /* Pods-NutriFence (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS).debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		5FB84F789A576C75C829D539 /* Pods-NutriFence (iOS)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)UITests/Pods-NutriFence (iOS)UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		761585D11E07A3990094BEDB /* NFShutterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFShutterButton.swift; sourceTree = "<group>"; };
+		7634A6761E0792A50049F909 /* NFLabelCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLabelCaptureViewController.swift; sourceTree = "<group>"; };
 		76598D631DCD6DDD00DEF76E /* NutriFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76598D661DCD6DDD00DEF76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76598D6B1DCD6DDE00DEF76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +132,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		761585D01E07A3860094BEDB /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				761585D11E07A3990094BEDB /* NFShutterButton.swift */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
 		76598D5A1DCD6DDD00DEF76E = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +169,7 @@
 				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
 				76DFA6291DD6D44600821BC5 /* Model */,
 				7685516F1DCE5725008A8526 /* View Controllers */,
+				761585D01E07A3860094BEDB /* Controls */,
 				76DFA6231DD6B56700821BC5 /* Utilities */,
 				7685516E1DCE56EF008A8526 /* Supporting Files */,
 			);
@@ -196,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */,
+				7634A6761E0792A50049F909 /* NFLabelCaptureViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -512,6 +526,8 @@
 				76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */,
 				76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */,
 				76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */,
+				7634A6771E0792A50049F909 /* NFLabelCaptureViewController.swift in Sources */,
+				761585D21E07A3990094BEDB /* NFShutterButton.swift in Sources */,
 				7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */,
 				76DFA6311DD6E15B00821BC5 /* NFDiet.swift in Sources */,
 				76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */,

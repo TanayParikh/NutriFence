@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TFi-qj-9lG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aY6-rM-vcv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -256,6 +257,46 @@
                 <exit id="Leb-Dm-taR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1824.8" y="76.911544227886068"/>
+        </scene>
+        <!--Label Capture View Controller-->
+        <scene sceneID="l9p-4B-AlR">
+            <objects>
+                <viewController id="aY6-rM-vcv" customClass="NFLabelCaptureViewController" customModule="NutriFence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dka-0s-97w"/>
+                        <viewControllerLayoutGuide type="bottom" id="uTs-IA-qwD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bm-Yg-bQo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-bO-Vh2" customClass="NFShutterButton" customModule="NutriFence" customModuleProvider="target">
+                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.27058823529411763" green="0.22745098039215686" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YFG-bO-Vh2" secondAttribute="height" multiplier="1:1" id="EmS-9m-Cf4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YFG-bO-Vh2" firstAttribute="centerX" secondItem="8bm-Yg-bQo" secondAttribute="centerX" id="I9o-e3-VXp"/>
+                            <constraint firstItem="YFG-bO-Vh2" firstAttribute="width" secondItem="8bm-Yg-bQo" secondAttribute="width" multiplier="0.2" id="VP9-gd-0t9"/>
+                            <constraint firstItem="uTs-IA-qwD" firstAttribute="top" secondItem="YFG-bO-Vh2" secondAttribute="bottom" constant="20" id="vgp-tL-LVa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureButton" destination="YFG-bO-Vh2" id="0zN-Eq-CYu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wH-wc-Dcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781.5999999999999" y="-38.23088455772114"/>
         </scene>
     </scenes>
     <resources>

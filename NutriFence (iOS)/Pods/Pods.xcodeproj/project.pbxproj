@@ -7,240 +7,251 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		036D9ACE1C384705D842EF0A859B5FDC /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2616E4BE70C4065CDF74CBAB6300C89 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04A620B8F7A9DF431B022A24B4355E7C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD26FF0D97A38CDA7D0F759ECE5AF1 /* UIViewExtensions.swift */; };
-		05316E7D30AA2C9EFCB992BABF8EDF54 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4ADA65FA56D961AF9C69941638033 /* NVActivityIndicatorAnimationCubeTransition.swift */; };
-		0AEDBAA7547F9D40C010EA3BFFEE78D2 /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AEFA7145AEC752275AD386E6771DCA /* NVActivityIndicatorAnimationOrbit.swift */; };
-		0AFDB91CAB32B63E9877CE50A73792DF /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D42503337C7F80F5AF57989EE21377 /* PhotoLibraryViewController.swift */; };
-		0DE2B989EA1F1592E67AED334AAB6B98 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686A1B0007A3FFDABF0ED151A40B93E /* CameraView.swift */; };
-		12A9528C78FC91D0AABD455430F71F14 /* ALCameraViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D5B5647BF330825D9072191B68D354 /* ALCameraViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		190729FE91A5EA145961A3C59353C621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
-		1921256E0012189FC4EEE2A11AE2E820 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D141AB807FEF4EE61799ED78164085D /* CameraViewController.swift */; };
-		19A2983E2CC133E1C50E8FB6AEAC9D9D /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E013C35C322DADB62D6CDE87F5E7C /* PermissionsView.swift */; };
-		1FD494199615D5ED85E3D06DE5C5982F /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF7AF4D02B27AB90F0384B31CFB836 /* NVActivityIndicatorPresenter.swift */; };
-		20954D57A9A0A2CCE608530975BD9880 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF436B2F9C24D4AD94C7D76901DA29 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */; };
-		20F2F8B31260F2869F2502026771BF8C /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426261011318378CF14A200A99485DE9 /* NVActivityIndicatorAnimationBallZigZag.swift */; };
-		2B2323F72B3257C9E64E4C464430805A /* NVActivityIndicatorAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417DA7FF76B98111980BEE6ECB51DEF /* NVActivityIndicatorAnimationBlank.swift */; };
-		2B7B1C4B141251B7154840885562AA93 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186DB1642B4CD9C3B82C51AE9239F05 /* Utilities.swift */; };
-		2EA20B5C8416D7B2825E0E7ED81B46AC /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9081620D9C8E4F1751E355DCB9D26A85 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
-		324D3D09812A7CE0217F3FB24A850019 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A865DE50D85F7C1208DE1AF551EC79D /* ConfirmViewController.xib */; };
-		33C2CF0CE805DA02C13269D165A837F8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730D21A33EDBE73B01CCB6CCEA5E35A /* SwiftyJSON.swift */; };
-		3BD24FAC0C1C25415AC53CDBAC1F57DA /* PhotoLibraryAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69155B2BC7C7187A527A7484BF1A5369 /* PhotoLibraryAuthorizer.swift */; };
+		01792B4212D4E2611B80A8C46B1B0A9C /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB3F783DD6C8554B649A02A7CF2F0D8 /* SwiftyJSON-dummy.m */; };
+		04A620B8F7A9DF431B022A24B4355E7C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A5CCE7F29B117EF234939D258698F /* UIViewExtensions.swift */; };
+		05316E7D30AA2C9EFCB992BABF8EDF54 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A24FE97E9603FDE8E4084BAFEAD7BB /* NVActivityIndicatorAnimationCubeTransition.swift */; };
+		0AEDBAA7547F9D40C010EA3BFFEE78D2 /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E8197D7F3AE736618F20ABB512E7EC /* NVActivityIndicatorAnimationOrbit.swift */; };
+		0AFDB91CAB32B63E9877CE50A73792DF /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA3076B354C6FA82F4668C7D92257B0 /* PhotoLibraryViewController.swift */; };
+		0B076BB6395460DE51925CFDD0E78914 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
+		0DE2B989EA1F1592E67AED334AAB6B98 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCBDA71D373133C106B04FF0A631DD /* CameraView.swift */; };
+		12A9528C78FC91D0AABD455430F71F14 /* ALCameraViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 165FD17D7DBDA5A54DF3E865D36F7FCE /* ALCameraViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1921256E0012189FC4EEE2A11AE2E820 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C81F9835F0E4798BF5BF9239F22D7D /* CameraViewController.swift */; };
+		19A2983E2CC133E1C50E8FB6AEAC9D9D /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B613272753C38A5B3D71DB5C9B36E864 /* PermissionsView.swift */; };
+		1CF009B144F6D7FBD6257600DE8EAD0B /* Pods-NutriFence (iOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DFA45C9F977A7977D42A3CF65F8C75 /* Pods-NutriFence (iOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FD494199615D5ED85E3D06DE5C5982F /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD66D2CF8ABEAD1705488D1A3D68A96 /* NVActivityIndicatorPresenter.swift */; };
+		20954D57A9A0A2CCE608530975BD9880 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA83467BC4E507EE324C4318F21DF6E /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */; };
+		20F2F8B31260F2869F2502026771BF8C /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99D51714D35C5A5E116E7146E5FD14E /* NVActivityIndicatorAnimationBallZigZag.swift */; };
+		2B2323F72B3257C9E64E4C464430805A /* NVActivityIndicatorAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC78A58D60150ED0738B8223A3CF76 /* NVActivityIndicatorAnimationBlank.swift */; };
+		2B7B1C4B141251B7154840885562AA93 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2150389A8FA4043B0AB357D4F4CEDA7 /* Utilities.swift */; };
+		2E44C9A1B9BE5550A940A2B67506A63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
+		2EA20B5C8416D7B2825E0E7ED81B46AC /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F7395ECEF41C1B083E6B40FD941299 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
+		2F453B69F60558D070DBCC659C9D6783 /* Pods-NutriFence (iOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CDC10FE3DC402A50C2ABA0DE18B22C /* Pods-NutriFence (iOS)-dummy.m */; };
+		324D3D09812A7CE0217F3FB24A850019 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B2DB796152675F7197FD89FF12F059 /* ConfirmViewController.xib */; };
+		3BD24FAC0C1C25415AC53CDBAC1F57DA /* PhotoLibraryAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5E78FEDB4A09DF8852F59104E9E80 /* PhotoLibraryAuthorizer.swift */; };
 		3BE490C1EDA78E55174BADDDFFC37F5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
-		3BF00FC98DC28EB65FD64CD61CBE469F /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812BA3008F3216D20C7D6B2DD66CDAF /* NVActivityIndicatorAnimationBallGridBeat.swift */; };
-		45AD103A7308F4575C81A34F31B4AD4C /* ALCameraViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBA4A833A0B152259F2493A64AC2812 /* ALCameraViewController-dummy.m */; };
-		4D7F64AC19454C57F7C900664F31EC04 /* NVActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C2BCBC85049E7F15C8BF27D021641 /* NVActivityIndicatorView-dummy.m */; };
-		57D46053523694399834EA1172A911CE /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48533BB521AD4944AEDE84465E708D0D /* NVActivityIndicatorAnimationBallPulseSync.swift */; };
-		5820152CF7B16F6FF64E13D78467376A /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62677EB018F9D9100D2B336CE5936D64 /* ImageCell.swift */; };
+		3BF00FC98DC28EB65FD64CD61CBE469F /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7502F94CF4FCB4C921361C5DAFCEE3ED /* NVActivityIndicatorAnimationBallGridBeat.swift */; };
+		45AD103A7308F4575C81A34F31B4AD4C /* ALCameraViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BB688B266A351D23EFA2CBD5A5444F /* ALCameraViewController-dummy.m */; };
+		474ED4AAC1942F7865E34ABF069E53C0 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21C954E0540E4342E930B89A2385CF37 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D7F64AC19454C57F7C900664F31EC04 /* NVActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B04709C3512EE2002FAB39B7329C4D4 /* NVActivityIndicatorView-dummy.m */; };
+		5719D777F46F7C6F689C6898EA54F524 /* CameraManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4C040E2045FB2D1393FCB92B31BA9F /* CameraManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57D46053523694399834EA1172A911CE /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB215CC3470A0698A31DF3600807748 /* NVActivityIndicatorAnimationBallPulseSync.swift */; };
+		5820152CF7B16F6FF64E13D78467376A /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F120098970A2B0E9CBCE9A4BBE26FED /* ImageCell.swift */; };
 		60F22FF6A0FEF3F88D2BB25E392CE8CB /* Pods-NutriFence (iOS)UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB7BD78D0B0C32BC72DF581D25FC892 /* Pods-NutriFence (iOS)UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6103E9903EB4E06491FC5DCF246FCAA5 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E82E7FFCDDE72ADEC76760B6B2743B /* NVActivityIndicatorAnimationBallRotate.swift */; };
-		6151CAD1CAD7F34BFD688580ABA02686 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41F02B7BC74EE5040AA95B8E8625B5 /* NVActivityIndicatorAnimationBallGridPulse.swift */; };
-		66A1D1994E2DA7303C41872B5E0C05A8 /* NVActivityIndicatorAnimationLineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE354015EC624B1903913219D088D4EB /* NVActivityIndicatorAnimationLineScale.swift */; };
-		67BFD91AEE97E523E7CD95D783DD2C02 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B270E34CC73E81F68935F4D6515BF38 /* ConfirmViewController.swift */; };
-		6D4FFBDD1446E07634AC24A82B729C44 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAFDA5CEBBE5C154A0D3B8E17794EED /* UIButtonExtensions.swift */; };
-		734896A911D37758CC661CBAAD673DA1 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F8E8B860428D370845891A9DCBCB6D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
+		6103E9903EB4E06491FC5DCF246FCAA5 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34289BE9B6F32BB14194B8EB868D4A10 /* NVActivityIndicatorAnimationBallRotate.swift */; };
+		6151CAD1CAD7F34BFD688580ABA02686 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B4634BC9CDE3F65AE0B1F080B6F32B /* NVActivityIndicatorAnimationBallGridPulse.swift */; };
+		66A1D1994E2DA7303C41872B5E0C05A8 /* NVActivityIndicatorAnimationLineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A282BCF48CC3E32A9162D9DEC372CFC /* NVActivityIndicatorAnimationLineScale.swift */; };
+		67BFD91AEE97E523E7CD95D783DD2C02 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E84D61E6CBD56DAE5687D37E530D41 /* ConfirmViewController.swift */; };
+		6D4FFBDD1446E07634AC24A82B729C44 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E7EF58604A4820558693D6361BD8E9 /* UIButtonExtensions.swift */; };
+		734896A911D37758CC661CBAAD673DA1 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD16EEF489213F70DD1F4382A7572E6 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
 		7693B72E6F0E317692B5457B14DFD304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
-		76DBBB98A6C38DCC9255A58F686144F3 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D259C117AE0E0D1872967C819BFDF160 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
-		82182CE8F228C83F26CA94BE11C2B17A /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685C78BD4DEA3BD7B1A2F6CE654C644 /* NVActivityIndicatorShape.swift */; };
-		8AE014E6246D550FF0290C45D4821F22 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2625074B949AEC01C703D07A392C3EC /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
-		8D961959484FC1FF71D46A27E889A75A /* NVActivityIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D908F44E1F975EECF2B0DE93B0AC5876 /* NVActivityIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EB0AD01FFFBD40A81836BFFC0D94416 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820C9AA56933DA9F66F0DB7C05939FC /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
-		8F79989E412A5B21058E3B6A137B2968 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB9426D8FE4E684E810EE67553415D /* NVActivityIndicatorAnimationLineScalePulseOut.swift */; };
-		915D962D4F95AEFB98B3951444CBF8F6 /* Pods-NutriFence (iOS)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CDC10FE3DC402A50C2ABA0DE18B22C /* Pods-NutriFence (iOS)-dummy.m */; };
-		91BF56F2EE96EC97E18675351C4C9B30 /* CameraGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09468F1975087972CF5761E8DC3CCA57 /* CameraGlobals.swift */; };
-		925E3D1AC833F8381E1FD2D1E9B7F52D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
-		92A34DDF760EF960F95C39C8618BA1A9 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE574CDE832A2DCB087783DADB8BAAF /* NVActivityIndicatorAnimationBallPulse.swift */; };
-		9907E9EF4FDDA27EAF8B0267299A12E0 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F38B5F75EE2B4A867703EBBCE54DD8 /* NVActivityIndicatorAnimationBallBeat.swift */; };
-		9976DCB033041F8981560B850E5EF434 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9449C9F87E2E233AA2C5D749BD165C /* NVActivityIndicatorView.swift */; };
-		A28BC96BFBF5928CFD4C70A1314A5901 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2A7145E1FB435B3594B4638ECA9D5 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */; };
-		A40733D4BB77E3F0309F8A46A034A250 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5F172A94962B9B0E32990AE163941 /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
+		76DBBB98A6C38DCC9255A58F686144F3 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEED6D269CAFE9F2DE94C2F8A01F8EE /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
+		82182CE8F228C83F26CA94BE11C2B17A /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78110E9D3FA6A677AA33CBBBE2F145DB /* NVActivityIndicatorShape.swift */; };
+		8AE014E6246D550FF0290C45D4821F22 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB1902EA3D1E0BD10FB8089846302 /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
+		8BB622C1F090A88EBADAA503A04F90DF /* CameraManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0F66DA96809354A1E90DB6F6B67939 /* CameraManager-dummy.m */; };
+		8D961959484FC1FF71D46A27E889A75A /* NVActivityIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 082C73259EF482CA10675506768EDBC0 /* NVActivityIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EB0AD01FFFBD40A81836BFFC0D94416 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A655E2985A8FAF5CC4D80E971A910E /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
+		8F79989E412A5B21058E3B6A137B2968 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD4BFD0F2D12D57AB38E13D8A785E4 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */; };
+		91BF56F2EE96EC97E18675351C4C9B30 /* CameraGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2426244CB9CEA5C3AE2C88F1F3FC666C /* CameraGlobals.swift */; };
+		92A34DDF760EF960F95C39C8618BA1A9 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF322D76E563EF68D54BA36E70FE9F /* NVActivityIndicatorAnimationBallPulse.swift */; };
+		9462551BBBC4C675457BE9569CA43F8C /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB53EA065A5A7B1614C0E66E58D32EC /* CameraManager.swift */; };
+		9907E9EF4FDDA27EAF8B0267299A12E0 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC900C2057D9A8A372DE276A2F3229 /* NVActivityIndicatorAnimationBallBeat.swift */; };
+		9976DCB033041F8981560B850E5EF434 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4806BE517F9EE2A10AE4E12A35F1581 /* NVActivityIndicatorView.swift */; };
+		A28BC96BFBF5928CFD4C70A1314A5901 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C25FDAFBB93504C61B33846D6D6E6 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */; };
+		A40733D4BB77E3F0309F8A46A034A250 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E189DF3DCC8E91C67B4530DDCA1E4 /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
 		AA03B45AE77FB5039236B42EBE5F309E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0203FCF2E38F9E0B8C4E69853543A3E /* QuartzCore.framework */; };
-		AB7C2D179D130003609035B8F38C3B45 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579B7FE561386690ED9EE2448B2951F /* NVActivityIndicatorViewable.swift */; };
-		B1D8105FDFFB088D18B64B0D40C32378 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC71D4659AE7FB7ACEC066D0B6E4617 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */; };
-		B820EB8902E948072290C657D8B1C3BE /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6A5A2959AC8B8E1D36977A68DC13AA /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
-		B8D93073BC7B63600BB2052C397F9BAF /* CameraShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD12902BBA0581D103D84DF8A4808814 /* CameraShot.swift */; };
-		B9729ABF7B34465ACDF3622F299AF463 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C079E5C43264E43FD1BE7C354D9514 /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
-		BAC6BE3D236EE941CC400A0CDDE0E1BB /* CameraView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7548CB5F03597E0F619D3DD1071E1CF3 /* CameraView.strings */; };
-		C3680F12DE1E444D4312F4113E6366EE /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B69FD59B44F370C4EF616D659B38A5E /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
-		C82D76C04578BCDA05C5A6265391B649 /* CameraViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2178BD1E5C29CF248C4D6A8662EA7 /* CameraViewControllerConstraint.swift */; };
+		AB7C2D179D130003609035B8F38C3B45 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19B98A6B97ADF3F4E52F51D85FB0ECA /* NVActivityIndicatorViewable.swift */; };
+		B1D8105FDFFB088D18B64B0D40C32378 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E15941D7D3DF0FF5D9DD73E8DFA57 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */; };
+		B77639E9E68F89AF6C5568AF1B942F61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
+		B820EB8902E948072290C657D8B1C3BE /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BA62FF15739A002DDCB5A743E35C1 /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
+		B8D93073BC7B63600BB2052C397F9BAF /* CameraShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4CED06AAD3B76E0D1CC336105173D /* CameraShot.swift */; };
+		B9729ABF7B34465ACDF3622F299AF463 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81155B0997A38424D3B057E9E5E58177 /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
+		BAC6BE3D236EE941CC400A0CDDE0E1BB /* CameraView.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC5BB39246F43D94C57FC7598C947F94 /* CameraView.strings */; };
+		C3680F12DE1E444D4312F4113E6366EE /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A25CE606F07508E54C274C513B1E5 /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
+		C82D76C04578BCDA05C5A6265391B649 /* CameraViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE9BA708D982AFC12E1F32F7046A390 /* CameraViewControllerConstraint.swift */; };
 		C8D774A4DB580FA031E2CDAA83DBAB70 /* Pods-NutriFence (iOS)UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 846BE2DC863B28207F68CF2AC312276C /* Pods-NutriFence (iOS)UITests-dummy.m */; };
 		C9C397F61AEE0F921D90D401A7D73FEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
-		CC4F616136F385FA9CDEA939FA766815 /* SingleImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4873B68B0502AEAC50EDAC227FF25509 /* SingleImageFetcher.swift */; };
-		CD21360061606DF7E88CFBE52894E97E /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD772D318DBA06541C3787D4368F76A9 /* NVActivityIndicatorAnimationLineScaleParty.swift */; };
-		D043585B57EB4F52A3E8DC796E938B6E /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF5E1CFD1A60A7B18497E96173E782 /* NVActivityIndicatorAnimationDelegate.swift */; };
-		D19EE707FE40D8B0E4C006D4517C7C17 /* NVActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F707CC10F31F261B1EB8DC2386A1F /* NVActivityIndicatorAnimationPacman.swift */; };
-		D1ADD9FA19AFF58FD32941D28BE1D1DA /* CropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BF8EFBE67DC739850AFEE3F9EE979 /* CropOverlay.swift */; };
-		D7C7525D0BC01EDCE9F5F1D81145280E /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBE5FBD574E1686769BDF1434FFF01B /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
-		DE1A8D219A174437C79F956E941F2907 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2CFD1E729FE093260471E2D1AEACC3 /* ImageFetcher.swift */; };
-		E24F342E883FD48A9C0AE77DA41032BC /* CameraViewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70FE07069DF97782BCD9C914EA842B6 /* CameraViewAssets.xcassets */; };
+		CC4F616136F385FA9CDEA939FA766815 /* SingleImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A090A0891C595F2C18E48F7D6596B4 /* SingleImageFetcher.swift */; };
+		CD21360061606DF7E88CFBE52894E97E /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062D70A01C6734DBAEE605109D3CA45 /* NVActivityIndicatorAnimationLineScaleParty.swift */; };
+		D043585B57EB4F52A3E8DC796E938B6E /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5010AB26E3D49F184D7C4A8F1C6587C /* NVActivityIndicatorAnimationDelegate.swift */; };
+		D19EE707FE40D8B0E4C006D4517C7C17 /* NVActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A57B9380A0444F68E6189E54E1F75 /* NVActivityIndicatorAnimationPacman.swift */; };
+		D1ADD9FA19AFF58FD32941D28BE1D1DA /* CropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD3849791453848D2FE65F03648D3D /* CropOverlay.swift */; };
+		D7C7525D0BC01EDCE9F5F1D81145280E /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B8F8EEFD2ABFF2F15D2780DD647B7 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		DE1A8D219A174437C79F956E941F2907 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A4E2ADE6F0A1CB40B2721BB0BB672 /* ImageFetcher.swift */; };
+		E0651A48BA75F29DC064EE67DD5A6E6A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394A7CFDDE743EB735B5DA3A9C127F9 /* SwiftyJSON.swift */; };
+		E24F342E883FD48A9C0AE77DA41032BC /* CameraViewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE1955F404674BB7C29C7155287646F /* CameraViewAssets.xcassets */; };
 		E2F14755076870207570A38767EBF095 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
-		ED5BE9F3F74614A80C0AF064BB9C1D2A /* NVActivityIndicatorAnimationBallScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17915F84320F3BF1C439C9A2B73365B3 /* NVActivityIndicatorAnimationBallScale.swift */; };
-		EEE1478B79092EB209968D14D213C2F9 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202906CAFAB632A111B61C3A580548F6 /* NVActivityIndicatorAnimationSquareSpin.swift */; };
-		EEF987BCFB48224604D3FC617582648B /* VolumeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC95EE5CD40CB90C5E5ED297517E12F /* VolumeControl.swift */; };
-		F2B32C3D5DDB7C59A06F094526AF7088 /* SingleImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473C829530144EB2196AFE33E09D0DB /* SingleImageSaver.swift */; };
+		ED5BE9F3F74614A80C0AF064BB9C1D2A /* NVActivityIndicatorAnimationBallScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B6A4F32516B1AC085BD5DE23F514 /* NVActivityIndicatorAnimationBallScale.swift */; };
+		EEE1478B79092EB209968D14D213C2F9 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A40497FF5CE767DD5DE83F32E7BD2A /* NVActivityIndicatorAnimationSquareSpin.swift */; };
+		EEF987BCFB48224604D3FC617582648B /* VolumeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E3D3CA44CF7C486DE13CC5A66AD21B /* VolumeControl.swift */; };
+		F2B32C3D5DDB7C59A06F094526AF7088 /* SingleImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6060A6E05ACF5FB0B70E732EDABE5CB2 /* SingleImageSaver.swift */; };
 		F4C03E0C13CD9C793C7C5C04F336DC73 /* Pods-NutriFence (iOS)Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 873EC7E8661036F64978DC65CFBBF4BE /* Pods-NutriFence (iOS)Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F74A71F0DE9D10DC638F244189B10DF0 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859BADD9E784755C8EE8DF32B24C387C /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
+		F74A71F0DE9D10DC638F244189B10DF0 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8C481BB34D31F81B249B1BE1E615A /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
 		F7C6DD76D0BE4EEEB31827CB227AA06F /* Pods-NutriFence (iOS)Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FF12312BA8394F196BF21D3E9A08A1 /* Pods-NutriFence (iOS)Tests-dummy.m */; };
-		F7D73313DFD7F85D77D06156C5B80895 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342E1D6A4CCE2132B8C0E76C2437D003 /* NVActivityIndicatorAnimationBallScaleRipple.swift */; };
-		F83882119C7A824B856EBA66C2F57EE4 /* Pods-NutriFence (iOS)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DFA45C9F977A7977D42A3CF65F8C75 /* Pods-NutriFence (iOS)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB0599825B1BF01C9DFB01081C2708AC /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D3B479CD69E429E3A2F9B1AAF8BF4 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */; };
+		F7D73313DFD7F85D77D06156C5B80895 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DEA8EAA2E02F2FE9C4B5196855AE7 /* NVActivityIndicatorAnimationBallScaleRipple.swift */; };
+		FB0599825B1BF01C9DFB01081C2708AC /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6673415A3959B484378971C800D298 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */; };
 		FD816CC4636C84850BEBC1C84A160C65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF675A168132FD52AED630F977FE906 /* UIKit.framework */; };
-		FFD1B2FD9AF9E44944758D91C6760D1A /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 953FF03B98F6EDDD7BC2AEF341CFD796 /* SwiftyJSON-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00BE22ABB613FCE39FECEE0187C83BF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C771F70641E797FCD0D9DBB31C255D3;
-			remoteInfo = SwiftyJSON;
-		};
-		EF93E89C3BB7687F09DED1EF6D66D6DE /* PBXContainerItemProxy */ = {
+		07E4B2531D1AA5673BEE0DCE3F2FE016 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3EDFE4052B5DE7D509935AC0774CB135;
 			remoteInfo = NVActivityIndicatorView;
 		};
-		F9FE90C453781590F5CA30D8B8E2C0E6 /* PBXContainerItemProxy */ = {
+		9B3C2C62323814846AAE01316907AEB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D7FAEFEAF68AE19EB2D22369766AF24E;
 			remoteInfo = ALCameraViewController;
 		};
+		B461EED644B63CF6347C42DD18183B88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 425C72DBF2F69400A68BF07B9A507F7A;
+			remoteInfo = SwiftyJSON;
+		};
+		CF1695484DED87CB5EA0046D692D9EEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFBE657764C9F6D8E01DDE2949BD2E64;
+			remoteInfo = CameraManager;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		017383BCB27F50A3992EE85A7EE77313 /* Pods-NutriFence (iOS)UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NutriFence (iOS)UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		01AF7AF4D02B27AB90F0384B31CFB836 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorPresenter.swift; path = NVActivityIndicatorView/NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
-		075E013C35C322DADB62D6CDE87F5E7C /* PermissionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PermissionsView.swift; path = ALCameraViewController/Views/PermissionsView.swift; sourceTree = "<group>"; };
-		09468F1975087972CF5761E8DC3CCA57 /* CameraGlobals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraGlobals.swift; path = ALCameraViewController/Utilities/CameraGlobals.swift; sourceTree = "<group>"; };
+		03B4634BC9CDE3F65AE0B1F080B6F32B /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridPulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
+		082C73259EF482CA10675506768EDBC0 /* NVActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
+		085A7951E88030E4EAA7469B90021F26 /* ALCameraViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALCameraViewController.xcconfig; sourceTree = "<group>"; };
 		0C2CAF024B49592FC412CA0C351603D0 /* Pods-NutriFence (iOS)UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NutriFence (iOS)UITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0C541C2BA1D7C22C1798E7E8EA839F32 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		10244DC6A0C3B5EBAA76E5F913C485A3 /* Pods-NutriFence (iOS)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NutriFence (iOS)Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1186DB1642B4CD9C3B82C51AE9239F05 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ALCameraViewController/Utilities/Utilities.swift; sourceTree = "<group>"; };
 		14FF12312BA8394F196BF21D3E9A08A1 /* Pods-NutriFence (iOS)Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NutriFence (iOS)Tests-dummy.m"; sourceTree = "<group>"; };
-		15B2A7145E1FB435B3594B4638ECA9D5 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationTriangleSkewSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
+		165FD17D7DBDA5A54DF3E865D36F7FCE /* ALCameraViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALCameraViewController-umbrella.h"; sourceTree = "<group>"; };
 		172B1F2B3DBD6098E65765D41CD1098D /* Pods-NutriFence (iOS)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NutriFence (iOS)UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		17915F84320F3BF1C439C9A2B73365B3 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScale.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
-		17CE6D6606C3185CC23C2D6DD9868E13 /* NVActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NVActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
+		1A4C040E2045FB2D1393FCB92B31BA9F /* CameraManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CameraManager-umbrella.h"; sourceTree = "<group>"; };
 		1AB7BD78D0B0C32BC72DF581D25FC892 /* Pods-NutriFence (iOS)UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NutriFence (iOS)UITests-umbrella.h"; sourceTree = "<group>"; };
-		1BC71D4659AE7FB7ACEC066D0B6E4617 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSemiCircleSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
-		1C913EBAB4A1065CE4A5F313E5C5E603 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D505010C6ECFCD3E47860A51211000E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EE5D944141561C682BBF1505B04848A /* Pods-NutriFence (iOS)Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NutriFence (iOS)Tests-frameworks.sh"; sourceTree = "<group>"; };
-		202906CAFAB632A111B61C3A580548F6 /* NVActivityIndicatorAnimationSquareSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSquareSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSquareSpin.swift; sourceTree = "<group>"; };
-		2166202CC48290888578147E53AFEEC0 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		221F707CC10F31F261B1EB8DC2386A1F /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationPacman.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
-		25F38B5F75EE2B4A867703EBBCE54DD8 /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallBeat.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
-		2820C9AA56933DA9F66F0DB7C05939FC /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; sourceTree = "<group>"; };
+		1F120098970A2B0E9CBCE9A4BBE26FED /* ImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCell.swift; path = ALCameraViewController/Views/ImageCell.swift; sourceTree = "<group>"; };
+		21C954E0540E4342E930B89A2385CF37 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		2426244CB9CEA5C3AE2C88F1F3FC666C /* CameraGlobals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraGlobals.swift; path = ALCameraViewController/Utilities/CameraGlobals.swift; sourceTree = "<group>"; };
+		24A090A0891C595F2C18E48F7D6596B4 /* SingleImageFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleImageFetcher.swift; path = ALCameraViewController/Utilities/SingleImageFetcher.swift; sourceTree = "<group>"; };
+		260A4E2ADE6F0A1CB40B2721BB0BB672 /* ImageFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = ALCameraViewController/Utilities/ImageFetcher.swift; sourceTree = "<group>"; };
 		28AC908C06CB502C005BACD3B9BF8CDC /* Pods-NutriFence (iOS)Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NutriFence (iOS)Tests.modulemap"; sourceTree = "<group>"; };
 		292A38FD5F49FCEEB812F7095DC464DB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29CDC10FE3DC402A50C2ABA0DE18B22C /* Pods-NutriFence (iOS)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NutriFence (iOS)-dummy.m"; sourceTree = "<group>"; };
-		2CAFDA5CEBBE5C154A0D3B8E17794EED /* UIButtonExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtensions.swift; path = ALCameraViewController/Utilities/UIButtonExtensions.swift; sourceTree = "<group>"; };
+		29E8197D7F3AE736618F20ABB512E7EC /* NVActivityIndicatorAnimationOrbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationOrbit.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationOrbit.swift; sourceTree = "<group>"; };
+		2A6673415A3959B484378971C800D298 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
+		2AD16EEF489213F70DD1F4382A7572E6 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineSpinFadeLoader.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
+		2D06149DF80B828D620E9CCA47C69552 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30FCBDA71D373133C106B04FF0A631DD /* CameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ALCameraViewController/Views/CameraView.swift; sourceTree = "<group>"; };
 		319B2A3C7FBB2C1A2074D48B1B4C3D0B /* Pods-NutriFence (iOS).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NutriFence (iOS).modulemap"; sourceTree = "<group>"; };
 		31DA4E6776F04FC9863A5E1FFF788BFD /* Pods-NutriFence (iOS)UITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NutriFence (iOS)UITests-resources.sh"; sourceTree = "<group>"; };
-		33D42503337C7F80F5AF57989EE21377 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoLibraryViewController.swift; path = ALCameraViewController/ViewController/PhotoLibraryViewController.swift; sourceTree = "<group>"; };
-		342E1D6A4CCE2132B8C0E76C2437D003 /* NVActivityIndicatorAnimationBallScaleRipple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRipple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRipple.swift; sourceTree = "<group>"; };
-		36C079E5C43264E43FD1BE7C354D9514 /* NVActivityIndicatorAnimationBallClipRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotate.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotate.swift; sourceTree = "<group>"; };
-		38DF5E1CFD1A60A7B18497E96173E782 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationDelegate.swift; path = NVActivityIndicatorView/NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
-		3B69FD59B44F370C4EF616D659B38A5E /* NVActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationAudioEqualizer.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
-		3D25616BAD92C979F52832DF1DEAF371 /* Pods_NutriFence__iOS_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NutriFence__iOS_UITests.framework; path = "Pods-NutriFence (iOS)UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		426261011318378CF14A200A99485DE9 /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZag.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
-		44AEFA7145AEC752275AD386E6771DCA /* NVActivityIndicatorAnimationOrbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationOrbit.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationOrbit.swift; sourceTree = "<group>"; };
-		47F8E8B860428D370845891A9DCBCB6D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineSpinFadeLoader.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
-		4812BA3008F3216D20C7D6B2DD66CDAF /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridBeat.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
-		48533BB521AD4944AEDE84465E708D0D /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseSync.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
-		4873B68B0502AEAC50EDAC227FF25509 /* SingleImageFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleImageFetcher.swift; path = ALCameraViewController/Utilities/SingleImageFetcher.swift; sourceTree = "<group>"; };
+		33C81F9835F0E4798BF5BF9239F22D7D /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ALCameraViewController/ViewController/CameraViewController.swift; sourceTree = "<group>"; };
+		34289BE9B6F32BB14194B8EB868D4A10 /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotate.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
+		35A34E156DB7E6EE534E06D3E3C57719 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37C780865E337B372E8B948F69A49C41 /* CameraManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CameraManager.xcconfig; sourceTree = "<group>"; };
+		38108EA0D1D242E8CA775A1FBDD3A140 /* ALCameraViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ALCameraViewController.modulemap; sourceTree = "<group>"; };
+		382E189DF3DCC8E91C67B4530DDCA1E4 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotateChase.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
+		3AEC57FE64E1D0965B21D4621CE07FAA /* CameraManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CameraManager.modulemap; sourceTree = "<group>"; };
+		3D03014F62B4579B98CDF68E1D21A950 /* Pods_NutriFence__iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NutriFence__iOS_Tests.framework; path = "Pods-NutriFence (iOS)Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44F7395ECEF41C1B083E6B40FD941299 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotateMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotateMultiple.swift; sourceTree = "<group>"; };
+		464F4D42D0557E2F2A8214483A33D6C0 /* Pods_NutriFence__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NutriFence__iOS_.framework; path = "Pods-NutriFence (iOS).framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		469DB1902EA3D1E0BD10FB8089846302 /* NVActivityIndicatorAnimationBallPulseRise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseRise.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseRise.swift; sourceTree = "<group>"; };
+		48BD4BFD0F2D12D57AB38E13D8A785E4 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOut.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
+		4B04709C3512EE2002FAB39B7329C4D4 /* NVActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NVActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
+		4E5E15941D7D3DF0FF5D9DD73E8DFA57 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSemiCircleSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
+		4F54700B681D5CC61D58EA6BA2FF81AC /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		4FE9BA708D982AFC12E1F32F7046A390 /* CameraViewControllerConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraViewControllerConstraint.swift; path = ALCameraViewController/ViewController/CameraViewControllerConstraint.swift; sourceTree = "<group>"; };
+		5091E2BAAF58E77A037463F43BB309AA /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		52DFA45C9F977A7977D42A3CF65F8C75 /* Pods-NutriFence (iOS)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NutriFence (iOS)-umbrella.h"; sourceTree = "<group>"; };
 		53C401014E58B1DEC607DE76B83B8FA2 /* Pods-NutriFence (iOS)-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NutriFence (iOS)-resources.sh"; sourceTree = "<group>"; };
+		544A25CE606F07508E54C274C513B1E5 /* NVActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationAudioEqualizer.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
 		565C2035B5C951A31D59E570F6E0EFF3 /* Pods-NutriFence (iOS)-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NutriFence (iOS)-frameworks.sh"; sourceTree = "<group>"; };
 		593DC8ABADF17F079F9E746D8C56B6BC /* Pods-NutriFence (iOS)Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NutriFence (iOS)Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5B270E34CC73E81F68935F4D6515BF38 /* ConfirmViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = ALCameraViewController/ViewController/ConfirmViewController.swift; sourceTree = "<group>"; };
+		5A282BCF48CC3E32A9162D9DEC372CFC /* NVActivityIndicatorAnimationLineScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScale.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScale.swift; sourceTree = "<group>"; };
 		5BF675A168132FD52AED630F977FE906 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		5CEF3AB7C5BDEBEEE62D94A5864DC68E /* ALCameraViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ALCameraViewController.framework; path = ALCameraViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D6A5A2959AC8B8E1D36977A68DC13AA /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallTrianglePath.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
-		5DA5F172A94962B9B0E32990AE163941 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotateChase.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
-		62677EB018F9D9100D2B336CE5936D64 /* ImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCell.swift; path = ALCameraViewController/Views/ImageCell.swift; sourceTree = "<group>"; };
-		69155B2BC7C7187A527A7484BF1A5369 /* PhotoLibraryAuthorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoLibraryAuthorizer.swift; path = ALCameraViewController/Utilities/PhotoLibraryAuthorizer.swift; sourceTree = "<group>"; };
-		7548CB5F03597E0F619D3DD1071E1CF3 /* CameraView.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = CameraView.strings; path = ALCameraViewController/CameraView.strings; sourceTree = "<group>"; };
+		5DB53EA065A5A7B1614C0E66E58D32EC /* CameraManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraManager.swift; path = camera/CameraManager.swift; sourceTree = "<group>"; };
+		6060A6E05ACF5FB0B70E732EDABE5CB2 /* SingleImageSaver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleImageSaver.swift; path = ALCameraViewController/Utilities/SingleImageSaver.swift; sourceTree = "<group>"; };
+		68E84D61E6CBD56DAE5687D37E530D41 /* ConfirmViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = ALCameraViewController/ViewController/ConfirmViewController.swift; sourceTree = "<group>"; };
+		6BB215CC3470A0698A31DF3600807748 /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseSync.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
+		6C1C25FDAFBB93504C61B33846D6D6E6 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationTriangleSkewSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
+		6D24B8658B799B26C88F4F9A7967D691 /* CameraManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CameraManager.framework; path = CameraManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		707B8F8EEFD2ABFF2F15D2780DD647B7 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallSpinFadeLoader.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
+		70BB688B266A351D23EFA2CBD5A5444F /* ALCameraViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ALCameraViewController-dummy.m"; sourceTree = "<group>"; };
+		715AF13CEDDFAEC9FAC1A8BF5316D40F /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		7502F94CF4FCB4C921361C5DAFCEE3ED /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridBeat.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
+		75A40497FF5CE767DD5DE83F32E7BD2A /* NVActivityIndicatorAnimationSquareSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSquareSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSquareSpin.swift; sourceTree = "<group>"; };
+		78110E9D3FA6A677AA33CBBBE2F145DB /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorShape.swift; path = NVActivityIndicatorView/NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		789AE815852200E87038358017A46D7F /* Pods-NutriFence (iOS)UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NutriFence (iOS)UITests-frameworks.sh"; sourceTree = "<group>"; };
-		78D996F2F1EDCAB06D74FD96114A8E40 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		79486B4D38B5D73A7E3C713B8873EFEC /* Pods-NutriFence (iOS)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NutriFence (iOS)UITests.release.xcconfig"; sourceTree = "<group>"; };
 		79604B696E17E3FF05495A5C671F2AFE /* Pods-NutriFence (iOS)Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NutriFence (iOS)Tests-resources.sh"; sourceTree = "<group>"; };
-		7C5C2BCBC85049E7F15C8BF27D021641 /* NVActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NVActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
-		80D5B5647BF330825D9072191B68D354 /* ALCameraViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALCameraViewController-umbrella.h"; sourceTree = "<group>"; };
-		81AF436B2F9C24D4AD94C7D76901DA29 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotatePulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotatePulse.swift; sourceTree = "<group>"; };
-		83B4ADA65FA56D961AF9C69941638033 /* NVActivityIndicatorAnimationCubeTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationCubeTransition.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationCubeTransition.swift; sourceTree = "<group>"; };
+		7B4A5CCE7F29B117EF234939D258698F /* UIViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = ALCameraViewController/Utilities/UIViewExtensions.swift; sourceTree = "<group>"; };
+		7BB3F783DD6C8554B649A02A7CF2F0D8 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		7CD66D2CF8ABEAD1705488D1A3D68A96 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorPresenter.swift; path = NVActivityIndicatorView/NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		8062D70A01C6734DBAEE605109D3CA45 /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScaleParty.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
+		81155B0997A38424D3B057E9E5E58177 /* NVActivityIndicatorAnimationBallClipRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotate.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotate.swift; sourceTree = "<group>"; };
 		841078F9D786677205FA117DAAB47789 /* Pods-NutriFence (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NutriFence (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		846BE2DC863B28207F68CF2AC312276C /* Pods-NutriFence (iOS)UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NutriFence (iOS)UITests-dummy.m"; sourceTree = "<group>"; };
-		8473C829530144EB2196AFE33E09D0DB /* SingleImageSaver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleImageSaver.swift; path = ALCameraViewController/Utilities/SingleImageSaver.swift; sourceTree = "<group>"; };
-		859BADD9E784755C8EE8DF32B24C387C /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
-		8685C78BD4DEA3BD7B1A2F6CE654C644 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorShape.swift; path = NVActivityIndicatorView/NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		873EC7E8661036F64978DC65CFBBF4BE /* Pods-NutriFence (iOS)Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NutriFence (iOS)Tests-umbrella.h"; sourceTree = "<group>"; };
 		8A62F084D0966481B345DB941A4BEE7A /* Pods-NutriFence (iOS)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NutriFence (iOS)-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9081620D9C8E4F1751E355DCB9D26A85 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotateMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotateMultiple.swift; sourceTree = "<group>"; };
+		92BA305B13E93A231CB5123402D7425C /* ALCameraViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALCameraViewController-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		953FF03B98F6EDDD7BC2AEF341CFD796 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		9579B7FE561386690ED9EE2448B2951F /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorViewable.swift; path = NVActivityIndicatorView/NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
-		967BF8EFBE67DC739850AFEE3F9EE979 /* CropOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropOverlay.swift; path = ALCameraViewController/Views/CropOverlay.swift; sourceTree = "<group>"; };
-		9A865DE50D85F7C1208DE1AF551EC79D /* ConfirmViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ConfirmViewController.xib; path = ALCameraViewController/ViewController/ConfirmViewController.xib; sourceTree = "<group>"; };
-		9B700D797FBD309BCF6FE64C64F0E9CE /* NVActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
-		9D141AB807FEF4EE61799ED78164085D /* CameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ALCameraViewController/ViewController/CameraViewController.swift; sourceTree = "<group>"; };
+		972BA62FF15739A002DDCB5A743E35C1 /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallTrianglePath.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
+		9A8E36F7C89A436A080AF8B62D4CDCB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA8C481BB34D31F81B249B1BE1E615A /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
 		9F8F5035593AA73859931CE780FA75F9 /* Pods-NutriFence (iOS)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NutriFence (iOS)Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A2625074B949AEC01C703D07A392C3EC /* NVActivityIndicatorAnimationBallPulseRise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseRise.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseRise.swift; sourceTree = "<group>"; };
+		A15800E568B981407EA24E3400DBFC21 /* NVActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
 		A30C2A0E7365D1419747D146820C6034 /* Pods-NutriFence (iOS)Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NutriFence (iOS)Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A35DEA8EAA2E02F2FE9C4B5196855AE7 /* NVActivityIndicatorAnimationBallScaleRipple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRipple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRipple.swift; sourceTree = "<group>"; };
+		A3F5E78FEDB4A09DF8852F59104E9E80 /* PhotoLibraryAuthorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoLibraryAuthorizer.swift; path = ALCameraViewController/Utilities/PhotoLibraryAuthorizer.swift; sourceTree = "<group>"; };
+		A573BF4A92AE7D963DCB2F02A9AC9F38 /* CameraManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CameraManager-prefix.pch"; sourceTree = "<group>"; };
+		A7CEB29F0787E50DE98DC50C2C9EFDCA /* ALCameraViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ALCameraViewController.framework; path = ALCameraViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92116465A14CEF876E779EF7531883F /* Pods-NutriFence (iOS)UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NutriFence (iOS)UITests.modulemap"; sourceTree = "<group>"; };
-		ACD7D440CEE5B1AA2B3BD64A00912AEC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADDD26FF0D97A38CDA7D0F759ECE5AF1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = ALCameraViewController/Utilities/UIViewExtensions.swift; sourceTree = "<group>"; };
-		B4A2178BD1E5C29CF248C4D6A8662EA7 /* CameraViewControllerConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraViewControllerConstraint.swift; path = ALCameraViewController/ViewController/CameraViewControllerConstraint.swift; sourceTree = "<group>"; };
-		B730D21A33EDBE73B01CCB6CCEA5E35A /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		B87D3B479CD69E429E3A2F9B1AAF8BF4 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
-		BCC95EE5CD40CB90C5E5ED297517E12F /* VolumeControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VolumeControl.swift; path = ALCameraViewController/Utilities/VolumeControl.swift; sourceTree = "<group>"; };
+		ABF7B6A4F32516B1AC085BD5DE23F514 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScale.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
+		AEEED6D269CAFE9F2DE94C2F8A01F8EE /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZagDeflect.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
+		B2150389A8FA4043B0AB357D4F4CEDA7 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ALCameraViewController/Utilities/Utilities.swift; sourceTree = "<group>"; };
+		B5010AB26E3D49F184D7C4A8F1C6587C /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationDelegate.swift; path = NVActivityIndicatorView/NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
+		B613272753C38A5B3D71DB5C9B36E864 /* PermissionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PermissionsView.swift; path = ALCameraViewController/Views/PermissionsView.swift; sourceTree = "<group>"; };
+		B8A24FE97E9603FDE8E4084BAFEAD7BB /* NVActivityIndicatorAnimationCubeTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationCubeTransition.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationCubeTransition.swift; sourceTree = "<group>"; };
+		BD327AF63996444F9EDAEC9E6129D1FA /* NVActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NVActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
 		BDE8C928790EE6298CA972C662011BCA /* Pods-NutriFence (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NutriFence (iOS).release.xcconfig"; sourceTree = "<group>"; };
-		BF500FB63F15960A969A4CB25DFD4725 /* Pods_NutriFence__iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NutriFence__iOS_Tests.framework; path = "Pods-NutriFence (iOS)Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1AF094FE85AEEA590508EA563A39632 /* ALCameraViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALCameraViewController.xcconfig; sourceTree = "<group>"; };
-		C417DA7FF76B98111980BEE6ECB51DEF /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBlank.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
-		CA9449C9F87E2E233AA2C5D749BD165C /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorView.swift; path = NVActivityIndicatorView/NVActivityIndicatorView.swift; sourceTree = "<group>"; };
-		CD87CB2AD6ADEE85ADE242AC6CD12027 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		D259C117AE0E0D1872967C819BFDF160 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZagDeflect.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
-		D5E82E7FFCDDE72ADEC76760B6B2743B /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotate.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
-		D66C3AB7A310F670D021E2DB923631FC /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
-		D682915B59509DC526189B2E175175AB /* Pods_NutriFence__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NutriFence__iOS_.framework; path = "Pods-NutriFence (iOS).framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D70FE07069DF97782BCD9C914EA842B6 /* CameraViewAssets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = CameraViewAssets.xcassets; path = ALCameraViewController/CameraViewAssets.xcassets; sourceTree = "<group>"; };
-		D908F44E1F975EECF2B0DE93B0AC5876 /* NVActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
-		DD772D318DBA06541C3787D4368F76A9 /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScaleParty.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
-		DDCB9426D8FE4E684E810EE67553415D /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOut.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
+		BECF322D76E563EF68D54BA36E70FE9F /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
+		BFA83467BC4E507EE324C4318F21DF6E /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotatePulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotatePulse.swift; sourceTree = "<group>"; };
+		C1524DA2E8A88A3B1231F16372BCC821 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19B98A6B97ADF3F4E52F51D85FB0ECA /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorViewable.swift; path = NVActivityIndicatorView/NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
+		C7E7EF58604A4820558693D6361BD8E9 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButtonExtensions.swift; path = ALCameraViewController/Utilities/UIButtonExtensions.swift; sourceTree = "<group>"; };
+		C8E3D3CA44CF7C486DE13CC5A66AD21B /* VolumeControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VolumeControl.swift; path = ALCameraViewController/Utilities/VolumeControl.swift; sourceTree = "<group>"; };
+		CBE1955F404674BB7C29C7155287646F /* CameraViewAssets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = CameraViewAssets.xcassets; path = ALCameraViewController/CameraViewAssets.xcassets; sourceTree = "<group>"; };
+		CCF3E18BC28BB15FF89B88F0A1E5458A /* Pods_NutriFence__iOS_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NutriFence__iOS_UITests.framework; path = "Pods-NutriFence (iOS)UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D394A7CFDDE743EB735B5DA3A9C127F9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		D6A655E2985A8FAF5CC4D80E971A910E /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; sourceTree = "<group>"; };
+		D99D51714D35C5A5E116E7146E5FD14E /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZag.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
+		DA82ABB9D2C60425E5BD86F0E1F0382D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBF4CED06AAD3B76E0D1CC336105173D /* CameraShot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraShot.swift; path = ALCameraViewController/Utilities/CameraShot.swift; sourceTree = "<group>"; };
+		DC5BB39246F43D94C57FC7598C947F94 /* CameraView.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = CameraView.strings; path = ALCameraViewController/CameraView.strings; sourceTree = "<group>"; };
+		DD0F66DA96809354A1E90DB6F6B67939 /* CameraManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CameraManager-dummy.m"; sourceTree = "<group>"; };
+		DD9A57B9380A0444F68E6189E54E1F75 /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationPacman.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
+		DFFE5CF70F696EBF50AA3B936179FF6E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0203FCF2E38F9E0B8C4E69853543A3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		E1B808F328C65B2FBF79B9FACC77ABCE /* Pods-NutriFence (iOS)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NutriFence (iOS)-acknowledgements.plist"; sourceTree = "<group>"; };
-		E2616E4BE70C4065CDF74CBAB6300C89 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		E3B29A9EE6B9D350267F2B43384E933B /* ALCameraViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ALCameraViewController.modulemap; sourceTree = "<group>"; };
-		E686A1B0007A3FFDABF0ED151A40B93E /* CameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ALCameraViewController/Views/CameraView.swift; sourceTree = "<group>"; };
-		E89D1298738C8C5DFAA3D34DB77D232E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4806BE517F9EE2A10AE4E12A35F1581 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorView.swift; path = NVActivityIndicatorView/NVActivityIndicatorView.swift; sourceTree = "<group>"; };
 		E90DE3C50DE389E4ABF44D27BF9CDC6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B2DB796152675F7197FD89FF12F059 /* ConfirmViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ConfirmViewController.xib; path = ALCameraViewController/ViewController/ConfirmViewController.xib; sourceTree = "<group>"; };
+		EAA3076B354C6FA82F4668C7D92257B0 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhotoLibraryViewController.swift; path = ALCameraViewController/ViewController/PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		EC32878090C4B2B93381956161EC0930 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EE41F02B7BC74EE5040AA95B8E8625B5 /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridPulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
-		EEBE5FBD574E1686769BDF1434FFF01B /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallSpinFadeLoader.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
-		F4F817B7A784001C9A4DC06D2FC0B39D /* ALCameraViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALCameraViewController-prefix.pch"; sourceTree = "<group>"; };
-		F61A6B5DF1918CCE7813B73FA8FAAB42 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD12902BBA0581D103D84DF8A4808814 /* CameraShot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraShot.swift; path = ALCameraViewController/Utilities/CameraShot.swift; sourceTree = "<group>"; };
-		FDBA4A833A0B152259F2493A64AC2812 /* ALCameraViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ALCameraViewController-dummy.m"; sourceTree = "<group>"; };
-		FDE574CDE832A2DCB087783DADB8BAAF /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
-		FE354015EC624B1903913219D088D4EB /* NVActivityIndicatorAnimationLineScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScale.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScale.swift; sourceTree = "<group>"; };
-		FF2CFD1E729FE093260471E2D1AEACC3 /* ImageFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = ALCameraViewController/Utilities/ImageFetcher.swift; sourceTree = "<group>"; };
+		EFAC78A58D60150ED0738B8223A3CF76 /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBlank.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
+		F6A8F42B03545B147C98AC287B7FBC34 /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
+		F7FD3849791453848D2FE65F03648D3D /* CropOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropOverlay.swift; path = ALCameraViewController/Views/CropOverlay.swift; sourceTree = "<group>"; };
+		F8FC900C2057D9A8A372DE276A2F3229 /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallBeat.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		152C080D4825DAC2A03A6FAFAC9F98EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				190729FE91A5EA145961A3C59353C621 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C64B1D7F92FF76BD0D1CDA8F9EC103B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,11 +260,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77C6EFA19AA669C929210FCF53C937B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E44C9A1B9BE5550A940A2B67506A63A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F617AC211739F33A9ED55677DEE4488 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C9C397F61AEE0F921D90D401A7D73FEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D6F91F8EA0FF0B8442F1BEBC550165D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B77639E9E68F89AF6C5568AF1B942F61 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,27 +302,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D131BF7549F4D7FE1022CF7707C88445 /* Frameworks */ = {
+		C7DF2D407BF6255F6758A219164C384E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				925E3D1AC833F8381E1FD2D1E9B7F52D /* Foundation.framework in Frameworks */,
+				0B076BB6395460DE51925CFDD0E78914 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		061ABA754E1BAEB6884DCE74DFB2FDBC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7548CB5F03597E0F619D3DD1071E1CF3 /* CameraView.strings */,
-				D70FE07069DF97782BCD9C914EA842B6 /* CameraViewAssets.xcassets */,
-				9A865DE50D85F7C1208DE1AF551EC79D /* ConfirmViewController.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,46 +321,109 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1734B900277BDC14933A416B4B7EBD25 /* Support Files */ = {
+		1547EE32A9F92B1F94F8D8696FFDBF10 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E3B29A9EE6B9D350267F2B43384E933B /* ALCameraViewController.modulemap */,
-				C1AF094FE85AEEA590508EA563A39632 /* ALCameraViewController.xcconfig */,
-				FDBA4A833A0B152259F2493A64AC2812 /* ALCameraViewController-dummy.m */,
-				F4F817B7A784001C9A4DC06D2FC0B39D /* ALCameraViewController-prefix.pch */,
-				80D5B5647BF330825D9072191B68D354 /* ALCameraViewController-umbrella.h */,
-				ACD7D440CEE5B1AA2B3BD64A00912AEC /* Info.plist */,
+				3AEC57FE64E1D0965B21D4621CE07FAA /* CameraManager.modulemap */,
+				37C780865E337B372E8B948F69A49C41 /* CameraManager.xcconfig */,
+				DD0F66DA96809354A1E90DB6F6B67939 /* CameraManager-dummy.m */,
+				A573BF4A92AE7D963DCB2F02A9AC9F38 /* CameraManager-prefix.pch */,
+				1A4C040E2045FB2D1393FCB92B31BA9F /* CameraManager-umbrella.h */,
+				DA82ABB9D2C60425E5BD86F0E1F0382D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CameraManager";
+			sourceTree = "<group>";
+		};
+		15F703B6549181383B5EEC2E5FA2FF2F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1524DA2E8A88A3B1231F16372BCC821 /* Info.plist */,
+				F6A8F42B03545B147C98AC287B7FBC34 /* NVActivityIndicatorView.modulemap */,
+				BD327AF63996444F9EDAEC9E6129D1FA /* NVActivityIndicatorView.xcconfig */,
+				4B04709C3512EE2002FAB39B7329C4D4 /* NVActivityIndicatorView-dummy.m */,
+				A15800E568B981407EA24E3400DBFC21 /* NVActivityIndicatorView-prefix.pch */,
+				082C73259EF482CA10675506768EDBC0 /* NVActivityIndicatorView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NVActivityIndicatorView";
+			sourceTree = "<group>";
+		};
+		225E732A0F6D90272DDCA592447BEE61 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				38108EA0D1D242E8CA775A1FBDD3A140 /* ALCameraViewController.modulemap */,
+				085A7951E88030E4EAA7469B90021F26 /* ALCameraViewController.xcconfig */,
+				70BB688B266A351D23EFA2CBD5A5444F /* ALCameraViewController-dummy.m */,
+				92BA305B13E93A231CB5123402D7425C /* ALCameraViewController-prefix.pch */,
+				165FD17D7DBDA5A54DF3E865D36F7FCE /* ALCameraViewController-umbrella.h */,
+				DFFE5CF70F696EBF50AA3B936179FF6E /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ALCameraViewController";
 			sourceTree = "<group>";
 		};
-		5AA2689CB674B51F31FA754868513F9D /* ALCameraViewController */ = {
+		4A137C7FE3A17E5BB0521FC70A997F72 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				09468F1975087972CF5761E8DC3CCA57 /* CameraGlobals.swift */,
-				FD12902BBA0581D103D84DF8A4808814 /* CameraShot.swift */,
-				E686A1B0007A3FFDABF0ED151A40B93E /* CameraView.swift */,
-				9D141AB807FEF4EE61799ED78164085D /* CameraViewController.swift */,
-				B4A2178BD1E5C29CF248C4D6A8662EA7 /* CameraViewControllerConstraint.swift */,
-				5B270E34CC73E81F68935F4D6515BF38 /* ConfirmViewController.swift */,
-				967BF8EFBE67DC739850AFEE3F9EE979 /* CropOverlay.swift */,
-				62677EB018F9D9100D2B336CE5936D64 /* ImageCell.swift */,
-				FF2CFD1E729FE093260471E2D1AEACC3 /* ImageFetcher.swift */,
-				075E013C35C322DADB62D6CDE87F5E7C /* PermissionsView.swift */,
-				69155B2BC7C7187A527A7484BF1A5369 /* PhotoLibraryAuthorizer.swift */,
-				33D42503337C7F80F5AF57989EE21377 /* PhotoLibraryViewController.swift */,
-				4873B68B0502AEAC50EDAC227FF25509 /* SingleImageFetcher.swift */,
-				8473C829530144EB2196AFE33E09D0DB /* SingleImageSaver.swift */,
-				2CAFDA5CEBBE5C154A0D3B8E17794EED /* UIButtonExtensions.swift */,
-				ADDD26FF0D97A38CDA7D0F759ECE5AF1 /* UIViewExtensions.swift */,
-				1186DB1642B4CD9C3B82C51AE9239F05 /* Utilities.swift */,
-				BCC95EE5CD40CB90C5E5ED297517E12F /* VolumeControl.swift */,
-				061ABA754E1BAEB6884DCE74DFB2FDBC /* Resources */,
-				1734B900277BDC14933A416B4B7EBD25 /* Support Files */,
+				DC5BB39246F43D94C57FC7598C947F94 /* CameraView.strings */,
+				CBE1955F404674BB7C29C7155287646F /* CameraViewAssets.xcassets */,
+				E9B2DB796152675F7197FD89FF12F059 /* ConfirmViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		50ADB8CE6A97E09AC0933AD937EC26F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57E20664085B508B072E0830F28CB7D2 /* ALCameraViewController */,
+				7F216229E2448BB81BF4D884C35FEE83 /* CameraManager */,
+				6A1983BE7F67A087AF04CE90045D4E92 /* NVActivityIndicatorView */,
+				6039C7C453323E7A8D7CC9BE125299D7 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		57E20664085B508B072E0830F28CB7D2 /* ALCameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2426244CB9CEA5C3AE2C88F1F3FC666C /* CameraGlobals.swift */,
+				DBF4CED06AAD3B76E0D1CC336105173D /* CameraShot.swift */,
+				30FCBDA71D373133C106B04FF0A631DD /* CameraView.swift */,
+				33C81F9835F0E4798BF5BF9239F22D7D /* CameraViewController.swift */,
+				4FE9BA708D982AFC12E1F32F7046A390 /* CameraViewControllerConstraint.swift */,
+				68E84D61E6CBD56DAE5687D37E530D41 /* ConfirmViewController.swift */,
+				F7FD3849791453848D2FE65F03648D3D /* CropOverlay.swift */,
+				1F120098970A2B0E9CBCE9A4BBE26FED /* ImageCell.swift */,
+				260A4E2ADE6F0A1CB40B2721BB0BB672 /* ImageFetcher.swift */,
+				B613272753C38A5B3D71DB5C9B36E864 /* PermissionsView.swift */,
+				A3F5E78FEDB4A09DF8852F59104E9E80 /* PhotoLibraryAuthorizer.swift */,
+				EAA3076B354C6FA82F4668C7D92257B0 /* PhotoLibraryViewController.swift */,
+				24A090A0891C595F2C18E48F7D6596B4 /* SingleImageFetcher.swift */,
+				6060A6E05ACF5FB0B70E732EDABE5CB2 /* SingleImageSaver.swift */,
+				C7E7EF58604A4820558693D6361BD8E9 /* UIButtonExtensions.swift */,
+				7B4A5CCE7F29B117EF234939D258698F /* UIViewExtensions.swift */,
+				B2150389A8FA4043B0AB357D4F4CEDA7 /* Utilities.swift */,
+				C8E3D3CA44CF7C486DE13CC5A66AD21B /* VolumeControl.swift */,
+				4A137C7FE3A17E5BB0521FC70A997F72 /* Resources */,
+				225E732A0F6D90272DDCA592447BEE61 /* Support Files */,
 			);
 			name = ALCameraViewController;
 			path = ALCameraViewController;
+			sourceTree = "<group>";
+		};
+		5C358BAD81F1B0FE5FD2F271846688C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7CEB29F0787E50DE98DC50C2C9EFDCA /* ALCameraViewController.framework */,
+				6D24B8658B799B26C88F4F9A7967D691 /* CameraManager.framework */,
+				35A34E156DB7E6EE534E06D3E3C57719 /* NVActivityIndicatorView.framework */,
+				464F4D42D0557E2F2A8214483A33D6C0 /* Pods_NutriFence__iOS_.framework */,
+				3D03014F62B4579B98CDF68E1D21A950 /* Pods_NutriFence__iOS_Tests.framework */,
+				CCF3E18BC28BB15FF89B88F0A1E5458A /* Pods_NutriFence__iOS_UITests.framework */,
+				2D06149DF80B828D620E9CCA47C69552 /* SwiftyJSON.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5F884D8388E0BBC7361768DE70728E36 /* Pods-NutriFence (iOS)UITests */ = {
@@ -364,25 +444,95 @@
 			path = "Target Support Files/Pods-NutriFence (iOS)UITests";
 			sourceTree = "<group>";
 		};
+		6039C7C453323E7A8D7CC9BE125299D7 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				D394A7CFDDE743EB735B5DA3A9C127F9 /* SwiftyJSON.swift */,
+				7A313900CC0B6C507DDCB4B92FD5A80D /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		6A1983BE7F67A087AF04CE90045D4E92 /* NVActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				544A25CE606F07508E54C274C513B1E5 /* NVActivityIndicatorAnimationAudioEqualizer.swift */,
+				F8FC900C2057D9A8A372DE276A2F3229 /* NVActivityIndicatorAnimationBallBeat.swift */,
+				81155B0997A38424D3B057E9E5E58177 /* NVActivityIndicatorAnimationBallClipRotate.swift */,
+				44F7395ECEF41C1B083E6B40FD941299 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */,
+				BFA83467BC4E507EE324C4318F21DF6E /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */,
+				7502F94CF4FCB4C921361C5DAFCEE3ED /* NVActivityIndicatorAnimationBallGridBeat.swift */,
+				03B4634BC9CDE3F65AE0B1F080B6F32B /* NVActivityIndicatorAnimationBallGridPulse.swift */,
+				BECF322D76E563EF68D54BA36E70FE9F /* NVActivityIndicatorAnimationBallPulse.swift */,
+				469DB1902EA3D1E0BD10FB8089846302 /* NVActivityIndicatorAnimationBallPulseRise.swift */,
+				6BB215CC3470A0698A31DF3600807748 /* NVActivityIndicatorAnimationBallPulseSync.swift */,
+				34289BE9B6F32BB14194B8EB868D4A10 /* NVActivityIndicatorAnimationBallRotate.swift */,
+				382E189DF3DCC8E91C67B4530DDCA1E4 /* NVActivityIndicatorAnimationBallRotateChase.swift */,
+				ABF7B6A4F32516B1AC085BD5DE23F514 /* NVActivityIndicatorAnimationBallScale.swift */,
+				9CA8C481BB34D31F81B249B1BE1E615A /* NVActivityIndicatorAnimationBallScaleMultiple.swift */,
+				A35DEA8EAA2E02F2FE9C4B5196855AE7 /* NVActivityIndicatorAnimationBallScaleRipple.swift */,
+				2A6673415A3959B484378971C800D298 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */,
+				707B8F8EEFD2ABFF2F15D2780DD647B7 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */,
+				972BA62FF15739A002DDCB5A743E35C1 /* NVActivityIndicatorAnimationBallTrianglePath.swift */,
+				D99D51714D35C5A5E116E7146E5FD14E /* NVActivityIndicatorAnimationBallZigZag.swift */,
+				AEEED6D269CAFE9F2DE94C2F8A01F8EE /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */,
+				EFAC78A58D60150ED0738B8223A3CF76 /* NVActivityIndicatorAnimationBlank.swift */,
+				B8A24FE97E9603FDE8E4084BAFEAD7BB /* NVActivityIndicatorAnimationCubeTransition.swift */,
+				B5010AB26E3D49F184D7C4A8F1C6587C /* NVActivityIndicatorAnimationDelegate.swift */,
+				5A282BCF48CC3E32A9162D9DEC372CFC /* NVActivityIndicatorAnimationLineScale.swift */,
+				8062D70A01C6734DBAEE605109D3CA45 /* NVActivityIndicatorAnimationLineScaleParty.swift */,
+				48BD4BFD0F2D12D57AB38E13D8A785E4 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */,
+				D6A655E2985A8FAF5CC4D80E971A910E /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */,
+				2AD16EEF489213F70DD1F4382A7572E6 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */,
+				29E8197D7F3AE736618F20ABB512E7EC /* NVActivityIndicatorAnimationOrbit.swift */,
+				DD9A57B9380A0444F68E6189E54E1F75 /* NVActivityIndicatorAnimationPacman.swift */,
+				4E5E15941D7D3DF0FF5D9DD73E8DFA57 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */,
+				75A40497FF5CE767DD5DE83F32E7BD2A /* NVActivityIndicatorAnimationSquareSpin.swift */,
+				6C1C25FDAFBB93504C61B33846D6D6E6 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */,
+				7CD66D2CF8ABEAD1705488D1A3D68A96 /* NVActivityIndicatorPresenter.swift */,
+				78110E9D3FA6A677AA33CBBBE2F145DB /* NVActivityIndicatorShape.swift */,
+				E4806BE517F9EE2A10AE4E12A35F1581 /* NVActivityIndicatorView.swift */,
+				C19B98A6B97ADF3F4E52F51D85FB0ECA /* NVActivityIndicatorViewable.swift */,
+				15F703B6549181383B5EEC2E5FA2FF2F /* Support Files */,
+			);
+			name = NVActivityIndicatorView;
+			path = NVActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		7A313900CC0B6C507DDCB4B92FD5A80D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E36F7C89A436A080AF8B62D4CDCB2 /* Info.plist */,
+				5091E2BAAF58E77A037463F43BB309AA /* SwiftyJSON.modulemap */,
+				4F54700B681D5CC61D58EA6BA2FF81AC /* SwiftyJSON.xcconfig */,
+				7BB3F783DD6C8554B649A02A7CF2F0D8 /* SwiftyJSON-dummy.m */,
+				715AF13CEDDFAEC9FAC1A8BF5316D40F /* SwiftyJSON-prefix.pch */,
+				21C954E0540E4342E930B89A2385CF37 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				AAAAC4A3528FBB950B97B730A137A67E /* Pods */,
-				C27B0829E97A2B4CFB5799744FA06FCC /* Products */,
+				50ADB8CE6A97E09AC0933AD937EC26F9 /* Pods */,
+				5C358BAD81F1B0FE5FD2F271846688C2 /* Products */,
 				975181843FBDCD4598B3224AD74A7C43 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E66374A25C9E666E8448703729A1857 /* SwiftyJSON */ = {
+		7F216229E2448BB81BF4D884C35FEE83 /* CameraManager */ = {
 			isa = PBXGroup;
 			children = (
-				B730D21A33EDBE73B01CCB6CCEA5E35A /* SwiftyJSON.swift */,
-				B4AEE5904020466DE3E6DC4B73805FC6 /* Support Files */,
+				5DB53EA065A5A7B1614C0E66E58D32EC /* CameraManager.swift */,
+				1547EE32A9F92B1F94F8D8696FFDBF10 /* Support Files */,
 			);
-			name = SwiftyJSON;
-			path = SwiftyJSON;
+			name = CameraManager;
+			path = CameraManager;
 			sourceTree = "<group>";
 		};
 		975181843FBDCD4598B3224AD74A7C43 /* Targets Support Files */ = {
@@ -393,89 +543,6 @@
 				5F884D8388E0BBC7361768DE70728E36 /* Pods-NutriFence (iOS)UITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		AAAAC4A3528FBB950B97B730A137A67E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5AA2689CB674B51F31FA754868513F9D /* ALCameraViewController */,
-				C4534D1D5FF038D2A670DD9BEEC046F8 /* NVActivityIndicatorView */,
-				7E66374A25C9E666E8448703729A1857 /* SwiftyJSON */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B4AEE5904020466DE3E6DC4B73805FC6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E89D1298738C8C5DFAA3D34DB77D232E /* Info.plist */,
-				CD87CB2AD6ADEE85ADE242AC6CD12027 /* SwiftyJSON.modulemap */,
-				0C541C2BA1D7C22C1798E7E8EA839F32 /* SwiftyJSON.xcconfig */,
-				953FF03B98F6EDDD7BC2AEF341CFD796 /* SwiftyJSON-dummy.m */,
-				78D996F2F1EDCAB06D74FD96114A8E40 /* SwiftyJSON-prefix.pch */,
-				E2616E4BE70C4065CDF74CBAB6300C89 /* SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		C27B0829E97A2B4CFB5799744FA06FCC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5CEF3AB7C5BDEBEEE62D94A5864DC68E /* ALCameraViewController.framework */,
-				2166202CC48290888578147E53AFEEC0 /* NVActivityIndicatorView.framework */,
-				D682915B59509DC526189B2E175175AB /* Pods_NutriFence__iOS_.framework */,
-				BF500FB63F15960A969A4CB25DFD4725 /* Pods_NutriFence__iOS_Tests.framework */,
-				3D25616BAD92C979F52832DF1DEAF371 /* Pods_NutriFence__iOS_UITests.framework */,
-				F61A6B5DF1918CCE7813B73FA8FAAB42 /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C4534D1D5FF038D2A670DD9BEEC046F8 /* NVActivityIndicatorView */ = {
-			isa = PBXGroup;
-			children = (
-				3B69FD59B44F370C4EF616D659B38A5E /* NVActivityIndicatorAnimationAudioEqualizer.swift */,
-				25F38B5F75EE2B4A867703EBBCE54DD8 /* NVActivityIndicatorAnimationBallBeat.swift */,
-				36C079E5C43264E43FD1BE7C354D9514 /* NVActivityIndicatorAnimationBallClipRotate.swift */,
-				9081620D9C8E4F1751E355DCB9D26A85 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */,
-				81AF436B2F9C24D4AD94C7D76901DA29 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */,
-				4812BA3008F3216D20C7D6B2DD66CDAF /* NVActivityIndicatorAnimationBallGridBeat.swift */,
-				EE41F02B7BC74EE5040AA95B8E8625B5 /* NVActivityIndicatorAnimationBallGridPulse.swift */,
-				FDE574CDE832A2DCB087783DADB8BAAF /* NVActivityIndicatorAnimationBallPulse.swift */,
-				A2625074B949AEC01C703D07A392C3EC /* NVActivityIndicatorAnimationBallPulseRise.swift */,
-				48533BB521AD4944AEDE84465E708D0D /* NVActivityIndicatorAnimationBallPulseSync.swift */,
-				D5E82E7FFCDDE72ADEC76760B6B2743B /* NVActivityIndicatorAnimationBallRotate.swift */,
-				5DA5F172A94962B9B0E32990AE163941 /* NVActivityIndicatorAnimationBallRotateChase.swift */,
-				17915F84320F3BF1C439C9A2B73365B3 /* NVActivityIndicatorAnimationBallScale.swift */,
-				859BADD9E784755C8EE8DF32B24C387C /* NVActivityIndicatorAnimationBallScaleMultiple.swift */,
-				342E1D6A4CCE2132B8C0E76C2437D003 /* NVActivityIndicatorAnimationBallScaleRipple.swift */,
-				B87D3B479CD69E429E3A2F9B1AAF8BF4 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */,
-				EEBE5FBD574E1686769BDF1434FFF01B /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */,
-				5D6A5A2959AC8B8E1D36977A68DC13AA /* NVActivityIndicatorAnimationBallTrianglePath.swift */,
-				426261011318378CF14A200A99485DE9 /* NVActivityIndicatorAnimationBallZigZag.swift */,
-				D259C117AE0E0D1872967C819BFDF160 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */,
-				C417DA7FF76B98111980BEE6ECB51DEF /* NVActivityIndicatorAnimationBlank.swift */,
-				83B4ADA65FA56D961AF9C69941638033 /* NVActivityIndicatorAnimationCubeTransition.swift */,
-				38DF5E1CFD1A60A7B18497E96173E782 /* NVActivityIndicatorAnimationDelegate.swift */,
-				FE354015EC624B1903913219D088D4EB /* NVActivityIndicatorAnimationLineScale.swift */,
-				DD772D318DBA06541C3787D4368F76A9 /* NVActivityIndicatorAnimationLineScaleParty.swift */,
-				DDCB9426D8FE4E684E810EE67553415D /* NVActivityIndicatorAnimationLineScalePulseOut.swift */,
-				2820C9AA56933DA9F66F0DB7C05939FC /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */,
-				47F8E8B860428D370845891A9DCBCB6D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */,
-				44AEFA7145AEC752275AD386E6771DCA /* NVActivityIndicatorAnimationOrbit.swift */,
-				221F707CC10F31F261B1EB8DC2386A1F /* NVActivityIndicatorAnimationPacman.swift */,
-				1BC71D4659AE7FB7ACEC066D0B6E4617 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */,
-				202906CAFAB632A111B61C3A580548F6 /* NVActivityIndicatorAnimationSquareSpin.swift */,
-				15B2A7145E1FB435B3594B4638ECA9D5 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */,
-				01AF7AF4D02B27AB90F0384B31CFB836 /* NVActivityIndicatorPresenter.swift */,
-				8685C78BD4DEA3BD7B1A2F6CE654C644 /* NVActivityIndicatorShape.swift */,
-				CA9449C9F87E2E233AA2C5D749BD165C /* NVActivityIndicatorView.swift */,
-				9579B7FE561386690ED9EE2448B2951F /* NVActivityIndicatorViewable.swift */,
-				EA99973F4B01ABFCB386544C40AA5611 /* Support Files */,
-			);
-			name = NVActivityIndicatorView;
-			path = NVActivityIndicatorView;
 			sourceTree = "<group>";
 		};
 		C912375D4956813D57DEE10BB68F9F22 /* Pods-NutriFence (iOS) */ = {
@@ -524,23 +591,17 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EA99973F4B01ABFCB386544C40AA5611 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1C913EBAB4A1065CE4A5F313E5C5E603 /* Info.plist */,
-				D66C3AB7A310F670D021E2DB923631FC /* NVActivityIndicatorView.modulemap */,
-				17CE6D6606C3185CC23C2D6DD9868E13 /* NVActivityIndicatorView.xcconfig */,
-				7C5C2BCBC85049E7F15C8BF27D021641 /* NVActivityIndicatorView-dummy.m */,
-				9B700D797FBD309BCF6FE64C64F0E9CE /* NVActivityIndicatorView-prefix.pch */,
-				D908F44E1F975EECF2B0DE93B0AC5876 /* NVActivityIndicatorView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/NVActivityIndicatorView";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2711AE9635B9AC5749D3938426E452BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				474ED4AAC1942F7865E34ABF069E53C0 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49B4FBED1BE7F841077BE5C31896A248 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,11 +610,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59F4C94061D74725C9CC8F08E85FF272 /* Headers */ = {
+		866793DF324E6FD0A9ECDD1D1B922C85 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				036D9ACE1C384705D842EF0A859B5FDC /* SwiftyJSON-umbrella.h in Headers */,
+				5719D777F46F7C6F689C6898EA54F524 /* CameraManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,11 +626,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACB78AA565AD134A9398E87E4145C232 /* Headers */ = {
+		A899E00CD90EEE82AA0058585928ECFD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F83882119C7A824B856EBA66C2F57EE4 /* Pods-NutriFence (iOS)-umbrella.h in Headers */,
+				1CF009B144F6D7FBD6257600DE8EAD0B /* Pods-NutriFence (iOS)-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +667,7 @@
 			);
 			name = "Pods-NutriFence (iOS)Tests";
 			productName = "Pods-NutriFence (iOS)Tests";
-			productReference = BF500FB63F15960A969A4CB25DFD4725 /* Pods_NutriFence__iOS_Tests.framework */;
+			productReference = 3D03014F62B4579B98CDF68E1D21A950 /* Pods_NutriFence__iOS_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3EDFE4052B5DE7D509935AC0774CB135 /* NVActivityIndicatorView */ = {
@@ -623,16 +684,16 @@
 			);
 			name = NVActivityIndicatorView;
 			productName = NVActivityIndicatorView;
-			productReference = 2166202CC48290888578147E53AFEEC0 /* NVActivityIndicatorView.framework */;
+			productReference = 35A34E156DB7E6EE534E06D3E3C57719 /* NVActivityIndicatorView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4C771F70641E797FCD0D9DBB31C255D3 /* SwiftyJSON */ = {
+		425C72DBF2F69400A68BF07B9A507F7A /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 020B178FE027E8E11B8D01A6ABE2F593 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = AB8DBAB6789383F700CC0AE2EBC10EF1 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				57BB2D0D4A9950B168D93323E57402FD /* Sources */,
-				152C080D4825DAC2A03A6FAFAC9F98EE /* Frameworks */,
-				59F4C94061D74725C9CC8F08E85FF272 /* Headers */,
+				1C87036C98151375A31CAA974BD7C9A8 /* Sources */,
+				8D6F91F8EA0FF0B8442F1BEBC550165D /* Frameworks */,
+				2711AE9635B9AC5749D3938426E452BE /* Headers */,
 			);
 			buildRules = (
 			);
@@ -640,27 +701,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = F61A6B5DF1918CCE7813B73FA8FAAB42 /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BBE7290E2E605DFD820D96B825B5C5FE /* Pods-NutriFence (iOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6F6048A53D769FAB8DFB0E13F53E1F3A /* Build configuration list for PBXNativeTarget "Pods-NutriFence (iOS)" */;
-			buildPhases = (
-				DC277D95A5B5B9C8973675293497FD38 /* Sources */,
-				D131BF7549F4D7FE1022CF7707C88445 /* Frameworks */,
-				ACB78AA565AD134A9398E87E4145C232 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A664DBC2EA3CF300AD26D42413490D31 /* PBXTargetDependency */,
-				1AD9ED80444A001FD6542110A1B95D1C /* PBXTargetDependency */,
-				A159E7D2CDA33A53FA2AFE2F0DAF2D6D /* PBXTargetDependency */,
-			);
-			name = "Pods-NutriFence (iOS)";
-			productName = "Pods-NutriFence (iOS)";
-			productReference = D682915B59509DC526189B2E175175AB /* Pods_NutriFence__iOS_.framework */;
+			productReference = 2D06149DF80B828D620E9CCA47C69552 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D7FAEFEAF68AE19EB2D22369766AF24E /* ALCameraViewController */ = {
@@ -678,7 +719,28 @@
 			);
 			name = ALCameraViewController;
 			productName = ALCameraViewController;
-			productReference = 5CEF3AB7C5BDEBEEE62D94A5864DC68E /* ALCameraViewController.framework */;
+			productReference = A7CEB29F0787E50DE98DC50C2C9EFDCA /* ALCameraViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DB4A288E40D5404466FA6090825917BF /* Pods-NutriFence (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EBADB8D3DF40F7D8CC695DAEB5196D4 /* Build configuration list for PBXNativeTarget "Pods-NutriFence (iOS)" */;
+			buildPhases = (
+				A0E7EE215A25C7CA4A49D377A2B04E1E /* Sources */,
+				C7DF2D407BF6255F6758A219164C384E /* Frameworks */,
+				A899E00CD90EEE82AA0058585928ECFD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				687D35FCFDD79E36374CA783E512CE68 /* PBXTargetDependency */,
+				ED6532B374D072495F711CFCFF763AED /* PBXTargetDependency */,
+				FD4C0A0FA629DB761E354A22E51466B9 /* PBXTargetDependency */,
+				7D919232854E5D81FA03DDCA7215F1AF /* PBXTargetDependency */,
+			);
+			name = "Pods-NutriFence (iOS)";
+			productName = "Pods-NutriFence (iOS)";
+			productReference = 464F4D42D0557E2F2A8214483A33D6C0 /* Pods_NutriFence__iOS_.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EC6648439A079ADDBBEDCF5CFB1325E4 /* Pods-NutriFence (iOS)UITests */ = {
@@ -695,7 +757,24 @@
 			);
 			name = "Pods-NutriFence (iOS)UITests";
 			productName = "Pods-NutriFence (iOS)UITests";
-			productReference = 3D25616BAD92C979F52832DF1DEAF371 /* Pods_NutriFence__iOS_UITests.framework */;
+			productReference = CCF3E18BC28BB15FF89B88F0A1E5458A /* Pods_NutriFence__iOS_UITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FFBE657764C9F6D8E01DDE2949BD2E64 /* CameraManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 160F1FCFB0776F8F53BECC26A743DDC8 /* Build configuration list for PBXNativeTarget "CameraManager" */;
+			buildPhases = (
+				24CDED026DE2C3906E1EC20354A98837 /* Sources */,
+				77C6EFA19AA669C929210FCF53C937B6 /* Frameworks */,
+				866793DF324E6FD0A9ECDD1D1B922C85 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CameraManager;
+			productName = CameraManager;
+			productReference = 6D24B8658B799B26C88F4F9A7967D691 /* CameraManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -715,16 +794,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C27B0829E97A2B4CFB5799744FA06FCC /* Products */;
+			productRefGroup = 5C358BAD81F1B0FE5FD2F271846688C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D7FAEFEAF68AE19EB2D22369766AF24E /* ALCameraViewController */,
+				FFBE657764C9F6D8E01DDE2949BD2E64 /* CameraManager */,
 				3EDFE4052B5DE7D509935AC0774CB135 /* NVActivityIndicatorView */,
-				BBE7290E2E605DFD820D96B825B5C5FE /* Pods-NutriFence (iOS) */,
+				DB4A288E40D5404466FA6090825917BF /* Pods-NutriFence (iOS) */,
 				1B59F668AD0F000A41462835702758D5 /* Pods-NutriFence (iOS)Tests */,
 				EC6648439A079ADDBBEDCF5CFB1325E4 /* Pods-NutriFence (iOS)UITests */,
-				4C771F70641E797FCD0D9DBB31C255D3 /* SwiftyJSON */,
+				425C72DBF2F69400A68BF07B9A507F7A /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
@@ -743,6 +823,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C87036C98151375A31CAA974BD7C9A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01792B4212D4E2611B80A8C46B1B0A9C /* SwiftyJSON-dummy.m in Sources */,
+				E0651A48BA75F29DC064EE67DD5A6E6A /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24CDED026DE2C3906E1EC20354A98837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB622C1F090A88EBADAA503A04F90DF /* CameraManager-dummy.m in Sources */,
+				9462551BBBC4C675457BE9569CA43F8C /* CameraManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		39CB1D83E4502874B6CA315A7053B40B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -788,12 +886,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		57BB2D0D4A9950B168D93323E57402FD /* Sources */ = {
+		A0E7EE215A25C7CA4A49D377A2B04E1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD1B2FD9AF9E44944758D91C6760D1A /* SwiftyJSON-dummy.m in Sources */,
-				33C2CF0CE805DA02C13269D165A837F8 /* SwiftyJSON.swift in Sources */,
+				2F453B69F60558D070DBCC659C9D6783 /* Pods-NutriFence (iOS)-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,14 +928,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC277D95A5B5B9C8973675293497FD38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				915D962D4F95AEFB98B3951444CBF8F6 /* Pods-NutriFence (iOS)-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DFC6E83D146E8EB93ECFF112BBAE56B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -850,23 +939,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1AD9ED80444A001FD6542110A1B95D1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NVActivityIndicatorView;
-			target = 3EDFE4052B5DE7D509935AC0774CB135 /* NVActivityIndicatorView */;
-			targetProxy = EF93E89C3BB7687F09DED1EF6D66D6DE /* PBXContainerItemProxy */;
-		};
-		A159E7D2CDA33A53FA2AFE2F0DAF2D6D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = 4C771F70641E797FCD0D9DBB31C255D3 /* SwiftyJSON */;
-			targetProxy = 00BE22ABB613FCE39FECEE0187C83BF2 /* PBXContainerItemProxy */;
-		};
-		A664DBC2EA3CF300AD26D42413490D31 /* PBXTargetDependency */ = {
+		687D35FCFDD79E36374CA783E512CE68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ALCameraViewController;
 			target = D7FAEFEAF68AE19EB2D22369766AF24E /* ALCameraViewController */;
-			targetProxy = F9FE90C453781590F5CA30D8B8E2C0E6 /* PBXContainerItemProxy */;
+			targetProxy = 9B3C2C62323814846AAE01316907AEB7 /* PBXContainerItemProxy */;
+		};
+		7D919232854E5D81FA03DDCA7215F1AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 425C72DBF2F69400A68BF07B9A507F7A /* SwiftyJSON */;
+			targetProxy = B461EED644B63CF6347C42DD18183B88 /* PBXContainerItemProxy */;
+		};
+		ED6532B374D072495F711CFCFF763AED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CameraManager;
+			target = FFBE657764C9F6D8E01DDE2949BD2E64 /* CameraManager */;
+			targetProxy = CF1695484DED87CB5EA0046D692D9EEC /* PBXContainerItemProxy */;
+		};
+		FD4C0A0FA629DB761E354A22E51466B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NVActivityIndicatorView;
+			target = 3EDFE4052B5DE7D509935AC0774CB135 /* NVActivityIndicatorView */;
+			targetProxy = 07E4B2531D1AA5673BEE0DCE3F2FE016 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -915,6 +1010,41 @@
 			};
 			name = Debug;
 		};
+		1D6B8980B8C2254A4A7932CD70FE97C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE8C928790EE6298CA972C662011BCA /* Pods-NutriFence (iOS).release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NutriFence (iOS)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NutriFence__iOS_;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2299BBE1E5C4BC932C71912D0C3C4A73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F8F5035593AA73859931CE780FA75F9 /* Pods-NutriFence (iOS)Tests.debug.xcconfig */;
@@ -944,6 +1074,42 @@
 				PRODUCT_NAME = Pods_NutriFence__iOS_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3CD7C3284B4675840AD4E8451A4CE359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 841078F9D786677205FA117DAAB47789 /* Pods-NutriFence (iOS).debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NutriFence (iOS)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NutriFence__iOS_;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -990,45 +1156,9 @@
 			};
 			name = Release;
 		};
-		4C767B966784CAEC6BA5F8CE83821510 /* Debug */ = {
+		597E878D3CE0F499D055971061DDE265 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 841078F9D786677205FA117DAAB47789 /* Pods-NutriFence (iOS).debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-NutriFence (iOS)/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NutriFence__iOS_;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		56F2ED8A90F2EB9B3DBE85F5E523CBD6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C541C2BA1D7C22C1798E7E8EA839F32 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 37C780865E337B372E8B948F69A49C41 /* CameraManager.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1041,14 +1171,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CameraManager/CameraManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CameraManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MODULEMAP_FILE = "Target Support Files/CameraManager/CameraManager.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
+				PRODUCT_NAME = CameraManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1060,7 +1190,7 @@
 		};
 		6B847F47FB5CEF3BBD9CAD5FA6504FFC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17CE6D6606C3185CC23C2D6DD9868E13 /* NVActivityIndicatorView.xcconfig */;
+			baseConfigurationReference = BD327AF63996444F9EDAEC9E6129D1FA /* NVActivityIndicatorView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1090,9 +1220,41 @@
 			};
 			name = Release;
 		};
+		6F88534492385F768CB382B06C121774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F54700B681D5CC61D58EA6BA2FF81AC /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		785A721F6305264AC3B713DA4E64C4A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1AF094FE85AEEA590508EA563A39632 /* ALCameraViewController.xcconfig */;
+			baseConfigurationReference = 085A7951E88030E4EAA7469B90021F26 /* ALCameraViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1122,40 +1284,38 @@
 			};
 			name = Release;
 		};
-		90B3474C09233FDEE92476BA8DCCA70C /* Release */ = {
+		799C23E922818663F861A5D09B91426A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDE8C928790EE6298CA972C662011BCA /* Pods-NutriFence (iOS).release.xcconfig */;
+			baseConfigurationReference = 37C780865E337B372E8B948F69A49C41 /* CameraManager.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-NutriFence (iOS)/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CameraManager/CameraManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CameraManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NutriFence__iOS_;
+				MODULEMAP_FILE = "Target Support Files/CameraManager/CameraManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CameraManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		9191A39E9E6874B2E14C8CCD4D6DF429 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1194,7 +1354,7 @@
 		};
 		98764EFF7C509CB5EAB0FC79571C624C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1AF094FE85AEEA590508EA563A39632 /* ALCameraViewController.xcconfig */;
+			baseConfigurationReference = 085A7951E88030E4EAA7469B90021F26 /* ALCameraViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1260,39 +1420,6 @@
 			};
 			name = Debug;
 		};
-		A66A1A4C3D4C3BB1EC362989545B6E8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C541C2BA1D7C22C1798E7E8EA839F32 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		A6D4B4F5E0CC5514925711A70ED0F65C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10244DC6A0C3B5EBAA76E5F913C485A3 /* Pods-NutriFence (iOS)Tests.release.xcconfig */;
@@ -1328,9 +1455,42 @@
 			};
 			name = Release;
 		};
+		CCB07606E36AA2CAC63EAF84164673B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F54700B681D5CC61D58EA6BA2FF81AC /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F37C64362172087D131FEEAD10E60CE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17CE6D6606C3185CC23C2D6DD9868E13 /* NVActivityIndicatorView.xcconfig */;
+			baseConfigurationReference = BD327AF63996444F9EDAEC9E6129D1FA /* NVActivityIndicatorView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1364,11 +1524,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		020B178FE027E8E11B8D01A6ABE2F593 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		0EBADB8D3DF40F7D8CC695DAEB5196D4 /* Build configuration list for PBXNativeTarget "Pods-NutriFence (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A66A1A4C3D4C3BB1EC362989545B6E8C /* Debug */,
-				56F2ED8A90F2EB9B3DBE85F5E523CBD6 /* Release */,
+				3CD7C3284B4675840AD4E8451A4CE359 /* Debug */,
+				1D6B8980B8C2254A4A7932CD70FE97C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		160F1FCFB0776F8F53BECC26A743DDC8 /* Build configuration list for PBXNativeTarget "CameraManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				799C23E922818663F861A5D09B91426A /* Debug */,
+				597E878D3CE0F499D055971061DDE265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1391,15 +1560,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F6048A53D769FAB8DFB0E13F53E1F3A /* Build configuration list for PBXNativeTarget "Pods-NutriFence (iOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4C767B966784CAEC6BA5F8CE83821510 /* Debug */,
-				90B3474C09233FDEE92476BA8DCCA70C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8F98A4D5CFDCC8E061C50877E5F9E4EF /* Build configuration list for PBXNativeTarget "Pods-NutriFence (iOS)Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1414,6 +1574,15 @@
 			buildConfigurations = (
 				A122A2FCD42B4FA5291E0A43F3ED0B01 /* Debug */,
 				9191A39E9E6874B2E14C8CCD4D6DF429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB8DBAB6789383F700CC0AE2EBC10EF1 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCB07606E36AA2CAC63EAF84164673B9 /* Debug */,
+				6F88534492385F768CB382B06C121774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,6 +7,7 @@ target 'NutriFence (iOS)' do
   pod 'SwiftyJSON'
   pod 'NVActivityIndicatorView'
   pod 'ALCameraViewController'
+  pod 'CameraManager', '~> 3.0'
 
   # Pods for NutriFence (iOS)
 

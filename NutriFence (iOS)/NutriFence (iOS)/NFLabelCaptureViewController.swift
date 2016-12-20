@@ -89,7 +89,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     }
     
     fileprivate func addCameraToView() {
-        cameraManager.addPreviewLayerToView(cameraView, newCameraOutputMode: .stillImage)
+        let _ = cameraManager.addPreviewLayerToView(cameraView, newCameraOutputMode: .stillImage)
         cameraManager.showErrorBlock = { [weak self] (erTitle: String, erMessage: String) -> Void in
             
             let alertController = UIAlertController(title: erTitle, message: erMessage, preferredStyle: .alert)

@@ -19,6 +19,8 @@
 		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
 		7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551671DCE4E8A008A8526 /* UIColor+Hex.swift */; };
 		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
+		76AAB6351E093BFB00D3CBB8 /* NFFirstPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76AAB6341E093BFB00D3CBB8 /* NFFirstPage.xib */; };
+		76AAB6381E093C7700D3CBB8 /* NFFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AAB6371E093C7700D3CBB8 /* NFFirstPageViewController.swift */; };
 		76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */; };
 		76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */; };
 		76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */; };
@@ -70,6 +72,8 @@
 		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		768551671DCE4E8A008A8526 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
+		76AAB6341E093BFB00D3CBB8 /* NFFirstPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NFFirstPage.xib; sourceTree = "<group>"; };
+		76AAB6371E093C7700D3CBB8 /* NFFirstPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFirstPageViewController.swift; sourceTree = "<group>"; };
 		76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTableViewController.swift; sourceTree = "<group>"; };
 		76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTVCType.swift; sourceTree = "<group>"; };
 		76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFIngredient.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
 			isa = PBXGroup;
 			children = (
+				76AAB6331E093B5000D3CBB8 /* Tutorial */,
 				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
 				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
 				76DFA6291DD6D44600821BC5 /* Model */,
@@ -218,6 +223,31 @@
 				76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		76AAB6331E093B5000D3CBB8 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				76AAB6361E093C5C00D3CBB8 /* View Controllers */,
+				76AAB6391E093C8900D3CBB8 /* Nibs */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		76AAB6361E093C5C00D3CBB8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76AAB6371E093C7700D3CBB8 /* NFFirstPageViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		76AAB6391E093C8900D3CBB8 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				76AAB6341E093BFB00D3CBB8 /* NFFirstPage.xib */,
+			);
+			name = Nibs;
 			sourceTree = "<group>";
 		};
 		76DFA6231DD6B56700821BC5 /* Utilities */ = {
@@ -363,6 +393,7 @@
 				76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */,
 				7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */,
 				76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */,
+				76AAB6351E093BFB00D3CBB8 /* NFFirstPage.xib in Resources */,
 				76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76AAB6381E093C7700D3CBB8 /* NFFirstPageViewController.swift in Sources */,
 				76DFA62F1DD6D96F00821BC5 /* NFGradientColors.swift in Sources */,
 				76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */,
 				76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */,

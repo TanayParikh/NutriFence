@@ -10,13 +10,10 @@ import UIKit
 
 class NFSimpleMenuViewController: UIViewController {
 
-<<<<<<< HEAD
-=======
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
     
->>>>>>> refactor/animation
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layer.insertSublayer(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple), at: 0)
@@ -30,18 +27,10 @@ class NFSimpleMenuViewController: UIViewController {
     
     // MARK: - Actions
     
-<<<<<<< HEAD
-    @IBAction func scanButtonTapped() {
-        performSegue(withIdentifier: "CaptureLabelSegue", sender: nil)
-    }
-    
-=======
     @IBAction func userDidSwipe(_ sender: UISwipeGestureRecognizer) {
         performSegue(withIdentifier: "CaptureLabelSegue", sender: nil)
     }
     
-    
->>>>>>> refactor/animation
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     

@@ -70,7 +70,6 @@
 		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		768551671DCE4E8A008A8526 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
-		768CADAA1E087D8A00D89E09 /* TOCropViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TOCropViewController; sourceTree = "<group>"; };
 		76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTableViewController.swift; sourceTree = "<group>"; };
 		76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTVCType.swift; sourceTree = "<group>"; };
 		76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFIngredient.swift; sourceTree = "<group>"; };
@@ -177,7 +176,6 @@
 				7685516F1DCE5725008A8526 /* View Controllers */,
 				761585D01E07A3860094BEDB /* Controls */,
 				76DFA6231DD6B56700821BC5 /* Utilities */,
-				768CADA91E087D4700D89E09 /* Frameworks */,
 				7685516E1DCE56EF008A8526 /* Supporting Files */,
 			);
 			path = "NutriFence (iOS)";
@@ -220,14 +218,6 @@
 				76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		768CADA91E087D4700D89E09 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				768CADAA1E087D8A00D89E09 /* TOCropViewController */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		76DFA6231DD6B56700821BC5 /* Utilities */ = {

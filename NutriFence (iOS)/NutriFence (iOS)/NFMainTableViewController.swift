@@ -9,8 +9,6 @@
 import UIKit
 import NVActivityIndicatorView
 import SwiftyJSON
-import ALCameraViewController
-import Photos
 
 class NFMainTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -74,19 +72,6 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     
     @IBAction func nextButtonTapped() {
-        let cameraController = CameraViewController(croppingEnabled: true,
-                                                    allowsLibraryAccess: false,
-                                                    completion: { [weak self] (image, _) -> Void in
-                                                        if let imageData = image {
-                                                            NFClassificationFetcher.analyzeImage(imageData,
-                                                                                                 onSuccess: self!.parseJSONResult,
-                                                                                                 onFail: self!.displayErrorAlert)
-                                                        }
-                                                        self!.dismiss(animated: true, completion: { [weak self] Void in
-                                                            self!.showOverlay()
-                                                        })
-        })
-        present(cameraController, animated: true, completion: nil)
     }
     
     
@@ -198,29 +183,6 @@ extension NFMainTableViewController {
                                         displayTimeThreshold: nil,
                                         minimumDisplayTime: 5)
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
-        hideSubviews()
-    }
-    
-    fileprivate func unhideSubviews() {
-        for view in self.view.subviews {
-            UIView.animate(withDuration: 0.2,
-                           animations: {
-                            view.isHidden = false
-            })
-        }
-    }
-    
-    fileprivate func hideSubviews() {
-        for view in self.view.subviews {
-            if view.restorationIdentifier == "NFLogo" {
-                continue
-            } else {
-                UIView.animate(withDuration: 0.2,
-                               animations: {
-                                view.isHidden = true
-                })
-            }
-        }
     }
 }
 
@@ -252,7 +214,6 @@ extension NFMainTableViewController {
         }
         // After parsing, trigger segue to see results
         self.hideOverlay()
-        self.unhideSubviews()
         performSegue(withIdentifier: "LoadResultsSegue", sender: result)
     }
     
@@ -265,9 +226,7 @@ extension NFMainTableViewController {
             self!.dismiss(animated: true, completion: nil)
         })
         errorAlert.addAction(okAction)
-        unhideSubviews()
-        present(errorAlert, animated: true, completion: { [weak self] Void in
-            self!.hideOverlay()
-        })
+        hideOverlay()
+        present(errorAlert, animated: true, completion: nil)
     }
 }

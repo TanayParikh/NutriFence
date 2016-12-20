@@ -10,6 +10,7 @@ import UIKit
 import CameraManager
 import TOCropViewController
 import SwiftyJSON
+import NVActivityIndicatorView
 
 class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelegate {
     
@@ -21,7 +22,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     
     
     @IBOutlet weak var cameraView: UIView!
-    private let cameraManager = CameraManager()
+    fileprivate let cameraManager = CameraManager()
     @IBOutlet weak var shutterButton: NFShutterButton!
     
     private var croppedImage: UIImage! {
@@ -35,6 +36,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cameraManager.writeFilesToPhoneLibrary = false
         navigationController?.isNavigationBarHidden = true
         switch cameraManager.currentCameraStatus() {
         case .notDetermined:
@@ -55,6 +57,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
         super.viewWillAppear(animated)
         UIApplication.shared.setStatusBarHidden(true, with: .none)
         cameraManager.resumeCaptureSession()
+        print(#function)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -86,7 +89,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     }
     
     fileprivate func addCameraToView() {
-        cameraManager.addPreviewLayerToView(cameraView, newCameraOutputMode: .stillImage)
+        let _ = cameraManager.addPreviewLayerToView(cameraView, newCameraOutputMode: .stillImage)
         cameraManager.showErrorBlock = { [weak self] (erTitle: String, erMessage: String) -> Void in
             
             let alertController = UIAlertController(title: erTitle, message: erMessage, preferredStyle: .alert)
@@ -94,6 +97,26 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
             
             self?.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    // MARK: - Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoadResultsSegue" {
+            // Prepare the VC
+            if let resultVC = segue.destination as? NFMainTableViewController {
+                if let result = sender as? NFResult {
+                    let resultColor = (result.safetyStatus == .safe ? UIColor.green : UIColor.red)
+                    resultVC.vcType = NFMainTVCType.result(result.safetyStatus)
+                    resultVC.setGradient(NFGradientColors.gradientInView(resultVC.view, withColor: resultColor))
+                    resultVC.tableContents = result.ingredients
+                    cameraManager.stopCaptureSession()
+                }
+            }
+        }
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
     // MARK: - TOCropViewControllerDelegate
@@ -107,6 +130,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
 // MARK: - Image analysis
 extension NFLabelCaptureViewController {
     fileprivate func analyzeImage(_ image: UIImage) {
+        showOverlay()
         NFClassificationFetcher.analyzeImage(image, onSuccess: parseJSONResult, onFail: displayErrorAlert)
     }
     
@@ -134,9 +158,7 @@ extension NFLabelCaptureViewController {
             }
             result.ingredients = ingredients
         }
-        // After parsing, trigger segue to see results
-        // self.hideOverlay()
-        // self.unhideSubviews()
+        hideOverlay()
         performSegue(withIdentifier: "LoadResultsSegue", sender: result)
     }
     
@@ -149,7 +171,25 @@ extension NFLabelCaptureViewController {
             self.dismiss(animated: true, completion: nil)
         })
         errorAlert.addAction(okAction)
-        // unhideSubviews()
-        present(errorAlert, animated: true, completion: nil)
+        hideOverlay()
+        present(errorAlert, animated: true, completion: { [unowned self] Void in
+            self.cameraManager.stopCaptureSession()
+        })
+    }
+    
+    fileprivate func hideOverlay() {
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+    }
+    
+    fileprivate func showOverlay() {
+        let rectSize = CGSize(width: self.view.bounds.width * 0.2, height: self.view.bounds.width * 0.2)
+        let activityData = ActivityData(size: rectSize,
+                                        message: "Working...",
+                                        type: NVActivityIndicatorType.ballBeat,
+                                        color: UIColor(red: 175, green: 175, blue: 175),
+                                        padding: nil,
+                                        displayTimeThreshold: nil,
+                                        minimumDisplayTime: 5)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
     }
 }

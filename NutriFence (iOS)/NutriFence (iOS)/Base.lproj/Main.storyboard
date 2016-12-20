@@ -168,23 +168,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="NFLogo" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="i38-zY-AdL">
                                 <rect key="frame" x="66" y="52" width="243.5" height="75"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yY-jH-MYy">
-                                <rect key="frame" x="150" y="309" width="74" height="49"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="30"/>
-                                <state key="normal" title="Scan"/>
-                                <connections>
-                                    <action selector="scanButtonTapped" destination="NJI-lS-axE" eventType="touchUpInside" id="7bd-97-IHq"/>
-                                </connections>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Swipe to start &gt;" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvK-6d-818">
+                                <rect key="frame" x="54" y="304.5" width="267" height="59"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qao-Nd-Edd">
+                                <rect key="frame" x="301" y="614" width="58" height="33"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                <state key="normal" title="Tutorial"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="i38-zY-AdL" firstAttribute="width" secondItem="smV-El-LPG" secondAttribute="width" multiplier="0.65" id="2w3-Gb-pfH"/>
                             <constraint firstItem="i38-zY-AdL" firstAttribute="centerX" secondItem="smV-El-LPG" secondAttribute="centerX" id="4P1-QB-ev5"/>
+                            <constraint firstItem="pvK-6d-818" firstAttribute="centerY" secondItem="smV-El-LPG" secondAttribute="centerY" id="83z-2c-mPS"/>
                             <constraint firstItem="i38-zY-AdL" firstAttribute="top" secondItem="2aD-mz-uuo" secondAttribute="bottom" constant="32" id="P2k-rq-j8r"/>
-                            <constraint firstItem="3yY-jH-MYy" firstAttribute="centerX" secondItem="smV-El-LPG" secondAttribute="centerX" id="aT9-PX-VCY"/>
-                            <constraint firstItem="3yY-jH-MYy" firstAttribute="centerY" secondItem="smV-El-LPG" secondAttribute="centerY" id="xEf-R3-FUc"/>
+                            <constraint firstItem="kxw-Lb-v5I" firstAttribute="top" secondItem="qao-Nd-Edd" secondAttribute="bottom" constant="20" id="cxU-Qi-eFH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qao-Nd-Edd" secondAttribute="trailing" id="qfJ-7g-fai"/>
+                            <constraint firstItem="pvK-6d-818" firstAttribute="centerX" secondItem="smV-El-LPG" secondAttribute="centerX" id="vv8-YH-imd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HM9-4e-Djv" appends="YES" id="IbW-UV-Cl8"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ele-10-rEC"/>
                     <connections>
@@ -192,6 +202,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjZ-ut-SXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="HM9-4e-Djv">
+                    <connections>
+                        <action selector="userDidSwipe:" destination="NJI-lS-axE" id="ADp-lE-PkN"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="774" y="64"/>
         </scene>
@@ -217,7 +232,7 @@
                                     <color key="titleColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Leb-Dm-taR" kind="unwind" identifier="UnwindToSelectionSegue" unwindAction="unwind:" id="J6f-y1-BSu"/>
+                                    <segue destination="Leb-Dm-taR" kind="unwind" unwindAction="unwind:" id="gjg-aE-Ozl"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="4" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ran-JK-krG">
@@ -283,6 +298,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="WBh-rs-lHJ" secondAttribute="trailing" id="y0A-yp-2K5"/>
                             <constraint firstItem="ran-JK-krG" firstAttribute="height" secondItem="Ylv-pO-GJZ" secondAttribute="height" multiplier="0.3" id="zuR-fb-Veo"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pMg-Zu-EJq" appends="YES" id="oRd-bl-ovv"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="J9n-9X-dhw"/>
                     <connections>
@@ -296,6 +314,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKL-4k-Udf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Leb-Dm-taR" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="pMg-Zu-EJq">
+                    <connections>
+                        <segue destination="Leb-Dm-taR" kind="unwind" unwindAction="unwind:" id="jsG-0B-eOD"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2361" y="63"/>
         </scene>

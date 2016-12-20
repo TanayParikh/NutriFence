@@ -10,6 +10,7 @@ import UIKit
 import CameraManager
 import TOCropViewController
 import SwiftyJSON
+import NVActivityIndicatorView
 
 class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelegate {
     

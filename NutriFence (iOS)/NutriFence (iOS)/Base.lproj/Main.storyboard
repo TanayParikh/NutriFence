@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aY6-rM-vcv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TFi-qj-9lG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,12 +28,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="91U-P1-yba" kind="relationship" relationship="rootViewController" id="csr-mr-Ui8"/>
+                        <segue destination="NJI-lS-axE" kind="relationship" relationship="rootViewController" id="Lve-D7-V0Y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBh-JC-CuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="348" y="77"/>
+            <point key="canvasLocation" x="-134" y="63"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="OoX-4i-Ekb">
@@ -147,12 +147,53 @@
                         <outlet property="tableView" destination="JFo-OK-erA" id="9cO-ag-66L"/>
                         <outletCollection property="dividerLines" destination="sRd-3T-R56" collectionClass="NSMutableArray" id="9t2-ri-yfZ"/>
                         <outletCollection property="dividerLines" destination="ksP-Wt-IpW" collectionClass="NSMutableArray" id="ghY-dr-fsl"/>
-                        <segue destination="qd7-SA-lj3" kind="show" identifier="LoadResultsSegue" id="ZDP-ip-OdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNJ-nj-R5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="76.911544227886068"/>
+            <point key="canvasLocation" x="1063" y="-655"/>
+        </scene>
+        <!--Simple Menu View Controller-->
+        <scene sceneID="8kA-z8-r3d">
+            <objects>
+                <viewController id="NJI-lS-axE" customClass="NFSimpleMenuViewController" customModule="NutriFence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2aD-mz-uuo"/>
+                        <viewControllerLayoutGuide type="bottom" id="kxw-Lb-v5I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smV-El-LPG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="NFLogo" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="i38-zY-AdL">
+                                <rect key="frame" x="66" y="52" width="243.5" height="75"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yY-jH-MYy">
+                                <rect key="frame" x="150" y="309" width="74" height="49"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="30"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="scanButtonTapped" destination="NJI-lS-axE" eventType="touchUpInside" id="7bd-97-IHq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i38-zY-AdL" firstAttribute="width" secondItem="smV-El-LPG" secondAttribute="width" multiplier="0.65" id="2w3-Gb-pfH"/>
+                            <constraint firstItem="i38-zY-AdL" firstAttribute="centerX" secondItem="smV-El-LPG" secondAttribute="centerX" id="4P1-QB-ev5"/>
+                            <constraint firstItem="i38-zY-AdL" firstAttribute="top" secondItem="2aD-mz-uuo" secondAttribute="bottom" constant="32" id="P2k-rq-j8r"/>
+                            <constraint firstItem="3yY-jH-MYy" firstAttribute="centerX" secondItem="smV-El-LPG" secondAttribute="centerX" id="aT9-PX-VCY"/>
+                            <constraint firstItem="3yY-jH-MYy" firstAttribute="centerY" secondItem="smV-El-LPG" secondAttribute="centerY" id="xEf-R3-FUc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ele-10-rEC"/>
+                    <connections>
+                        <segue destination="aY6-rM-vcv" kind="show" identifier="CaptureLabelSegue" id="ppw-c6-VaF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AjZ-ut-SXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="64"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="uxK-I6-sKe">
@@ -256,7 +297,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKL-4k-Udf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Leb-Dm-taR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1824.8" y="76.911544227886068"/>
+            <point key="canvasLocation" x="2361" y="63"/>
         </scene>
         <!--Label Capture View Controller-->
         <scene sceneID="l9p-4B-AlR">
@@ -270,11 +311,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-6E-cu9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-6E-cu9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="YtC-lc-ZeP" appends="YES" id="zkD-hG-Ilp"/>
+                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLa-X1-cWq" customClass="NFBackButton" customModule="NutriFence" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aLa-X1-cWq" secondAttribute="height" multiplier="1:1" id="Wva-oH-maF"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="JdO-Sd-4rt" kind="unwind" unwindAction="unwind:" id="ad0-YM-mjZ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-bO-Vh2" customClass="NFShutterButton" customModule="NutriFence" customModuleProvider="target">
                                 <rect key="frame" x="150" y="572" width="75" height="75"/>
                                 <color key="backgroundColor" red="0.27058823529411763" green="0.22745098039215686" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
@@ -293,19 +346,34 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OeT-6E-cu9" firstAttribute="height" secondItem="8bm-Yg-bQo" secondAttribute="height" id="1r5-fv-wo3"/>
+                            <constraint firstItem="aLa-X1-cWq" firstAttribute="leading" secondItem="OeT-6E-cu9" secondAttribute="leading" constant="16" id="3ab-bU-rsh"/>
+                            <constraint firstItem="aLa-X1-cWq" firstAttribute="top" secondItem="OeT-6E-cu9" secondAttribute="top" constant="16" id="GQS-OZ-DAR"/>
+                            <constraint firstItem="OeT-6E-cu9" firstAttribute="centerX" secondItem="8bm-Yg-bQo" secondAttribute="centerX" id="I0j-Uw-li2"/>
                             <constraint firstItem="YFG-bO-Vh2" firstAttribute="centerX" secondItem="8bm-Yg-bQo" secondAttribute="centerX" id="I9o-e3-VXp"/>
+                            <constraint firstItem="OeT-6E-cu9" firstAttribute="width" secondItem="8bm-Yg-bQo" secondAttribute="width" id="TYB-C7-aIe"/>
                             <constraint firstItem="YFG-bO-Vh2" firstAttribute="width" secondItem="8bm-Yg-bQo" secondAttribute="width" multiplier="0.2" id="VP9-gd-0t9"/>
                             <constraint firstItem="uTs-IA-qwD" firstAttribute="top" secondItem="YFG-bO-Vh2" secondAttribute="bottom" constant="20" id="vgp-tL-LVa"/>
+                            <constraint firstItem="aLa-X1-cWq" firstAttribute="width" secondItem="OeT-6E-cu9" secondAttribute="width" multiplier="0.2" id="xdR-PF-8as"/>
+                            <constraint firstItem="OeT-6E-cu9" firstAttribute="centerY" secondItem="8bm-Yg-bQo" secondAttribute="centerY" id="y6t-Js-TF3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="OeT-6E-cu9" id="gfg-Hi-Fqu"/>
                         <outlet property="shutterButton" destination="YFG-bO-Vh2" id="lrJ-zP-pgF"/>
+                        <segue destination="qd7-SA-lj3" kind="show" identifier="LoadResultsSegue" id="2iC-J5-9OR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wH-wc-Dcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JdO-Sd-4rt" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="YtC-lc-ZeP">
+                    <connections>
+                        <action selector="userSwiped:" destination="aY6-rM-vcv" id="Xnh-Wf-IRs"/>
+                        <segue destination="JdO-Sd-4rt" kind="unwind" unwindAction="unwind:" id="uOq-5f-xKB"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2781.5999999999999" y="-38.23088455772114"/>
+            <point key="canvasLocation" x="1556" y="62.518740629685162"/>
         </scene>
     </scenes>
     <resources>

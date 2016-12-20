@@ -12,8 +12,8 @@ class NFShutterButton: UIButton {
     
     var shutterColor: UIColor!
     override func awakeFromNib() {
-        layer.backgroundColor = UIColor(red: 69, green: 58, blue: 73).cgColor
-        shutterColor = UIColor(red: 69, green: 58, blue: 73)
+        layer.backgroundColor = UIColor(red: 69, green: 58, blue: 73).withAlphaComponent(0.7).cgColor
+        shutterColor = UIColor(red: 69, green: 58, blue: 73).withAlphaComponent(0.7)
     }
     
     override func layoutSubviews() {

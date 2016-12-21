@@ -12,15 +12,32 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private let firstLaunchKey = "NFFirstApplicationLaunchKey"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        /*
-        if let navController = window?.rootViewController as? UINavigationController {
-            if let mainVC = navController.topViewController as? NFSimpleMenuViewController {
-            
-            }
-        } */
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let defaults = UserDefaults.standard
+        var rootViewController: UIViewController!
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let _ = defaults.object(forKey: firstLaunchKey) {
+            // If the key is set, we've already seen the demo
+            rootViewController = mainSB.instantiateViewController(withIdentifier: "NFSimpleMenuController")
+        } else {
+            // It's not set...show the demo
+            rootViewController = mainSB.instantiateViewController(withIdentifier: "NFTutorialViewController")
+            defaults.set(true, forKey: firstLaunchKey)
+        }
+        
+        let navigationController = UINavigationController(rootViewController: rootViewController!)
+        
+        navigationController.isNavigationBarHidden = true
+        
+        self.window!.rootViewController = navigationController
+        
+        self.window!.makeKeyAndVisible()
+        
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {

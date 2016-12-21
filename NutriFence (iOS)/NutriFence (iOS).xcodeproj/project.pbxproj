@@ -19,8 +19,6 @@
 		76598D871DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D861DCD6DDE00DEF76E /* NutriFence__iOS_UITests.swift */; };
 		7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768551671DCE4E8A008A8526 /* UIColor+Hex.swift */; };
 		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
-		76AAB6351E093BFB00D3CBB8 /* NFFirstPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76AAB6341E093BFB00D3CBB8 /* NFFirstPage.xib */; };
-		76AAB6381E093C7700D3CBB8 /* NFFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AAB6371E093C7700D3CBB8 /* NFFirstPageViewController.swift */; };
 		76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */; };
 		76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */; };
 		76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */; };
@@ -30,6 +28,7 @@
 		76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */; };
 		76F84D021E08E75500D56608 /* NFSimpleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */; };
 		76F84D041E08EA7600D56608 /* NFBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F84D031E08EA7600D56608 /* NFBackButton.swift */; };
+		76FA40991E09BFA7000978E0 /* NFTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA40981E09BFA7000978E0 /* NFTutorialViewController.swift */; };
 		E1B07B51D332B62A4EB06153 /* Pods_NutriFence__iOS_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A309F0F930E8BDC843B02A /* Pods_NutriFence__iOS_UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +71,6 @@
 		76598D881DCD6DDE00DEF76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		768551671DCE4E8A008A8526 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
-		76AAB6341E093BFB00D3CBB8 /* NFFirstPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NFFirstPage.xib; sourceTree = "<group>"; };
-		76AAB6371E093C7700D3CBB8 /* NFFirstPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFirstPageViewController.swift; sourceTree = "<group>"; };
 		76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTableViewController.swift; sourceTree = "<group>"; };
 		76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTVCType.swift; sourceTree = "<group>"; };
 		76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFIngredient.swift; sourceTree = "<group>"; };
@@ -83,6 +80,7 @@
 		76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFClassificationFetcher.swift; sourceTree = "<group>"; };
 		76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFSimpleMenuViewController.swift; sourceTree = "<group>"; };
 		76F84D031E08EA7600D56608 /* NFBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBackButton.swift; sourceTree = "<group>"; };
+		76FA40981E09BFA7000978E0 /* NFTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFTutorialViewController.swift; sourceTree = "<group>"; };
 		9125098AAED1349121DDE646 /* Pods_NutriFence__iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriFence__iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C0D898703FCA3A4266C58C /* Pods_NutriFence__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NutriFence__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69867A18043D93B011A71F7 /* Pods-NutriFence (iOS)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)Tests/Pods-NutriFence (iOS)Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,26 +226,9 @@
 		76AAB6331E093B5000D3CBB8 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				76AAB6361E093C5C00D3CBB8 /* View Controllers */,
-				76AAB6391E093C8900D3CBB8 /* Nibs */,
+				76FA40981E09BFA7000978E0 /* NFTutorialViewController.swift */,
 			);
 			name = Tutorial;
-			sourceTree = "<group>";
-		};
-		76AAB6361E093C5C00D3CBB8 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				76AAB6371E093C7700D3CBB8 /* NFFirstPageViewController.swift */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		76AAB6391E093C8900D3CBB8 /* Nibs */ = {
-			isa = PBXGroup;
-			children = (
-				76AAB6341E093BFB00D3CBB8 /* NFFirstPage.xib */,
-			);
-			name = Nibs;
 			sourceTree = "<group>";
 		};
 		76DFA6231DD6B56700821BC5 /* Utilities */ = {
@@ -393,7 +374,6 @@
 				76598D711DCD6DDE00DEF76E /* LaunchScreen.storyboard in Resources */,
 				7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */,
 				76598D6E1DCD6DDE00DEF76E /* Assets.xcassets in Resources */,
-				76AAB6351E093BFB00D3CBB8 /* NFFirstPage.xib in Resources */,
 				76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,7 +537,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76AAB6381E093C7700D3CBB8 /* NFFirstPageViewController.swift in Sources */,
 				76DFA62F1DD6D96F00821BC5 /* NFGradientColors.swift in Sources */,
 				76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */,
 				76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */,
@@ -570,6 +549,7 @@
 				76DFA6311DD6E15B00821BC5 /* NFDiet.swift in Sources */,
 				76F84D021E08E75500D56608 /* NFSimpleMenuViewController.swift in Sources */,
 				76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */,
+				76FA40991E09BFA7000978E0 /* NFTutorialViewController.swift in Sources */,
 				76F84D041E08EA7600D56608 /* NFBackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

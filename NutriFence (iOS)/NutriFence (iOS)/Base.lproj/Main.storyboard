@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TFi-qj-9lG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,23 +17,23 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="ZFk-hi-IgH">
+        <!--Tutorial View Controller-->
+        <scene sceneID="vPQ-VL-RN6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="TFi-qj-9lG" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YLH-Zs-obM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NJI-lS-axE" kind="relationship" relationship="rootViewController" id="Lve-D7-V0Y"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KBh-JC-CuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="NFTutorialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MGJ-RB-jMV" customClass="NFTutorialViewController" customModule="NutriFence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f8r-g6-Wh3"/>
+                        <viewControllerLayoutGuide type="bottom" id="UqA-bF-FyS"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="TVM-qH-AWG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.27058823529999998" green="0.2274509804" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whv-HM-lgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="63"/>
+            <point key="canvasLocation" x="774" y="752"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="OoX-4i-Ekb">
@@ -156,7 +156,7 @@
         <!--Simple Menu View Controller-->
         <scene sceneID="8kA-z8-r3d">
             <objects>
-                <viewController id="NJI-lS-axE" customClass="NFSimpleMenuViewController" customModule="NutriFence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NFSimpleMenuController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NJI-lS-axE" customClass="NFSimpleMenuViewController" customModule="NutriFence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2aD-mz-uuo"/>
                         <viewControllerLayoutGuide type="bottom" id="kxw-Lb-v5I"/>
@@ -179,6 +179,9 @@
                                 <rect key="frame" x="301" y="614" width="58" height="33"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
                                 <state key="normal" title="Tutorial"/>
+                                <connections>
+                                    <action selector="showTutorial" destination="NJI-lS-axE" eventType="touchUpInside" id="MWJ-wc-hOa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,6 +202,7 @@
                     <navigationItem key="navigationItem" id="ele-10-rEC"/>
                     <connections>
                         <segue destination="aY6-rM-vcv" kind="show" identifier="CaptureLabelSegue" id="ppw-c6-VaF"/>
+                        <segue destination="MGJ-RB-jMV" kind="presentation" identifier="ShowTutorialSegue" id="reX-C0-TeI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjZ-ut-SXe" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -34,6 +34,10 @@ class NFSimpleMenuViewController: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
+    @IBAction func showTutorial() {
+        performSegue(withIdentifier: "ShowTutorialSegue", sender: nil)
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -44,5 +48,11 @@ class NFSimpleMenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // Debugging
+    
+    deinit {
+        print("NFSimpleMenuController deinit")
+    }
 
 }

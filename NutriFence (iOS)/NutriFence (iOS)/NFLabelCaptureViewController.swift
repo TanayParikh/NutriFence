@@ -36,6 +36,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cameraManager.cameraOutputQuality = .medium
         cameraManager.writeFilesToPhoneLibrary = false
         navigationController?.isNavigationBarHidden = true
         switch cameraManager.currentCameraStatus() {
@@ -43,6 +44,8 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
             cameraManager.askUserForCameraPermission({ [unowned self] (isGranted) in
                 if isGranted {
                     self.addCameraToView()
+                } else {
+                    self.performSegue(withIdentifier: "NFNoPermissionUnwindSegue", sender: nil)
                 }
             })
         case .accessDenied:
@@ -55,9 +58,30 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        switch cameraManager.currentCameraStatus() {
+        case .accessDenied:
+            let alertController = UIAlertController(title: "Camera permission needed",
+                                                    message: "NutriFence needs access to the camera to work properly. Go to settings to enable camera permission.",
+                                                    preferredStyle: .alert)
+            let alertActionSettings = UIAlertAction(title: "Settings", style: .default, handler: { (_) in
+                if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
+                    UIApplication.shared.openURL(settingsURL)
+                }
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { [unowned self] (_) in
+                self.performSegue(withIdentifier: "NFNoPermissionUnwindSegue", sender: nil)
+                self.dismiss(animated: true, completion: nil)
+            })
+            alertController.addAction(alertActionSettings)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        case .ready:
+            cameraManager.resumeCaptureSession()
+        case .noDeviceFound, .notDetermined:
+            print("Error")
+        }
         UIApplication.shared.setStatusBarHidden(true, with: .none)
-        cameraManager.resumeCaptureSession()
-        print(#function)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -85,6 +109,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     fileprivate func displayCropViewController(with image: UIImage) {
         let cropController = TOCropViewController(croppingStyle: TOCropViewCroppingStyle.default, image: image)
         cropController.delegate = self
+        cropController.setAspectRatioPreset(.presetSquare, animated: false)
         present(cropController, animated: true, completion: nil)
     }
     

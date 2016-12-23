@@ -340,7 +340,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-6E-cu9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="YtC-lc-ZeP" appends="YES" id="zkD-hG-Ilp"/>
@@ -352,7 +352,7 @@
                                     <constraint firstAttribute="width" secondItem="aLa-X1-cWq" secondAttribute="height" multiplier="1:1" id="Wva-oH-maF"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="JdO-Sd-4rt" kind="unwind" unwindAction="unwind:" id="ad0-YM-mjZ"/>
+                                    <segue destination="JdO-Sd-4rt" kind="unwind" identifier="NFNoPermissionUnwindSegue" unwindAction="unwind:" id="ad0-YM-mjZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-bO-Vh2" customClass="NFShutterButton" customModule="NutriFence" customModuleProvider="target">
@@ -371,7 +371,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OeT-6E-cu9" firstAttribute="height" secondItem="8bm-Yg-bQo" secondAttribute="height" id="1r5-fv-wo3"/>
                             <constraint firstItem="aLa-X1-cWq" firstAttribute="leading" secondItem="OeT-6E-cu9" secondAttribute="leading" constant="16" id="3ab-bU-rsh"/>

@@ -43,9 +43,11 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
             if status == .safe {
                 setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.green))
                 self.headerLabel.text = "This product is safe to eat!"
-            } else {
+            } else if status == .unsafe {
                 setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.red))
                 self.headerLabel.text = "This product is NOT safe to eat!"
+            } else {
+                
             }
             self.headerLabel.sizeToFit()
             self.ingredientsFoundHeaderLabel.text = "List of ingredients found:"

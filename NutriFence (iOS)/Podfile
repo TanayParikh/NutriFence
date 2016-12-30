@@ -5,8 +5,11 @@ target 'NutriFence (iOS)' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'SwiftyJSON'
+  pod 'CameraManager', '~> 3.0'
   pod 'NVActivityIndicatorView'
-  pod 'ALCameraViewController'
+  pod 'TOCropViewController'
+  pod 'EAIntroView', '~> 2.10.0'
+
 
   # Pods for NutriFence (iOS)
 

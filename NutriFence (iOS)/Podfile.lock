@@ -1,18 +1,27 @@
 PODS:
-  - ALCameraViewController (1.2.7)
-  - NVActivityIndicatorView (3.0)
+  - CameraManager (3.0.0)
+  - EAIntroView (2.10.0):
+    - EARestrictedScrollView (~> 1.1.0)
+  - EARestrictedScrollView (1.1.0)
+  - NVActivityIndicatorView (3.1)
   - SwiftyJSON (3.1.1)
+  - TOCropViewController (2.0.11)
 
 DEPENDENCIES:
-  - ALCameraViewController
+  - CameraManager (~> 3.0)
+  - EAIntroView (~> 2.10.0)
   - NVActivityIndicatorView
   - SwiftyJSON
+  - TOCropViewController
 
 SPEC CHECKSUMS:
-  ALCameraViewController: 4a513b8d5ecfdb3f34c50b1d469c373aae1ec7b4
-  NVActivityIndicatorView: 81953b5e65093ba79edf4fe7268e002039ca5268
+  CameraManager: 8b92bc0ab51b598d9a4c01998bc9f1efb9b681bf
+  EAIntroView: 3494b7bbd1212e3a4f7e8d16194a1b00e7b9abb2
+  EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  NVActivityIndicatorView: 9f47e8a4affb860ef729aeec99b1550219e6c233
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+  TOCropViewController: fe91aaab9e95d72ac38654d1174c8c8339585ee5
 
-PODFILE CHECKSUM: 5df2bf595e672fb4fa40e8261bb4e9b1adb346c3
+PODFILE CHECKSUM: 0b15aa9b4a5ff9780dd100140c5f35f8cc3c2ce4
 
 COCOAPODS: 1.1.1

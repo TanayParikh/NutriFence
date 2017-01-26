@@ -16,6 +16,9 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     
     // MARK: - Instance variables
     
+    /**
+     A capture view controller only supports portrait capture
+     */
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
@@ -34,6 +37,11 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     
     // MARK: - View controller
 
+    /**
+     Configure the view controller - sets up the camera manager for use
+     If the user has never been asked for camera permission, this triggers an alert
+     If the user disabled permission, an error is displayed
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraManager.cameraOutputQuality = .medium
@@ -56,6 +64,9 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
         }
     }
     
+    /**
+     Checks if the user still has granted permission to use the camera
+     */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         switch cameraManager.currentCameraStatus() {
@@ -84,6 +95,9 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
         UIApplication.shared.setStatusBarHidden(true, with: .none)
     }
     
+    /**
+     Stops the camera session
+     */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -92,6 +106,9 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     
     // MARK: - Actions
     
+    /**
+     Action to handle the tapping of the shutter button
+     */
     @IBAction func shutterButtonTapped() {
         cameraManager.capturePictureWithCompletion({ [unowned self] (image, error) -> Void in
             if let errorOccured = error {
@@ -106,6 +123,11 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     
     // MARK: - Helpers
     
+    /**
+     This function configures and presents a crop view controller with an image captured by the camera
+     - parameters:
+        - image: The UIImage object taken from the camera
+     */
     fileprivate func displayCropViewController(with image: UIImage) {
         let cropController = TOCropViewController(croppingStyle: TOCropViewCroppingStyle.default, image: image)
         cropController.delegate = self
@@ -113,6 +135,9 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
         present(cropController, animated: true, completion: nil)
     }
     
+    /**
+     Adds the camera preview layer to the view controller
+     */
     fileprivate func addCameraToView() {
         let _ = cameraManager.addPreviewLayerToView(cameraView, newCameraOutputMode: .stillImage)
         cameraManager.showErrorBlock = { [weak self] (erTitle: String, erMessage: String) -> Void in
@@ -141,24 +166,46 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
         }
     }
     
+    /**
+     Unwind action used in StoryBoard to return to this view controller
+     */
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
     // MARK: - TOCropViewControllerDelegate
-    
+    /**
+     Implementation of CropViewController delegate. Sets the croppedImage property of ths view controller for processing
+     */
     func cropViewController(_ cropViewController: TOCropViewController, didCropTo image: UIImage, with cropRect: CGRect, angle: Int) {
         self.croppedImage = image
         dismiss(animated: true, completion: nil)
     }
 }
 
-// MARK: - Image analysis
+/**
+ This extension encapsulates the image analysis logic
+ */
 extension NFLabelCaptureViewController {
+    
+    /**
+     A helper function. Calls underlying image analysis functions in NFClassificationFetcher
+     - parameters:
+        - image: UIImage to analyze
+     */
     fileprivate func analyzeImage(_ image: UIImage) {
         showOverlay()
         NFClassificationFetcher.analyzeImage(image, onSuccess: parseJSONResult, onFail: displayErrorAlert)
     }
     
+    /**
+     Used as a success handler to the analyzeImage function in NFClassificationFetcher
+     - parameters:
+        - json: the JSON data (returned from the API) to parse
+     
+     This function handles the case where the classification API successfully returns a result
+     The JSON dictionary is parsed out into a NFResult object which is then passed via segue to 
+     The result view controller for presentation
+     */
     func parseJSONResult(_ json: JSON) {
         var result = NFResult(safetyStatus: .unsafe, ingredients: [])
         var ingredients = [NFIngredient]()
@@ -187,6 +234,9 @@ extension NFLabelCaptureViewController {
         performSegue(withIdentifier: "LoadResultsSegue", sender: result)
     }
     
+    /**
+     Used as a failure handler to the analyzeImage function of NFClassificationFetcher
+     */
     func displayErrorAlert() {
         let message = "Looks like we're having some trouble connecting. Check your connection and try again."
         let errorAlert = UIAlertController(title: "Connection error",
@@ -202,10 +252,16 @@ extension NFLabelCaptureViewController {
         })
     }
     
+    /**
+     Hides the Activity indicator currently presenting
+     */
     fileprivate func hideOverlay() {
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
     
+    /**
+     Shows an activity indicator when the image analysis begins
+     */
     fileprivate func showOverlay() {
         let rectSize = CGSize(width: self.view.bounds.width * 0.2, height: self.view.bounds.width * 0.2)
         let activityData = ActivityData(size: rectSize,

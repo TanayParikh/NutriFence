@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ A custom UIButton used as a back button in the Nutrifence camera implementation
+ */
 class NFBackButton: UIButton {
     
     private var arrowPath: UIBezierPath!

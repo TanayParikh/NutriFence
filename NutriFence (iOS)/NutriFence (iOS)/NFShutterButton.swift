@@ -8,9 +8,13 @@
 
 import UIKit
 
+/**
+ A custom shutter button used in NutriFence's custom camera implementation
+ */
 class NFShutterButton: UIButton {
     
     var shutterColor: UIColor!
+    
     override func awakeFromNib() {
         layer.backgroundColor = UIColor(red: 69, green: 58, blue: 73).withAlphaComponent(0.7).cgColor
         shutterColor = UIColor(red: 69, green: 58, blue: 73).withAlphaComponent(0.7)

@@ -31,7 +31,6 @@ enum NFGradientColors {
         - withColor: the color to use when creating the gradient
      
     */
-    
     static func gradientInView(_ view: UIView, withColor color: UIColor) -> CAGradientLayer {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds

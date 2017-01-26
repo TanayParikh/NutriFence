@@ -22,6 +22,9 @@ enum NFProductSafetyStatus {
     }
 }
 
+/**
+    A type to contain the results of an ingredient analysis
+ */
 struct NFResult: CustomDebugStringConvertible {
     var safetyStatus: NFProductSafetyStatus
     var ingredients: [NFIngredient]

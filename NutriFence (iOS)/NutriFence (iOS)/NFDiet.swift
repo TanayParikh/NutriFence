@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+    A type to represent a given diet
+ */
 class NFDiet {
     var name: String!
     init(with name: String) {

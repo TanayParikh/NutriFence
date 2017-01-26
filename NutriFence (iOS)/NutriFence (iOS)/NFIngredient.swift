@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+    A type to represent an ingredient result
+ */
 class NFIngredient {
     var name: String
     

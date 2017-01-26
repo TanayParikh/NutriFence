@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ */
+
 enum NFMainTVCType {
     case result(NFProductSafetyStatus?)
     case selection

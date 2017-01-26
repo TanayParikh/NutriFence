@@ -9,7 +9,10 @@
 import UIKit
 
 class NFSimpleMenuViewController: UIViewController {
-
+    
+    /**
+     This view controller should only show portrait
+     */
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
@@ -27,13 +30,26 @@ class NFSimpleMenuViewController: UIViewController {
     
     // MARK: - Actions
     
+    /**
+     Action called when a user swipes right
+     - parameters:
+        -sender: the swipe gesture recognizer that recognized the swipe
+     */
     @IBAction func userDidSwipe(_ sender: UISwipeGestureRecognizer) {
         performSegue(withIdentifier: "CaptureLabelSegue", sender: nil)
     }
     
+    /**
+     Action used to perform an unwind segue from descendent view controllers to this one
+     - parameters:
+        - segue: the triggered segue
+     */
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
+    /**
+     Action that triggers the segue to show the tutorial
+     */
     @IBAction func showTutorial() {
         performSegue(withIdentifier: "ShowTutorialSegue", sender: nil)
     }
@@ -52,7 +68,7 @@ class NFSimpleMenuViewController: UIViewController {
     // Debugging
     
     deinit {
-        print("NFSimpleMenuController deinit")
+        print("NFSimpleMenuController destroyed")
     }
 
 }

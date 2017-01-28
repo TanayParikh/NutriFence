@@ -20,39 +20,33 @@ class NFClassificationFetcher {
      An optional NFResult containing results of image analysis if the request succeeded, nil if not
      - parameters:
         - image: the image to be analyzed
-     - Important:
-     Function should be run on a background queue
+        - completion: an optional closure of type (JSON) -> Void to be executed (on the main queue) when the network call completes
     */
-    class func analyzeImage(_ image: UIImage, onSuccess successHandler: @escaping (JSON) -> Void, onFail failHandler: @escaping (Void) -> Void) {
-        let imageBase64 = base64EncodeImage(image)
-        if let request = urlRequest(withImageBase64: imageBase64) {
-            print(request.httpBody!.description)
-            let queue = DispatchQueue(label: "com.nutrifence.background")
-            queue.async {
-                let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
-                    guard let data = data, error == nil else {
-                        DispatchQueue.main.async {
-                            failHandler()
-                        }
-                        return
-                    }
-                    if let resp = response as? HTTPURLResponse {
-                        switch resp.statusCode {
-                        case 200:
-                            DispatchQueue.main.async {
-                                print(JSON(data: data))
-                                successHandler(JSON(data: data))
-                            }
-                        default:
-                            DispatchQueue.main.async {
-                                failHandler()
-                            }
-                        }
-                    }
-                }
-                task.resume()
-            }
-        }
+    class func analyzeImage(_ image: UIImage, completion: @escaping (JSON) -> Void) {
+//        let imageBase64 = base64EncodeImage(image)
+//        if let request = urlRequest(withImageBase64: imageBase64) {
+//            print(request.httpBody!.description)
+//            let queue = DispatchQueue(label: "com.nutrifence.background")
+//            queue.async {
+//                let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
+//                    guard let data = data, error == nil else {
+//                        return
+//                    }
+//                    if let resp = response as? HTTPURLResponse {
+//                        switch resp.statusCode {
+//                        case 200:
+//                            DispatchQueue.main.async {
+//                                print(JSON(data: data))
+//                                completion(JSON(data: data))
+//                            }
+//                        default: break
+//                            
+//                        }
+//                    }
+//                }
+//                task.resume()
+//            }
+//        }
     }
     
     // MARK: - Private implementation

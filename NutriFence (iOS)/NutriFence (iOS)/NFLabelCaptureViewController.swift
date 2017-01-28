@@ -194,7 +194,7 @@ extension NFLabelCaptureViewController {
      */
     fileprivate func analyzeImage(_ image: UIImage) {
         showOverlay()
-        NFClassificationFetcher.analyzeImage(image, onSuccess: parseJSONResult, onFail: displayErrorAlert)
+        NFClassificationFetcher.analyzeImage(image, completion: parseJSONResult)
     }
     
     /**

@@ -194,7 +194,7 @@ extension NFLabelCaptureViewController {
      */
     fileprivate func analyzeImage(_ image: UIImage) {
         showOverlay()
-        NFClassificationFetcher.analyzeImage(image, completion: parseJSONResult)
+        // NFClassificationFetcher.analyzeImage(image, completion: parseJSONResult)
     }
     
     /**
@@ -206,32 +206,33 @@ extension NFLabelCaptureViewController {
      The JSON dictionary is parsed out into a NFResult object which is then passed via segue to 
      The result view controller for presentation
      */
+    // FIXME: please eliminate this whence you have implemented a similar function in NFClassificationFetcher
     func parseJSONResult(_ json: JSON) {
-        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
-        var ingredients = [NFIngredient]()
-        if let jsonDict = json.dictionary {
-            debugPrint(jsonDict)
-            let isSafe = jsonDict["isGlutenFree"]?.bool!
-            if isSafe == true {
-                result.safetyStatus = .safe
-                if let ingreds = jsonDict["Good_Ingredients"]?.array {
-                    for goodIngred in ingreds {
-                        ingredients.append(NFIngredient(with: goodIngred.string!))
-                    }
-                }
-            } else {
-                print("Setting as .unsafe")
-                result.safetyStatus = .unsafe
-                if let ingreds = jsonDict["Bad_Ingredients"]?.array {
-                    for badIngred in ingreds {
-                        ingredients.append(NFIngredient(with: badIngred.string!))
-                    }
-                }
-            }
-            result.ingredients = ingredients
-        }
-        hideOverlay()
-        performSegue(withIdentifier: "LoadResultsSegue", sender: result)
+//        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
+//        var ingredients = [NFIngredient]()
+//        if let jsonDict = json.dictionary {
+//            debugPrint(jsonDict)
+//            let isSafe = jsonDict["isGlutenFree"]?.bool!
+//            if isSafe == true {
+//                result.safetyStatus = .safe
+//                if let ingreds = jsonDict["Good_Ingredients"]?.array {
+//                    for goodIngred in ingreds {
+//                        ingredients.append(NFIngredient(with: goodIngred.string!))
+//                    }
+//                }
+//            } else {
+//                print("Setting as .unsafe")
+//                result.safetyStatus = .unsafe
+//                if let ingreds = jsonDict["Bad_Ingredients"]?.array {
+//                    for badIngred in ingreds {
+//                        ingredients.append(NFIngredient(with: badIngred.string!))
+//                    }
+//                }
+//            }
+//            result.ingredients = ingredients
+//        }
+//        hideOverlay()
+//        performSegue(withIdentifier: "LoadResultsSegue", sender: result)
     }
     
     /**

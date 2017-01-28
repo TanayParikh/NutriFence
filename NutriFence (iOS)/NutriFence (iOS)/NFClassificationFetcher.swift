@@ -8,8 +8,11 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 class NFClassificationFetcher {
+    
+    typealias NutrientData = (conditionTest: String, labelImage: UIImage)
     
     // MARK: - Public API
     
@@ -19,40 +22,65 @@ class NFClassificationFetcher {
      - returns:
      An optional NFResult containing results of image analysis if the request succeeded, nil if not
      - parameters:
-        - image: the image to be analyzed
-        - completion: an optional closure of type (JSON) -> Void to be executed (on the main queue) when the network call completes
+        - data: nutrient image data to be analyzed based on the given condition
+        - completion: a closure of type (NFResult) -> Void to be executed (on the main queue) when the network call completes
     */
-    class func analyzeImage(_ image: UIImage, completion: @escaping (JSON) -> Void) {
-//        let imageBase64 = base64EncodeImage(image)
-//        if let request = urlRequest(withImageBase64: imageBase64) {
-//            print(request.httpBody!.description)
-//            let queue = DispatchQueue(label: "com.nutrifence.background")
-//            queue.async {
-//                let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
-//                    guard let data = data, error == nil else {
-//                        return
-//                    }
-//                    if let resp = response as? HTTPURLResponse {
-//                        switch resp.statusCode {
-//                        case 200:
-//                            DispatchQueue.main.async {
-//                                print(JSON(data: data))
-//                                completion(JSON(data: data))
-//                            }
-//                        default: break
-//                            
-//                        }
-//                    }
-//                }
-//                task.resume()
-//            }
-//        }
+    class func analyze(_ data: NutrientData, completion: @escaping (NFResult) -> Void) {
+        let imageBase64 = base64EncodeImage(data.labelImage)
+        let parameters: Parameters = [
+            "imageContent" : imageBase64,
+            "condition"    : data.conditionTest
+        ]
+        Alamofire.request(classificationURL,
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default)
+        .validate(statusCode: 200..<300)
+        .validate(contentType: ["application/json"])
+        .responseJSON { (jsonResponse) in
+            switch jsonResponse.result {
+            case .success(let value):
+                let json = JSON(value)
+                let result = NFClassificationFetcher.parseJSONResult(json)
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
+    
+    
+    //        let imageBase64 = base64EncodeImage(image)
+    //        if let request = urlRequest(withImageBase64: imageBase64) {
+    //            print(request.httpBody!.description)
+    //            let queue = DispatchQueue(label: "com.nutrifence.background")
+    //            queue.async {
+    //                let task: URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
+    //                    guard let data = data, error == nil else {
+    //                        return
+    //                    }
+    //                    if let resp = response as? HTTPURLResponse {
+    //                        switch resp.statusCode {
+    //                        case 200:
+    //                            DispatchQueue.main.async {
+    //                                print(JSON(data: data))
+    //                                completion(JSON(data: data))
+    //                            }
+    //                        default: break
+    //
+    //                        }
+    //                    }
+    //                }
+    //                task.resume()
+    //            }
+    //        }
     
     // MARK: - Private implementation
     
     private static let session = URLSession.shared
-    private static let classificationURL = URL(string: "http://node.nutrifence.com:3000/ClassificationAPI")!
+    private static let classificationURL = URL(string: "https://node.nutrifence.com:4000/ClassificationAPI")!
     
     
     private class func urlRequest(withImageBase64 image: String) -> URLRequest? {
@@ -99,4 +127,36 @@ class NFClassificationFetcher {
         UIGraphicsEndImageContext()
         return resizedImage!
     }
+    
+    // FIXME: implement the parsing method but do gooder than last time
+    private class func parseJSONResult(_ json: JSON) -> NFResult {
+        return NFResult(safetyStatus: .safe, ingredients: [])
+    }
+    
+    //        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
+    //        var ingredients = [NFIngredient]()
+    //        if let jsonDict = json.dictionary {
+    //            debugPrint(jsonDict)
+    //            let isSafe = jsonDict["isGlutenFree"]?.bool!
+    //            if isSafe == true {
+    //                result.safetyStatus = .safe
+    //                if let ingreds = jsonDict["Good_Ingredients"]?.array {
+    //                    for goodIngred in ingreds {
+    //                        ingredients.append(NFIngredient(with: goodIngred.string!))
+    //                    }
+    //                }
+    //            } else {
+    //                print("Setting as .unsafe")
+    //                result.safetyStatus = .unsafe
+    //                if let ingreds = jsonDict["Bad_Ingredients"]?.array {
+    //                    for badIngred in ingreds {
+    //                        ingredients.append(NFIngredient(with: badIngred.string!))
+    //                    }
+    //                }
+    //            }
+    //            result.ingredients = ingredients
+    //        }
+    //        hideOverlay()
+    //        performSegue(withIdentifier: "LoadResultsSegue", sender: result)
+
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+// FIXME: I may be deleted soon so...
 class NFSimpleMenuViewController: UIViewController {
     
     /**
@@ -19,7 +20,7 @@ class NFSimpleMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.layer.insertSublayer(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple), at: 0)
+        self.view.layer.insertSublayer(NFColors.gradient(self.view, color: NFColors.GradientColor.purple), at: 0)
         // Do any additional setup after loading the view.
     }
     

@@ -12,6 +12,15 @@ import TOCropViewController
 import SwiftyJSON
 import NVActivityIndicatorView
 
+
+protocol NFCroppedImageHandlerDelegate {
+    var croppedImage: UIImage? { get set }
+}
+
+/**
+ View controller handles presenting a camera view the the user,
+ handling all the necessary permissions requests and logic
+ */
 class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelegate {
     
     // MARK: - Instance variables
@@ -28,11 +37,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     fileprivate let cameraManager = CameraManager()
     @IBOutlet weak var shutterButton: NFShutterButton!
     
-    private var croppedImage: UIImage! {
-        didSet {
-            analyze(self.croppedImage)
-        }
-    }
+    var imageHandlerDelegate: NFCroppedImageHandlerDelegate?
     
     
     // MARK: - View controller
@@ -100,7 +105,6 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
      */
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         cameraManager.stopCaptureSession()
     }
     
@@ -152,41 +156,18 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "LoadResultsSegue" {
-            // Prepare the VC
-            if let resultVC = segue.destination as? NFMainTableViewController {
-                if let result = sender as? NFResult {
-                    let resultColor = (result.safetyStatus == .safe ? NFColors.NFGradientColor.green : .red)
-                    resultVC.vcType = NFMainTVCType.result(result.safetyStatus)
-                    resultVC.setGradient(NFColors.gradient(resultVC.view, color: resultColor))
-                    resultVC.tableContents = result.ingredients
-                    cameraManager.stopCaptureSession()
-                }
-            }
-        }
+        // FIXME: I may (or may not) need to be implemented - the programmer ain't sure yet
     }
-    
-    /**
-     Unwind action used in StoryBoard to return to this view controller
-     */
-    @IBAction func unwind(_ segue: UIStoryboardSegue) {
-    }
+
     
     // MARK: - TOCropViewControllerDelegate
     /**
      Implementation of CropViewController delegate. Sets the croppedImage property of ths view controller for processing
      */
     func cropViewController(_ cropViewController: TOCropViewController, didCropTo image: UIImage, with cropRect: CGRect, angle: Int) {
-        self.croppedImage = image
-        dismiss(animated: true, completion: nil)
-    }
-    
-    fileprivate func analyze(_ image: UIImage) {
-        NFClassificationFetcher.analyze((.celiac, image), completion: present)
-    }
-    
-    fileprivate func present(_ result: NFResult) {
-        // pass result back to presenting vc
+        imageHandlerDelegate!.croppedImage = image
+        debugPrint(#function + ": dismissing cropController")
+        performSegue(withIdentifier: "CameraUnwindToMain", sender: nil)
     }
 }
 

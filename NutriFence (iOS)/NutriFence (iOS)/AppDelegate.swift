@@ -23,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let _ = defaults.object(forKey: firstLaunchKey) {
             // If the key is set, we've already seen the demo
-            rootViewController = mainSB.instantiateViewController(withIdentifier: "NFSimpleMenuController")
+            let mainTVC = mainSB.instantiateViewController(withIdentifier: "NFSelectionTableViewController") as! NFMainTableViewController
+            mainTVC.vcType = .selection
+            mainTVC.tableContents = NFClassificationFetcher.Diet.list as [AnyObject]
+            rootViewController = mainTVC
         } else {
             // It's not set...show the demo
             rootViewController = mainSB.instantiateViewController(withIdentifier: "NFTutorialViewController")

@@ -22,9 +22,7 @@
 		7685516D1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */; };
 		76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */; };
 		76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */; };
-		76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */; };
 		76DFA62F1DD6D96F00821BC5 /* NFColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62E1DD6D96F00821BC5 /* NFColors.swift */; };
-		76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6321DD8E0B300821BC5 /* NFResult.swift */; };
 		76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */; };
 		76F84D021E08E75500D56608 /* NFSimpleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */; };
 		76F84D041E08EA7600D56608 /* NFBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F84D031E08EA7600D56608 /* NFBackButton.swift */; };
@@ -74,9 +72,7 @@
 		7685516C1DCE56BC008A8526 /* ufonts.com_century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_century-gothic.ttf"; sourceTree = "<group>"; };
 		76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTableViewController.swift; sourceTree = "<group>"; };
 		76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTVCType.swift; sourceTree = "<group>"; };
-		76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFIngredient.swift; sourceTree = "<group>"; };
 		76DFA62E1DD6D96F00821BC5 /* NFColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFColors.swift; sourceTree = "<group>"; };
-		76DFA6321DD8E0B300821BC5 /* NFResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFResult.swift; sourceTree = "<group>"; };
 		76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFClassificationFetcher.swift; sourceTree = "<group>"; };
 		76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFSimpleMenuViewController.swift; sourceTree = "<group>"; };
 		76F84D031E08EA7600D56608 /* NFBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBackButton.swift; sourceTree = "<group>"; };
@@ -181,6 +177,7 @@
 		76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
 			isa = PBXGroup;
 			children = (
+				76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */,
 				7625F6AF1E3D813E007DF2F9 /* Extensions */,
 				76AAB6331E093B5000D3CBB8 /* Tutorial */,
 				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
@@ -228,7 +225,6 @@
 			children = (
 				76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */,
 				7634A6761E0792A50049F909 /* NFLabelCaptureViewController.swift */,
-				76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -245,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				76DFA62E1DD6D96F00821BC5 /* NFColors.swift */,
-				76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -253,9 +248,8 @@
 		76DFA6291DD6D44600821BC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */,
 				76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */,
-				76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */,
-				76DFA6321DD8E0B300821BC5 /* NFResult.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -547,9 +541,7 @@
 			files = (
 				76DFA62F1DD6D96F00821BC5 /* NFColors.swift in Sources */,
 				76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */,
-				76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */,
 				76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */,
-				76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */,
 				76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */,
 				7634A6771E0792A50049F909 /* NFLabelCaptureViewController.swift in Sources */,
 				761585D21E07A3990094BEDB /* NFShutterButton.swift in Sources */,

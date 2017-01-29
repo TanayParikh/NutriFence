@@ -38,10 +38,9 @@ struct NFColors {
         case .green:
             gradient.colors = [greenColors["top"]!.cgColor, greenColors["bottom"]!.cgColor]
         case .red:
-            .colors = [redColors["top"]!.cgColor, redColors["bottom"]!.cgColor]
-        case UIColor.purple:
-            .colors = [purpleColors["top"]!.cgColor, purpleColors["bottom"]!.cgColor]
-        default: break
+            gradient.colors = [redColors["top"]!.cgColor, redColors["bottom"]!.cgColor]
+        case .purple:
+            gradient.colors = [purpleColors["top"]!.cgColor, purpleColors["bottom"]!.cgColor]
         }
         return gradient
     }

@@ -9,9 +9,12 @@
 import Foundation
 
 /**
+ Describes the type of data the Main Table View Controller will show, namely:
+    result - result of an analysis
+    selection - interface allowing the user to select their preferred diet
  */
 
 enum NFMainTVCType {
-    case result(NFProductSafetyStatus?)
+    case result(NFClassificationFetcher.ProductSafetyStatus?)
     case selection
 }

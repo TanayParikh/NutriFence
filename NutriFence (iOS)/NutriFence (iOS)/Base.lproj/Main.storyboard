@@ -33,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whv-HM-lgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="752"/>
+            <point key="canvasLocation" x="774" y="-679"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="OoX-4i-Ekb">
@@ -147,6 +147,8 @@
                         <outlet property="tableView" destination="JFo-OK-erA" id="9cO-ag-66L"/>
                         <outletCollection property="dividerLines" destination="sRd-3T-R56" collectionClass="NSMutableArray" id="9t2-ri-yfZ"/>
                         <outletCollection property="dividerLines" destination="ksP-Wt-IpW" collectionClass="NSMutableArray" id="ghY-dr-fsl"/>
+                        <segue destination="aY6-rM-vcv" kind="show" identifier="CaptureLabelSegue" id="ddh-uI-hMJ"/>
+                        <segue destination="qd7-SA-lj3" kind="show" identifier="DisplayResultSegue" id="jNH-O1-pEY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNJ-nj-R5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,7 +210,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1996" y="-655"/>
+            <point key="canvasLocation" x="2306" y="-967"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="uxK-I6-sKe">
@@ -320,7 +322,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2361" y="63"/>
+            <point key="canvasLocation" x="774" y="809"/>
         </scene>
         <!--Label Capture View Controller-->
         <scene sceneID="l9p-4B-AlR">
@@ -347,9 +349,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aLa-X1-cWq" secondAttribute="height" multiplier="1:1" id="Wva-oH-maF"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="JdO-Sd-4rt" kind="unwind" identifier="NFNoPermissionUnwindSegue" unwindAction="unwind:" id="ad0-YM-mjZ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-bO-Vh2" customClass="NFShutterButton" customModule="NutriFence" customModuleProvider="target">
                                 <rect key="frame" x="150" y="572" width="75" height="75"/>
@@ -384,19 +383,18 @@
                     <connections>
                         <outlet property="cameraView" destination="OeT-6E-cu9" id="gfg-Hi-Fqu"/>
                         <outlet property="shutterButton" destination="YFG-bO-Vh2" id="lrJ-zP-pgF"/>
-                        <segue destination="qd7-SA-lj3" kind="show" identifier="LoadResultsSegue" id="2iC-J5-9OR"/>
+                        <segue destination="WEP-r2-85L" kind="unwind" identifier="CameraUnwindToMain" unwindAction="unwind:" id="AAQ-tk-e5x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wH-wc-Dcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="JdO-Sd-4rt" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="WEP-r2-85L" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="YtC-lc-ZeP">
                     <connections>
                         <action selector="userSwiped:" destination="aY6-rM-vcv" id="Xnh-Wf-IRs"/>
-                        <segue destination="JdO-Sd-4rt" kind="unwind" unwindAction="unwind:" id="uOq-5f-xKB"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1556" y="62.518740629685162"/>
+            <point key="canvasLocation" x="1524" y="63"/>
         </scene>
     </scenes>
     <resources>

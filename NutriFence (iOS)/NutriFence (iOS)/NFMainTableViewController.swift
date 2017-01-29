@@ -33,26 +33,37 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.headerLabel.textColor = UIColor(red: 175, green: 175, blue: 175)
         
-        switch vcType! {
+        initUI(vcType)
+    }
+    
+    private func initUI(_ type: NFMainTVCType) {
+        
+        self.headerLabel.textColor = NFColors.text
+        
+        // Check whether we're displaying the choice list or the results
+        switch type {
         case .selection:
-            setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.purple))
+            self.view.layer.insertSublayer(NFColors.gradient(self.view, color: NFColors.GradientColor.purple), at: 0)
             self.headerLabel.text = "Select diet:"
         case .result(let status):
-            if status == .safe {
-                setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.green))
+            // Check whether the result was safe or unsafe
+            switch status! {
+            case .safe:
+                self.view.layer.insertSublayer(NFColors.gradient(self.view, color: NFColors.GradientColor.green), at: 0)
                 self.headerLabel.text = "This product is safe to eat!"
-            } else if status == .unsafe {
-                setGradient(NFGradientColors.gradientInView(self.view, withColor: UIColor.red))
+                break
+            case .unsafe:
+                self.view.layer.insertSublayer(NFColors.gradient(self.view, color: NFColors.GradientColor.red), at: 0)
                 self.headerLabel.text = "This product is NOT safe to eat!"
-            } else {
-                
+                break
             }
             self.headerLabel.sizeToFit()
             self.ingredientsFoundHeaderLabel.text = "List of ingredients found:"
             self.ingredientsFoundHeaderLabel.sizeToFit()
+            break
         }
+        
         if let _ = headerHeightConstraint {
             if UIScreen.main.bounds.height <= iphone4sScreenHeight {
                 headerHeightConstraint.constant = 30
@@ -113,13 +124,13 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
-        cell.textLabel?.font = UIFont(name: "Century Gothic", size: 17)
-        cell.textLabel?.textColor = UIColor(red: 175, green: 175, blue: 175)
-        if let cellContent = tableContents[indexPath.row] as? NFIngredient {
-            cell.textLabel?.text = cellContent.name
-        } else if let cellContent = tableContents[indexPath.row] as? NFDiet {
-            cell.textLabel?.text = cellContent.name
-        }
+//        cell.textLabel?.font = UIFont(name: "Century Gothic", size: 17)
+//        cell.textLabel?.textColor = UIColor(red: 175, green: 175, blue: 175)
+//        if let cellContent = tableContents[indexPath.row] as? NFIngredient {
+//            cell.textLabel?.text = cellContent.name
+//        } else if let cellContent = tableContents[indexPath.row] as? NFDiet {
+//            cell.textLabel?.text = cellContent.name
+//        }
         cell.selectionStyle = .none
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
@@ -165,70 +176,4 @@ class NFMainTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-}
-
-// MARK: - Camera view and loading animation
-extension NFMainTableViewController {
-    // MARK: - Loading overlay
-    
-    fileprivate func hideOverlay() {
-        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
-    }
-    
-    fileprivate func showOverlay() {
-        let rectSize = CGSize(width: self.view.bounds.width * 0.2, height: self.view.bounds.width * 0.2)
-        let activityData = ActivityData(size: rectSize,
-                                        message: "Working...",
-                                        type: NVActivityIndicatorType.ballBeat,
-                                        color: UIColor(red: 175, green: 175, blue: 175),
-                                        padding: nil,
-                                        displayTimeThreshold: nil,
-                                        minimumDisplayTime: 5)
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
-    }
-}
-
-// MARK: - Networking and parsing results
-extension NFMainTableViewController {
-    func parseJSONResult(_ json: JSON) {
-        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
-        var ingredients = [NFIngredient]()
-        if let jsonDict = json.dictionary {
-            debugPrint(jsonDict)
-            let isSafe = jsonDict["isGlutenFree"]?.bool!
-            if isSafe == true {
-                result.safetyStatus = .safe
-                if let ingreds = jsonDict["Good_Ingredients"]?.array {
-                    for goodIngred in ingreds {
-                        ingredients.append(NFIngredient(with: goodIngred.string!))
-                    }
-                }
-            } else {
-                print("Setting as .unsafe")
-                result.safetyStatus = .unsafe
-                if let ingreds = jsonDict["Bad_Ingredients"]?.array {
-                    for badIngred in ingreds {
-                        ingredients.append(NFIngredient(with: badIngred.string!))
-                    }
-                }
-            }
-            result.ingredients = ingredients
-        }
-        // After parsing, trigger segue to see results
-        self.hideOverlay()
-        performSegue(withIdentifier: "LoadResultsSegue", sender: result)
-    }
-    
-    func displayErrorAlert() {
-        let message = "Looks like we're having some trouble connecting. Check your connection and try again."
-        let errorAlert = UIAlertController(title: "Connection error",
-                                           message: message,
-                                           preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: { [weak self] (_) -> Void in
-            self!.dismiss(animated: true, completion: nil)
-        })
-        errorAlert.addAction(okAction)
-        hideOverlay()
-        present(errorAlert, animated: true, completion: nil)
-    }
 }

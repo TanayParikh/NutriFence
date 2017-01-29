@@ -12,9 +12,22 @@ import Alamofire
 
 class NFClassificationFetcher {
     
-    typealias NutrientData = (conditionTest: String, labelImage: UIImage)
+    private static let classificationURL = URL(string: "https://node.nutrifence.com:4000/ClassificationAPI")!
     
     // MARK: - Public API
+    
+    
+    /**
+     Type NutrientData is a tuple that contains a condition String and an image to be analyzed
+     */
+    typealias NutrientData = (conditionTest: NFDiet, labelImage: UIImage)
+    
+    public enum NFDiet: String {
+        case celiac = "celiac"
+        case lactoseIntolerant = "lactoseIntolerant"
+        case vegan = "vegan"
+        case vegetarian = "vegetarian"
+    }
     
     /**
      Sends an image off to the Classification API for analysis and returns an NFResult
@@ -26,10 +39,10 @@ class NFClassificationFetcher {
         - completion: a closure of type (NFResult) -> Void to be executed (on the main queue) when the network call completes
     */
     class func analyze(_ data: NutrientData, completion: @escaping (NFResult) -> Void) {
-        let imageBase64 = base64EncodeImage(data.labelImage)
+        let imageBase64 = data.labelImage.base64encoded
         let parameters: Parameters = [
             "imageContent" : imageBase64,
-            "condition"    : data.conditionTest
+            "condition"    : data.conditionTest.rawValue
         ]
         Alamofire.request(classificationURL,
                           method: .post,
@@ -41,7 +54,7 @@ class NFClassificationFetcher {
             switch jsonResponse.result {
             case .success(let value):
                 let json = JSON(value)
-                let result = NFClassificationFetcher.parseJSONResult(json)
+                let result = parseJSONResult(json)
                 DispatchQueue.main.async {
                     completion(result)
                 }
@@ -77,61 +90,36 @@ class NFClassificationFetcher {
     //            }
     //        }
     
-    // MARK: - Private implementation
-    
-    private static let session = URLSession.shared
-    private static let classificationURL = URL(string: "https://node.nutrifence.com:4000/ClassificationAPI")!
-    
-    
-    private class func urlRequest(withImageBase64 image: String) -> URLRequest? {
-        var request = URLRequest(url: classificationURL)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let jsonRequest = [
-            "request": [
-                "imageContent": image
-            ]
-        ]
-        let jsonObject = JSON(jsonDictionary: jsonRequest)
-        
-        // Serialize the JSON
-        guard let data = try? jsonObject.rawData() else {
-            return nil
-        }
-        
-        request.httpBody = data
-        
-        return request
-    }
+    private static let kGoodIngredientJSONKey = "Good_Ingredients"
+    private static let kBadIngredientJSONKey = "Bad_Ingredients"
+    private static let kPassesTestJSONKey = "Passes_Test"
     
     
-    private class func base64EncodeImage(_ image: UIImage) -> String {
-        var imagedata = UIImagePNGRepresentation(image)
-        
-        // Resize the image if it exceeds the 2MB API limit
-        if ((imagedata?.count)! > 2097152) {
-            let oldSize: CGSize = image.size
-            let newSize: CGSize = CGSize(width: 800, height: oldSize.height / oldSize.width * 800)
-            imagedata = resizeImage(newSize, image: image)
-        }
-        
-        return imagedata!.base64EncodedString(options: .endLineWithCarriageReturn)
-    }
-    
-    private class func resizeImage(_ imageSize: CGSize, image: UIImage) -> Data {
-        UIGraphicsBeginImageContext(imageSize)
-        image.draw(in: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        let resizedImage = UIImagePNGRepresentation(newImage!)
-        UIGraphicsEndImageContext()
-        return resizedImage!
-    }
-    
-    // FIXME: implement the parsing method but do gooder than last time
     private class func parseJSONResult(_ json: JSON) -> NFResult {
-        return NFResult(safetyStatus: .safe, ingredients: [])
+        let goodIngredients = json[kGoodIngredientJSONKey].arrayValue.map({ NFIngredient(with: $0.stringValue) })
+        let badIngredients = json[kBadIngredientJSONKey].arrayValue.map({ NFIngredient(with: $0.stringValue) })
+        let didPassTest = json[kPassesTestJSONKey].boolValue
+        return NFResult(safetyStatus: didPassTest ? .safe : .unsafe,
+                        ingredients: didPassTest ? goodIngredients : badIngredients)
     }
+    
+    /* Response format
+    
+    {"Bad_Ingredients":[],
+     "Good_Ingredients":
+     ["wheat flour","niacin","reduced corn syrup fructose","glycerin","processed with alkali","polydextrose","modified corn starch","salt","palm calcium sulfate","distilled monoglycerides","hydrogenated kernel oil","sodium stearoyl lactylate","Gelman","color added","soy lecithin","datem","natural and artificial flavor vanilla extract carnauba wax","xanthan gum","vitamin a palmitate","yellow i5 lake","red f40 lake","caramel color","niacinamide","blue /2 lake","reduced Ron","yellow lake","pyridoxine hydrochloride vitamin b6","","vitamin b2","vitamin b1","","citric acid folic acid","red f40","yellow f5","yellow f6","blue f2","bluef1"],
+     "May_Contain":[],
+     "Passes_Test":true}
+ 
+    */
+    
+    
+    
+    
+    
+    
+    
+    
     
     //        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
     //        var ingredients = [NFIngredient]()

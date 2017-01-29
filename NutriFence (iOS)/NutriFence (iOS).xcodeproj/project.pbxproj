@@ -10,6 +10,7 @@
 		0E63F2E3521F0162D10503B1 /* Pods_NutriFence__iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9125098AAED1349121DDE646 /* Pods_NutriFence__iOS_Tests.framework */; };
 		2C7869EF477C41A77966D20B /* Pods_NutriFence__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0D898703FCA3A4266C58C /* Pods_NutriFence__iOS_.framework */; };
 		761585D21E07A3990094BEDB /* NFShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761585D11E07A3990094BEDB /* NFShutterButton.swift */; };
+		7625F6B11E3D815D007DF2F9 /* UIImage+Base64Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7625F6B01E3D815D007DF2F9 /* UIImage+Base64Encode.swift */; };
 		7634A6771E0792A50049F909 /* NFLabelCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7634A6761E0792A50049F909 /* NFLabelCaptureViewController.swift */; };
 		76598D671DCD6DDD00DEF76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76598D661DCD6DDD00DEF76E /* AppDelegate.swift */; };
 		76598D6C1DCD6DDE00DEF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76598D6A1DCD6DDE00DEF76E /* Main.storyboard */; };
@@ -22,8 +23,7 @@
 		76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */; };
 		76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */; };
 		76DFA62D1DD6D6E200821BC5 /* NFIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */; };
-		76DFA62F1DD6D96F00821BC5 /* NFGradientColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62E1DD6D96F00821BC5 /* NFGradientColors.swift */; };
-		76DFA6311DD6E15B00821BC5 /* NFDiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6301DD6E15B00821BC5 /* NFDiet.swift */; };
+		76DFA62F1DD6D96F00821BC5 /* NFColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA62E1DD6D96F00821BC5 /* NFColors.swift */; };
 		76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6321DD8E0B300821BC5 /* NFResult.swift */; };
 		76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */; };
 		76F84D021E08E75500D56608 /* NFSimpleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */; };
@@ -56,6 +56,7 @@
 		52B0026EBF0E9A9D9757F91B /* Pods-NutriFence (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS).debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)/Pods-NutriFence (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		5FB84F789A576C75C829D539 /* Pods-NutriFence (iOS)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NutriFence (iOS)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NutriFence (iOS)UITests/Pods-NutriFence (iOS)UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		761585D11E07A3990094BEDB /* NFShutterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFShutterButton.swift; sourceTree = "<group>"; };
+		7625F6B01E3D815D007DF2F9 /* UIImage+Base64Encode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64Encode.swift"; sourceTree = "<group>"; };
 		7634A6761E0792A50049F909 /* NFLabelCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLabelCaptureViewController.swift; sourceTree = "<group>"; };
 		76598D631DCD6DDD00DEF76E /* NutriFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76598D661DCD6DDD00DEF76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,8 +75,7 @@
 		76DFA6241DD6B6D700821BC5 /* NFMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTableViewController.swift; sourceTree = "<group>"; };
 		76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFMainTVCType.swift; sourceTree = "<group>"; };
 		76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFIngredient.swift; sourceTree = "<group>"; };
-		76DFA62E1DD6D96F00821BC5 /* NFGradientColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFGradientColors.swift; sourceTree = "<group>"; };
-		76DFA6301DD6E15B00821BC5 /* NFDiet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFDiet.swift; sourceTree = "<group>"; };
+		76DFA62E1DD6D96F00821BC5 /* NFColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFColors.swift; sourceTree = "<group>"; };
 		76DFA6321DD8E0B300821BC5 /* NFResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFResult.swift; sourceTree = "<group>"; };
 		76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFClassificationFetcher.swift; sourceTree = "<group>"; };
 		76F84D011E08E75500D56608 /* NFSimpleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFSimpleMenuViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +147,15 @@
 			name = Controls;
 			sourceTree = "<group>";
 		};
+		7625F6AF1E3D813E007DF2F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				768551671DCE4E8A008A8526 /* UIColor+Hex.swift */,
+				7625F6B01E3D815D007DF2F9 /* UIImage+Base64Encode.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		76598D5A1DCD6DDD00DEF76E = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +181,7 @@
 		76598D651DCD6DDD00DEF76E /* NutriFence (iOS) */ = {
 			isa = PBXGroup;
 			children = (
+				7625F6AF1E3D813E007DF2F9 /* Extensions */,
 				76AAB6331E093B5000D3CBB8 /* Tutorial */,
 				76598D661DCD6DDD00DEF76E /* AppDelegate.swift */,
 				76598D6A1DCD6DDE00DEF76E /* Main.storyboard */,
@@ -234,8 +244,7 @@
 		76DFA6231DD6B56700821BC5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				768551671DCE4E8A008A8526 /* UIColor+Hex.swift */,
-				76DFA62E1DD6D96F00821BC5 /* NFGradientColors.swift */,
+				76DFA62E1DD6D96F00821BC5 /* NFColors.swift */,
 				76DFA6351DD8E23000821BC5 /* NFClassificationFetcher.swift */,
 			);
 			name = Utilities;
@@ -246,7 +255,6 @@
 			children = (
 				76DFA62A1DD6D47100821BC5 /* NFMainTVCType.swift */,
 				76DFA62C1DD6D6E200821BC5 /* NFIngredient.swift */,
-				76DFA6301DD6E15B00821BC5 /* NFDiet.swift */,
 				76DFA6321DD8E0B300821BC5 /* NFResult.swift */,
 			);
 			name = Model;
@@ -537,7 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76DFA62F1DD6D96F00821BC5 /* NFGradientColors.swift in Sources */,
+				76DFA62F1DD6D96F00821BC5 /* NFColors.swift in Sources */,
 				76DFA6361DD8E23000821BC5 /* NFClassificationFetcher.swift in Sources */,
 				76DFA6331DD8E0B300821BC5 /* NFResult.swift in Sources */,
 				76DFA6251DD6B6D700821BC5 /* NFMainTableViewController.swift in Sources */,
@@ -546,7 +554,7 @@
 				7634A6771E0792A50049F909 /* NFLabelCaptureViewController.swift in Sources */,
 				761585D21E07A3990094BEDB /* NFShutterButton.swift in Sources */,
 				7685516B1DCE4E8A008A8526 /* UIColor+Hex.swift in Sources */,
-				76DFA6311DD6E15B00821BC5 /* NFDiet.swift in Sources */,
+				7625F6B11E3D815D007DF2F9 /* UIImage+Base64Encode.swift in Sources */,
 				76F84D021E08E75500D56608 /* NFSimpleMenuViewController.swift in Sources */,
 				76DFA62B1DD6D47100821BC5 /* NFMainTVCType.swift in Sources */,
 				76FA40991E09BFA7000978E0 /* NFTutorialViewController.swift in Sources */,

@@ -30,7 +30,7 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
     
     private var croppedImage: UIImage! {
         didSet {
-            analyzeImage(croppedImage)
+            analyze(self.croppedImage)
         }
     }
     
@@ -156,9 +156,9 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
             // Prepare the VC
             if let resultVC = segue.destination as? NFMainTableViewController {
                 if let result = sender as? NFResult {
-                    let resultColor = (result.safetyStatus == .safe ? UIColor.green : UIColor.red)
+                    let resultColor = (result.safetyStatus == .safe ? NFColors.NFGradientColor.green : .red)
                     resultVC.vcType = NFMainTVCType.result(result.safetyStatus)
-                    resultVC.setGradient(NFGradientColors.gradientInView(resultVC.view, withColor: resultColor))
+                    resultVC.setGradient(NFColors.gradient(resultVC.view, color: resultColor))
                     resultVC.tableContents = result.ingredients
                     cameraManager.stopCaptureSession()
                 }
@@ -180,60 +180,22 @@ class NFLabelCaptureViewController: UIViewController, TOCropViewControllerDelega
         self.croppedImage = image
         dismiss(animated: true, completion: nil)
     }
+    
+    fileprivate func analyze(_ image: UIImage) {
+        NFClassificationFetcher.analyze((.celiac, image), completion: present)
+    }
+    
+    fileprivate func present(_ result: NFResult) {
+        // pass result back to presenting vc
+    }
 }
 
+// FIXME: This code will eventually make its way to the main tvc controller
 /**
  This extension encapsulates the image analysis logic
  */
 extension NFLabelCaptureViewController {
     
-    /**
-     A helper function. Calls underlying image analysis functions in NFClassificationFetcher
-     - parameters:
-        - image: UIImage to analyze
-     */
-    fileprivate func analyzeImage(_ image: UIImage) {
-        showOverlay()
-        // NFClassificationFetcher.analyzeImage(image, completion: parseJSONResult)
-    }
-    
-    /**
-     Used as a success handler to the analyzeImage function in NFClassificationFetcher
-     - parameters:
-        - json: the JSON data (returned from the API) to parse
-     
-     This function handles the case where the classification API successfully returns a result
-     The JSON dictionary is parsed out into a NFResult object which is then passed via segue to 
-     The result view controller for presentation
-     */
-    // FIXME: please eliminate this whence you have implemented a similar function in NFClassificationFetcher
-    func parseJSONResult(_ json: JSON) {
-//        var result = NFResult(safetyStatus: .unsafe, ingredients: [])
-//        var ingredients = [NFIngredient]()
-//        if let jsonDict = json.dictionary {
-//            debugPrint(jsonDict)
-//            let isSafe = jsonDict["isGlutenFree"]?.bool!
-//            if isSafe == true {
-//                result.safetyStatus = .safe
-//                if let ingreds = jsonDict["Good_Ingredients"]?.array {
-//                    for goodIngred in ingreds {
-//                        ingredients.append(NFIngredient(with: goodIngred.string!))
-//                    }
-//                }
-//            } else {
-//                print("Setting as .unsafe")
-//                result.safetyStatus = .unsafe
-//                if let ingreds = jsonDict["Bad_Ingredients"]?.array {
-//                    for badIngred in ingreds {
-//                        ingredients.append(NFIngredient(with: badIngred.string!))
-//                    }
-//                }
-//            }
-//            result.ingredients = ingredients
-//        }
-//        hideOverlay()
-//        performSegue(withIdentifier: "LoadResultsSegue", sender: result)
-    }
     
     /**
      Used as a failure handler to the analyzeImage function of NFClassificationFetcher

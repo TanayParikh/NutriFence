@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNJ-nj-R5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="-655"/>
+            <point key="canvasLocation" x="774" y="63"/>
         </scene>
         <!--Simple Menu View Controller-->
         <scene sceneID="8kA-z8-r3d">
@@ -200,10 +200,6 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ele-10-rEC"/>
-                    <connections>
-                        <segue destination="aY6-rM-vcv" kind="show" identifier="CaptureLabelSegue" id="ppw-c6-VaF"/>
-                        <segue destination="MGJ-RB-jMV" kind="presentation" identifier="ShowTutorialSegue" id="reX-C0-TeI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjZ-ut-SXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="HM9-4e-Djv">
@@ -212,7 +208,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="774" y="64"/>
+            <point key="canvasLocation" x="1996" y="-655"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="uxK-I6-sKe">
